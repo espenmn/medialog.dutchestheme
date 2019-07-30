@@ -48,12 +48,12 @@
           <div class="menu-content">
             <ul>
              <xsl:for-each css:select="ul#portal-globalnav > li">
-              <li><a><xsl:attribute name="class">t-menu-item 
-                 <xsl:choose><xsl:when 
+              <li><a><xsl:attribute name="class">t-menu-item
+                 <xsl:choose><xsl:when
                   test="@class[contains(., 'selected')]">active</xsl:when>
                   </xsl:choose>
-                </xsl:attribute><xsl:attribute name="href"><xsl:value-of 
-                    select="./a/@href" /></xsl:attribute><xsl:copy-of 
+                </xsl:attribute><xsl:attribute name="href"><xsl:value-of
+                    select="./a/@href" /></xsl:attribute><xsl:copy-of
                     select="./a/text()" /></a></li>
               </xsl:for-each>
             </ul>
@@ -118,8 +118,6 @@
   <!-- Content header -->
   <replace css:theme="#portal-top" css:content-children="#portal-top" />
 
-  <!-- Footer -->
-  <replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />
 
   <!-- toolbar -->
   <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />

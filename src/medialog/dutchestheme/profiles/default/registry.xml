@@ -9,7 +9,7 @@
 		<value key="color3">345612</value>
 		<value key="load_css">True</value>
     <value key="favicon"></value>
-    <value key="extra_css">.outer-wrapper div.container, #content-header div.container {max-width: 1170px !important;}</value>
+    <value key="extra_css" purge="False">.outer-wrapper div.container, #content-header div.container {max-width: 1450px !important;}</value>
 	</records>
 
 	<records prefix="plone.bundles/imagesloaded-js"

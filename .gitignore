@@ -1,0 +1,6 @@
+
+*.pyc
+
+src/medialog.dutchestheme.egg-info/
+
+src/medialog.dutchestheme.egg-info/*
