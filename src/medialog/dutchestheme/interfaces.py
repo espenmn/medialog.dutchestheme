@@ -50,7 +50,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
 
     rules = schema.Choice(
         title=_(u'Layout Rules'),
-        values=['default', 'spot', 'spot_2', 'head', 'fullmenu', 'fullmenu_l'],
+        values=['default', 'spot', 'spot_2', 'head', 'fullmenu_l'],
         required=True,
     )
 

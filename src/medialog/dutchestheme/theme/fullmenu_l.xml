@@ -52,8 +52,14 @@
         </div>
   </replace>
 
+
+
   <!-- full-width breadcrumb -->
   <replace css:content="#viewlet-above-content" css:theme="#above-content" />
+
+  <replace css:content="#portal-searchbox" css:theme="#portal-searchbox2" method="raw"/>
+  <drop css:content="header #portal-searchbox" />
+
 
   <!-- Central column -->
   <replace css:theme="#content-container" method="raw">

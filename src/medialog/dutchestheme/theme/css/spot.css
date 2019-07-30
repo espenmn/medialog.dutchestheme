@@ -88,12 +88,17 @@ button.plone-navbar-toggle {
 	font-size: 140%
 }
 
+ul.dropdown
 .has_subtree.dropdown {
-	background: white;
-	border:  1px solid silver;
-	border-left:  1px solid silver;
+	background: white !important;
 }
 
+body ul.dropdown li {
+	background: white;
+	border-top:  0 none !important;
+	xborder-bottom:  1px solid  #ccc !important;
+	box-shadow: 0 2px 4px rgba(0,0,0, 0.3);
+}
 /* @group Search */
 
 div#seach-wrapper {

@@ -15,6 +15,7 @@
            <span style="cursor:pointer" onclick="openNav()"<i class="fa fa-bars plone-link"></i></span>
          </div>
         </div>
+        <div id="portal-searchbox2"></div>
       </header>
       <div id="above-content-wrapper">
           <div id="above-content"></div>
@@ -58,19 +59,34 @@
     });
   </script>
   <style>
-    #portal-searchbox { display: none;}
-    div#portal-searchbox {
-	right:  0 !important;
-	z-index: 99;
-	background: whitesmoke;
-	display: block;
-	top: 0 !important;
-	clear: none;
-	position: fixed !important;
+  div#portal-searchbox {
+	   z-index: 99;
+display: none;
+	}
+  div#portal-searchbox {
+	background: #AAA;
 	padding: 2em;
-}
-span.top-searchicon {
-	cursor:  pointer;
-}
+	position: relative;
+	width: 100%;
+	max-width: 100%
+  }
+
+  form#searchGadget_form.pat-livesearch {
+  	max-width: 50%;
+  	margin: auto;
+  }
+
+
+
+  input#searchGadget.searchField {
+  	width: 70% ;
+  }
+
+  div.LSBox input.searchButton {
+   	width: 30% !important;
+  }
+  span.top-searchicon {
+	   cursor:  pointer;
+   }
   </style>
 </html>
