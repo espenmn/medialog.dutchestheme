@@ -38,7 +38,9 @@
    <!-- custom fullpage menu-->
   <replace css:theme="#mainnavigation">
         <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#215;</a>
           <div class="overlay-content">
+
             <xsl:for-each css:select="ul#portal-globalnav > li">
              <a><xsl:attribute name="class">t-menu-item
                 <xsl:choose><xsl:when
