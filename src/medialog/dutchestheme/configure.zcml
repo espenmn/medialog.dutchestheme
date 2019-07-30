@@ -36,24 +36,24 @@
       post_handler=".setuphandlers.uninstall"
     />
 
-  <genericsetup:registerProfile
+  <!--genericsetup:registerProfile
       name="upgrade"
       title="Dutchestheme: Upgrade"
       directory="profiles/upgrade"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
-      />
+      /-->
 
-  <genericsetup:upgradeStep
+  <!--genericsetup:upgradeStep
       title="upgrade"
       source="1000"
       destination="1002"
       profile="upgrade"
       description="upgrade to version 1.2"
       handler=".setuphandlers.post_install"
-      />
+      /-->
 
-  <genericsetup:upgradeDepends
+  <!--genericsetup:upgradeDepends
       profile="medialog.dutchestheme:default"
       source="1000"
       destination="1002"
@@ -61,7 +61,7 @@
       import_profile="medialog.dutchestheme:upgrade"
       import_steps="plone.app.registry"
       run_deps="false"
-    />
+    /-->
 
 
 
