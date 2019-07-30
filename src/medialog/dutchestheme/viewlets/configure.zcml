@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="medialog.dutchestheme">
+
+    <browser:viewlet
+      name="dutchestheme.menuviewlet"
+      for="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.MenuViewlet"
+      template="menu.pt"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      permission="zope2.View"
+      />
+
+    <include package="Products.CMFCore" file="permissions.zcml" />
+
+    <!-- Portlets Below Content -->
+    <browser:viewlet
+                name="medialog.dutchestheme.belowportlets"
+                layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+                manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+                class=".viewlets.BelowViewlet"
+                permission="zope.Public"
+    />
+
+
+    <!-- Portlets Above Content -->
+    <browser:viewlet
+                name="medialog.dutchestheme.aboveportlets"
+                layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+                manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+                class=".viewlets.AboveViewlet"
+                permission="zope.Public"
+    />
+
+    <!-- Duplicate Portlets -->
+    <!--browser:viewlet
+                name="medialog.dutchestheme.footerportlets"
+                layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+                manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+                class=".viewlets.AboveFooterViewlet"
+                permission="zope.Public"
+    /-->
+
+</configure>

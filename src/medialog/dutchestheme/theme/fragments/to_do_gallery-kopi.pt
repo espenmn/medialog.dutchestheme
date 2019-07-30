@@ -1,0 +1,8 @@
+<section id="fragment-gallery">
+		<div id="slider">
+
+${view/data/table}
+</div>
+
+
+</section>

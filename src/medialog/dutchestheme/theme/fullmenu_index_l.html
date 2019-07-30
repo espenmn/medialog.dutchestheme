@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Plone Theme</title>
+    <link rel="shortcut icon" type="image/x-icon"
+          href="favicon.ico" />
+    <link rel="apple-touch-icon"
+          href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="apple-touch-icon-72x72..png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+          href="apple-touch-icon-57x57..png" />
+    <link rel="apple-touch-icon-precomposed"
+          href="apple-touch-icon.png" />
+
+  </head>
+  <body>
+    <section id="portal-toolbar"></section>
+    <div class="outer-wrapper">
+      <header id="content-header" role="banner">
+        <div class="container flex no-wrap">
+          <header id="portal-top">
+          </header>
+          <div class="nav-togglers">
+           <a href="#" title="search" alt="search" id="search-toggler"><i class="fa fa-search padding-0-20"></i></a>
+           <span style="cursor:pointer" onclick="openNav()"<i class="fa fa-bars plone-link"></i></span>
+         </div>
+        </div>
+      </header>
+      <div id="above-content-wrapper">
+          <div id="above-content"></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <aside id="global_statusmessage"></aside>
+        </div>
+        <main id="main-container" class="row row-offcanvas row-offcanvas-right" role="main">
+          <div id="column1-container">
+          </div>
+          <div id="content-container">
+          </div>
+          <div id="column2-container">
+          </div>
+        </main><!--/row-->
+      </div><!--/container-->
+    </div> <!--/outer-wrapper -->
+    <footer id="portal-footer-wrapper" role="contentinfo">
+      <div class="container" id="portal-footer"></div>
+    </footer>
+    <style id="customcss"></style>
+ 
+    <div id="mainnavigation"></div>
+  </body>
+  <script>function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+          }
+          function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+          }
+  </script> 			
+  <script>
+    $("#search-toggler").click(function() {
+      $('#portal-searchbox').toggle();
+    });
+  </script>
+  <style>
+    #portal-searchbox { display: none;}
+    div#portal-searchbox {
+	right:  0 !important;
+	z-index: 99;
+	background: whitesmoke;
+	display: block;
+	top: 0 !important;
+	clear: none;
+	position: fixed !important;
+	padding: 2em;
+}
+span.top-searchicon {
+	cursor:  pointer;
+}
+  </style>
+</html>

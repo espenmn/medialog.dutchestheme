@@ -1,0 +1,78 @@
+/* @override 
+	http://localhost:8086/Plone/++theme++dutchestheme/css/lr_block.css
+	http://localhost:8086/Plone/afgeronde-restauraties/++theme++dutchestheme/css/lr_block.css
+*/
+
+@media (max-width: 768px) {
+
+.mosaic-width-full .lrblock {
+    width: 100%; 
+    margin-left: 0;
+    margin-righ: 0;
+}
+
+div.half {
+	width: 100%; 
+	position: static;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	min-width: 100%
+ 
+	}
+	.half.bodytext {
+	text-align: left	
+	}
+}
+
+
+.half.bodytext  ul {
+	padding-left: 1.5em;
+}
+
+ 
+.text-on-image div.half {
+	width: 100% ;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+ 
+div.flex.text-on-image {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+
+.text-on-image div.half.bodytext {
+	z-index: 3;
+	top:  2em;
+	left: 4em;
+	position: absolute;
+}
+
+.text-on-image.center .half.bodytext {
+	left: 0;
+	text-align: center;
+}
+
+
+body div.black hr {
+	border-color:  white;
+	color: white;
+}
+
+ 
+div.flex.left-right:nth-child(odd){
+	flex-direction: row-reverse ;
+}
+
+div.flex.left-right:nth-child(even){
+	 background: white;
+	 padding-top: 3em !important;
+	 padding-bottom: 3em !important;
+}
+
+.black-background div.flex.left-right:nth-child(odd) .black {
+	color:  white !important;
+}

@@ -1,0 +1,11 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    i18n:domain="medialog.dutchestheme">
+
+<div class="${view/data/color1|None} bold center-text large-text padding-10 margin-0 line-feed-1">
+    <a href="${view/item_url}" class="${view/data/color2|None}"><span tal:replace="structure view/data/bannertext|None"/></a>
+</div>
+</html>

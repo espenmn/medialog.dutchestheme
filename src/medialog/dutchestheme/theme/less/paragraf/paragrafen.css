@@ -1,0 +1,180 @@
+div.leadimage.image-preview {
+	float: right;
+	margin-bottom: 2.5em;
+	margin-left: 3.5em;
+}
+
+ 
+#edit-zone {
+	z-index:  11 !important ;
+}
+div.only-mobile  {
+	display: none !important;
+}
+ 
+.hidden {
+	display: none !important;
+}
+ 
+ 
+ lign-items: stretch;
+}
+
+
+.zoom  {
+  transition: all 0.5s ease;
+  }
+
+.zoom:hover {
+  transform: scale(1.02);
+}
+
+
+  
+
+h1.documentFirstHeading {
+	border-bottom: 0 none;
+}
+
+.compact p {
+	margin: 0;
+}
+.grey-background {
+	background: #c4c4c4;
+}
+
+.grey-text {
+	color: #584534;
+}
+
+.darker-grey-text {
+	color: #727272;
+}
+ 
+
+.dark-grey-background {
+	background: #4f4f4f;
+}
+
+.green-background {
+	background-color: #009e56;
+}
+
+.ligh-green-background {
+	background-color: #5fb08d;
+}
+
+.orange-background {
+	background-color: #ff9535;
+}
+
+.light-orange-background {
+	background-color: #dcab84;
+}
+
+.blue-background {
+	background-color: #09d;
+}
+
+.light-blue-background {
+	background-color: #6eadcc;
+}
+
+
+.large-text {
+	font-size:24px;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.line-feed-1 {
+	line-height: 120%;	
+}
+
+.center-text {
+	text-align: center;
+}
+
+p.sub_info span,
+.pre_title a, {
+	text-align: center;
+	color: #b7b7b7;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.news-item h1 {
+	margin:0; 
+}
+
+.hidden_picture  {
+ line-height: 1px;
+}
+
+.full-width div.colorbox-text.full-width {
+	position: relative;
+	top:  0px;
+	left: 0px;
+}
+
+footer#portal-footer-wrapper {
+	background: #4f4f4f;
+}
+ 
+footer#portal-footer-wrapper .portletWrapper {
+	width: 50%;
+	float: left;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+  .no-mobile {
+	
+	display:none;
+	}
+	
+
+	div.social-links {
+	zoom: 0.6;
+	}
+	
+	.movie-row div  {
+	width:  50%;
+	min-height: 5px;
+	
+	}
+	
+	div.leadimage.image-preview {
+	width:  100%;
+	margin-bottom: 3em;
+	
+	}
+
+	div.leadimage.image-preview img {
+	width:  100%;
+	
+	}
+
+ }
+  
+@media screen and (max-width: 998px){
+
+ 
+ 
+ 
+	.no-mobile {
+		display:none;
+	}
+
+
+	
+}

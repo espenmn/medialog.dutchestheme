@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records interface="medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings">
+		<value key="style">dutchesblue</value>
+		<value key="rules">default</value>
+		<value key="color1">123456</value>
+		<value key="color2">234561</value>
+		<value key="color3">345612</value>
+		<value key="load_css">True</value>
+    <value key="favicon"></value>
+    <value key="extra_css">.outer-wrapper div.container, #content-header div.container {max-width: 1170px !important;}</value>
+	</records>
+
+	<records prefix="plone.bundles/imagesloaded-js"
+	           interface="Products.CMFPlone.interfaces.IBundleRegistry">
+	    <value key="depends">plone</value>
+	    <value key="jscompilation">++theme++dutchestheme/javascript/imagesloaded.pkgd.min.js</value>
+	    <value key="last_compilation">2017-10-06 00:00:00</value>
+	    <value key="compile">False</value>
+	    <value key="enabled">False</value>
+	</records>
+	<records prefix="plone.bundles/masonry-js"
+	           interface="Products.CMFPlone.interfaces.IBundleRegistry">
+	    <value key="depends">imagesloaded-js</value>
+	    <value key="jscompilation">++theme++dutchestheme/javascript/masonry.pkgd.min.js</value>
+	    <value key="csscompilation">++theme++dutchestheme/css/masonary.css</value>
+	    <value key="last_compilation">2017-10-06 00:00:00</value>
+	    <value key="compile">False</value>
+	    <value key="enabled">False</value>
+	</records>
+</registry>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form"
+       xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+       i18n:domain="medialog.dutchestheme">
+<schema>
+    <field name="title" type="zope.schema.TextLine">
+        <description/>
+        <required>False</required>
+        <title>Title</title>
+    </field>
+    <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
+              form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
+              <form:widget>plone.app.z3cform.widget.RichTextFieldWidget</form:widget>
+          <title>Text</title>
+    </field>
+</schema>
+</model>

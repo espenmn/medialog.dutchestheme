@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xsl:variable name="central">
+      <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-one']) and //section[@id='fragment-right-portlets']">col-xs-12 col-sm-12</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-two']) and //section[@id='fragment-left-portlets']">col-xs-12 col-sm-12</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-one'] and //section[@id='fragment-right-portlets']">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two'] and //section[@id='fragment-left-portlets']">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//section[@id='fragment-left-portlets'] and //section[@id='fragment-right-portlets']">col-xs-12 col-sm-12</xsl:if>
+  </xsl:variable>
+
+  <rules if="$default">
+	 <xi:include href="++theme++dutchestheme/default.xml"/>
+	</rules>
+
+  <rules if="$spot">
+	 <xi:include href="++theme++dutchestheme/spot.xml"/>
+	</rules>
+
+  <rules if="$spot_2">
+	 <xi:include href="++theme++dutchestheme/spot_2.xml"/>
+	</rules>
+
+  <rules if="$head">
+   <xi:include href="++theme++dutchestheme/head_rules.xml"/>
+  </rules>
+
+  <rules if="$fullmenu">
+   <xi:include href="++theme++dutchestheme/fullmenu.xml"/>
+  </rules>
+
+  <rules if="$fullmenu_l">
+   <xi:include href="++theme++dutchestheme/fullmenu_l.xml"/>
+  </rules>
+
+  <after theme-children="/html/head" >
+  		<link href="++theme++dutchestheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+  </after>
+
+  <replace css:theme="#customcss" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
+
+  <!-- Add additional footer content, like script tags (from site settings). -->
+  <after
+      css:theme-children="html body"
+      content="//footer[@id='portal-footer-wrapper']/*[not(@class='row')]"
+   />
+
+</rules>

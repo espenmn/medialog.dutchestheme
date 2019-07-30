@@ -1,0 +1,32 @@
+<section>
+  <figure class="cd-image-container"
+     tal:define="image_scale view/data/image_size;
+              image_1 view/image1;
+              image_2 view/image2;
+              image1 image_1/getObject;
+              image2 image_2/getObject">
+    <tal:define tal:define="scale_func1 image1/@@images;
+              scale_func2 image2/@@images;
+              scaled_image1 python:scale_func1.scale('image', scale=image_scale);
+              scaled_image2 python:scale_func2.scale('image', scale=image_scale);"
+              tal:on-error="">
+    	<img tal:replace="structure python:scaled_image1.tag()"/>
+    	<span class="cd-image-label" data-type="original">${image1/title|None}</span>
+    	<div class="cd-resize-img"> <!-- the resizable image on top -->
+    			<img tal:replace="structure python:scaled_image2.tag()"/>
+    			<span class="cd-image-label" data-type="modified">${image2/title|None}</span>
+    	</div>
+    	<span class="cd-handle"></span>
+    </tal:define>
+  </figure> <!-- cd-image-container -->
+  <script>require([
+    'jquery',
+    '++theme++dutchestheme/javascript/before-after'
+    ], function(Base) {
+      'use strict';
+  });
+  </script>
+  <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
+    <link rel="stylesheet" href="++theme++dutchestheme/css/before-after.css" tal:condition="load_css">
+  </tal:define>
+</section>

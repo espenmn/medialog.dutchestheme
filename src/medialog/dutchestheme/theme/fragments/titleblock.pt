@@ -1,0 +1,33 @@
+<div class="flex align-center" tal:define="color1 view/data/color1">
+    <span class="border ${color1}"/><BR/>
+    <span class="headertext" tal:content="structure view/titlestructure"/>
+    <span class="border ${color1}"/>
+</div>
+
+<style>
+.align-center {
+	align-items: center;
+	flex-wrap: no-wrap !important;
+}
+
+.flex span {
+	width: 100%;
+	text-align: center;
+	line-height: 100%;
+}
+
+.border {
+	height: 1px;
+}
+
+.flex .headertext {
+	flex-grow: 0;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.headertext * {
+	padding: 0;
+}
+
+</style>

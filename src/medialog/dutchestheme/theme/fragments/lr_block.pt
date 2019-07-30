@@ -1,0 +1,47 @@
+
+<section id="fragment-${view/id}"
+         tal:define="scale view/data/image_size;
+                title view/data/title | nothing;
+                image view/one_image;
+                image_url image/getURL;
+                css_class view/data/css_class;
+                color1 view/data/color1;
+                color2 view/data/color2;
+                load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or ''"
+          class="lrblock ${color1}"
+          data-anchor="anchor-${title}"
+          title="${title}">
+  <div class="container flex padding-0 ${css_class}">
+    <div class="half bodytext ${color2} padding-40">
+        <h2 class="${color2}" tal:condition="title">${title}</h2>
+        <h4  class="${color2}" tal:condition="view/data/description">${view/data/description}</h4>
+        <div  class="${color2}" tal:define="value view/data/text|nothing;
+              output_relative_to nocall:value/@@output_relative_to|nothing"
+              tal:condition="output_relative_to"
+              tal:content="structure python:output_relative_to(context)" />
+    </div>
+    <div class="half image margin-0 padding-0">
+        <img alt="${title}" class="image-inline"
+            title="${title}"
+            src="${image_url}/@@images/image/${scale}" />
+    </div>
+ </div>
+ <link rel="stylesheet" href="++theme++dutchestheme/css/lr_block.css" tal:condition="load_css">
+ <style>
+<tal:check tal:condition="view/data/image_height|None">
+    #fragment-${view/id} img.image-inline {
+        object-fit: cover;
+        width: 100%;
+        max-height: ${view/data/image_height}px;
+        object-position: 0 ${view/data/position-y|None}%;
+    }
+</tal:check>
+    
+ #fragment-${view/id} .half {
+    min-width: 30px;
+    box-sizing: border-box;
+ }
+
+ </style>
+
+</section>

@@ -1,0 +1,59 @@
+<section tal:define="wall view/get_wallitems|None;
+         items wall/@@contentlisting|context/@@contentlisting;
+         image_size view/data/image_size|None"
+         id="fragment-${view/id}"
+         data-anchor="anchor-images"
+         title="images">
+    <div class="wall-of-images" tal:condition="image_size">
+      <tal:image tal:repeat="item items">
+        <figure tal:define="obj item/getObject;
+                         scale_func obj/@@images;
+                         scaled_image python:scale_func.scale('image', scale=image_size)">
+        <img tal:replace="structure python:scaled_image.tag()"
+             tal:on-error=""
+             tal:condition="python: obj.portal_type == 'Image'"/>
+       </figure>
+     </tal:image>
+    </div>
+    <!--tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
+        <link rel="stylesheet" href="++theme++dutchestheme/css/masonary.css" tal:condition="load_css">
+    </tal:define-->
+
+
+    <script>require([
+      'jquery',
+      '++theme++dutchestheme/javascript/masonry.pkgd.min',
+      '++theme++dutchestheme/javascript/imagesloaded.pkgd.min'
+      ], function(Base) {
+        'use strict';
+        $('.wall-of-images').imagesLoaded(function() {
+          $('.wall-of-images').masonry({
+            itemSelector: 'figure',
+            percentPosition: true
+          });
+        });
+      });
+    </script>
+
+    <style tal:define="small view/small; medium view/medium; large view/large">
+      @media only screen and (min-width: 768px) {
+        .wall-of-images figure {
+          width: ${small}%;
+          }
+        }
+
+        @media screen and (min-width: 900px) {
+          .wall-of-images figure {
+              width: ${medium}%;
+          }
+        }
+
+      @media screen and (min-width: 1200px) {
+        .wall-of-images figure {
+              width: ${large}%;
+          }
+      }
+
+    </style>
+
+</section>

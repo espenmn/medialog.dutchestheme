@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records interface="medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings" purge="false">
+		<value purge="false" key="style"></value>
+		<value purge="false" key="rules"></value>
+  </records>
+
+</registry>

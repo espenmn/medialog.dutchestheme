@@ -1,0 +1,71 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="medialog.dutchestheme">
+
+
+    <browser:page
+    	for="*"
+    	name="mobile_site_map"
+    	class=".menu_sitemap.SitemapView"
+    	template="mobile_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+    	for="*"
+    	name="visual-sitemap"
+    	class=".visual_sitemap.VisualSitemapView"
+    	template="visual_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+    	for="*"
+    	name="menu-sitemap"
+    	class=".menu_sitemap.SitemapView"
+    	template="menu_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+    	for="*"
+    	name="left-sitemap"
+    	class=".left_sitemap.SitemapView"
+    	template="left_sitemap.pt"
+    	permission="zope.Public"
+    	allowed_interface="Products.CMFPlone.browser.interfaces.ISitemapView"
+    	/>
+
+
+    <browser:page
+      for="*"
+      name="changelayout"
+      class=".views.IChangelayoutView"
+      template="change_layout.pt"
+      permission="cmf.ManagePortal"
+    />
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <!--include package="z3c.jbot" file="meta.zcml" /-->
+  <!--browser:jbot
+      directory="overrides"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      /-->
+
+  <!-- Publish static files -->
+  <plone:static
+      name="medialog.dutchestheme"
+      type="plone"
+      directory="static"
+      />
+
+
+</configure>

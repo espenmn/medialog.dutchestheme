@@ -1,0 +1,33 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="title" type="zope.schema.TextLine">
+    <description/>
+    <required>False</required>
+    <title>Title</title>
+  </field>
+  <field name="description" type="zope.schema.Text">
+    <description/>
+    <required>True</required>
+    <title>Description</title>
+  </field>
+  <field name="linktext" type="zope.schema.TextLine">
+    <description/>
+    <required>True</required>
+    <title>Link text</title>
+  </field>
+  <field name="link" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Choose Link to</title>
+      <source>collective.themefragments.tiles.CatalogSource</source>
+  </field>
+  <field name="image_size" type="zope.schema.Choice">
+   <description>Choose Image Size</description>
+   <required>True</required>
+   <title>Image Size</title>
+   <default>preview</default>
+   <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+  </field>
+</schema>
+</model>

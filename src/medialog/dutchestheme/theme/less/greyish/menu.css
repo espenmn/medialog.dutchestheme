@@ -1,0 +1,44 @@
+/* All this should be moved to the theme, also styles in templates */
+
+/* @group Footer */
+
+footer#portal-footer-wrapper .portletStaticText ul {
+	text-align: left;
+	font-weight: bold;
+	font-size: 18px;
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0;
+	width: 30%;
+	min-width: 300px;
+	float: left;
+	margin-top: 2em
+}
+
+
+footer#portal-footer-wrapper ul a {
+	color: #F2F2F2;
+}
+
+
+footer#portal-footer-wrapper p {
+	border-bottom: 0 none;
+	font-weight: normal
+}
+
+ 
+
+/* @end */
+ 
+
+@media (max-width: 1000px) {
+
+ .no-mobile {
+	display: none !important
+	}
+
+  .mobile {
+	display: inline-block;
+   }
+
+}
