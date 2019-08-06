@@ -1,0 +1,40 @@
+
+<section id="fragment-${view/id}"
+         tal:define="color1 view/data/color1|None;
+                color2 view/data/color2|None"
+          class="tabblock">
+
+          ${view/data/table}
+          <div class="pat-autotoc autotabs no-border ${color2}"
+                data-pat-autotoc="section:fieldset;levels:legend;">
+              <fieldset>
+                <legend  class="{color2}">Tab 1</legend>
+                <div>
+                  Lorem ipsum dolor sit amet, ex nam odio ceteros fastidii,
+                  id porro lorem pro, homero facilisis in cum.
+                  At doming voluptua indoctum mel, natum noster similique ne mel.
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="${color2}">TTab 2</legend>
+                <div>
+                  Reque repudiare eum et. Prompta expetendis percipitur eu eam,
+                  et graece mandamus pro, eu vim harum audire tractatos.
+                  Ad perpetua salutandi mea, soluta delicata aliquando eam ne.
+                  Qui nostrum lucilius perpetua ut, eum suas stet oblique ut.
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="${color2}">TTab 3</legend>
+                <div>
+                  Vis mazim harum deterruisset ex, duo nemore nostro civibus ad,
+                  eros vituperata id cum. Vim at erat solet soleat,
+                  eum et iuvaret luptatum, pro an esse dolorum maiestatis.
+                </div>
+              </fieldset>
+          </div>
+<style>
+  .no-border { border: 0 none !important}
+</style>
+
+</section>

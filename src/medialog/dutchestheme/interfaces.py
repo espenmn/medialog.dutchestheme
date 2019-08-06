@@ -11,6 +11,10 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from plone.app.portlets.interfaces import IColumn
 from plone.namedfile.field import NamedBlobImage
 
+
+from zope import interface
+
+
 _ = MessageFactory('medialog.dutchestheme')
 
 
@@ -25,6 +29,15 @@ class IBelow(IColumn):
 class IAbove(IColumn):
     """here we put the above content portlets
     """
+
+class IRichtextPair(interface.Interface):
+    """To be used with the fragments"""
+    legend = schema.TextLine(
+            title=_('legend', default=u'Tab title'),
+    )
+    tabtext = schema.TextLine(
+            title=_('Text', default=u'Tab text'),
+    )
 
 class IMedialogDutchesThemeSettings(model.Schema):
     """Adds settings to medialog.controlpanel"""
