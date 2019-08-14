@@ -1,19 +1,54 @@
 
 <section id="fragment-${view/id}"
-         tal:define="color1 view/data/color1|None;
-                color2 view/data/color2|None"
-          class="tabblock">
+  class="tabblock no-border">
 
-          <div class="pat-autotoc autotabs no-border ${color2}"
-                data-pat-autotoc="section: ;levels:h2;">
-                <fieldset>
-                <tal:replace tal:replace="structure view/data/text/output" />
-              </fieldset>
-              <fieldset>
-                <h2>tittel</h2>
-                <p>some text</p>
-              </fieldset>
-          </div>
+  <div class="pat-autotoc autotabs no-border" data-pat-autotoc="section:fieldset;levels:legend;">
+    <fieldset tal:condition="view/data/title1|None">
+        <legend>${view/data/title1}</legend>
+        <div tal:replace="structure view/data/text1"></div>
+    </fieldset>
+    <fieldset tal:condition="view/data/title2|None">
+        <legend>${view/data/title2}</legend>
+        <div tal:replace="structure view/data/text2"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title3|None">
+        <legend>${view/data/title3}</legend>
+        <div tal:replace="structure view/data/text3"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title4|None">
+        <legend>${view/data/title4}</legend>
+        <div tal:replace="structure view/data/text4"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title5|None">
+      <legend>${view/data/title5}</legend>
+      <div tal:replace="structure view/data/text5"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title6|None">
+      <legend>${view/data/title6}</legend>
+      <div tal:replace="structure view/data/tex6"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title7|None">
+        <legend>${view/data/title7}</legend>
+        <div tal:replace="structure view/data/text7"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title8|None">
+        <legend>${view/data/title8}</legend>
+        <div tal:replace="structure view/data/text8"></div>
+    </fieldset>
+
+    <fieldset tal:condition="view/data/title9|None">
+        <legend>${view/data/title9}</legend>
+        <div tal:replace="structure view/data/text9"></div>
+    </fieldset>
+
+</div>
+
 <style>
   .no-border { border: 0 none !important}
 </style>

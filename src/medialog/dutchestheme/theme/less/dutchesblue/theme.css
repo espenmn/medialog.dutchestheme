@@ -5049,6 +5049,10 @@ body.template-logged_out #content-core .portletFooter {
   display: flex;
   justify-content: space-between;
 }
+.pat-autotoc.autotabs .autotoc-nav a,
+.autotabs .autotoc-nav a {
+  background: inherit;
+}
 img,
 .flex .portletWrapper img {
   max-width: 100%;
