@@ -5053,6 +5053,9 @@ body.template-logged_out #content-core .portletFooter {
 .autotabs .autotoc-nav a {
   background: inherit;
 }
+.label {
+  color: inherit;
+}
 img,
 .flex .portletWrapper img {
   max-width: 100%;

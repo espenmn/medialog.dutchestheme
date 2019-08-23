@@ -1,4 +1,4 @@
-<section class="newsitems flex flex-wrap margin-0--15" 
+<section class="newsitems flex flex-wrap margin-0--15"
               tal:define="collection_items view/get_items|None;
              items collection_items/@@contentlisting|context/@@contentlisting;
              size view/data/image_size;
@@ -7,7 +7,7 @@
              id="fragment-${view/id}">
 <div class="collection_item margin-10" tal:repeat="item items">
         <div tal:define="item_url item/getURL|item/absolute_url">
-        <p class="portal-type white black-background">
+        <p class="${item/portal_type} portal-type white black-background">
            <span class="sans-serif" i18n:translate="" tal:condition="show_ctype">
                 ${item/portal_type}</span>
             <span class="sans-serif" i18n:translate="" tal:condition="show_csubject">
