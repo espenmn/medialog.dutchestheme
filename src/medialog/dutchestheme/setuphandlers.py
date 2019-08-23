@@ -35,12 +35,20 @@ def _create_content(portal):
                 id=i_image,
                 title=i_image,
             )
+
             icon_image.image = load_image(i_image)
+
 
 def load_image(i_image):
     filename = os.path.join(os.path.dirname(__file__), 'theme',
-                            '{0}'.format(i_image))
-    return NamedBlobImage(
-        data=open(filename, 'r').read(),
-        filename=u'{0}'.format(i_image)
-    )
+                            i_image)
+
+    try:
+        data=open(filename, 'r').read()
+
+        return NamedBlobImage(
+            data=data,
+            filename=u'{0}'.format(i_image)
+            )
+    finally:
+        return None

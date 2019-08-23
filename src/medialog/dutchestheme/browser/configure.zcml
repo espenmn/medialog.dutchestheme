@@ -45,13 +45,14 @@
     	/>
 
 
-    <browser:page
+    <!-- some old stuff that let you change view of content if upgrading-->
+    <!--browser:page
       for="*"
       name="changelayout"
       class=".views.IChangelayoutView"
       template="change_layout.pt"
       permission="cmf.ManagePortal"
-    />
+    /-->
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <!--include package="z3c.jbot" file="meta.zcml" /-->

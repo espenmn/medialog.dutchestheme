@@ -144,7 +144,7 @@ class IChangelayoutView(BrowserView):
                     line = re.sub(key, value, line)
                     item.Title = line
                     obj.setTitle(line)
-                    print line
+                    #print (line)
                     obj.reindexObject(idxs=['Title'])
                     a = a + 1
 

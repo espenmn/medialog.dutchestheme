@@ -10,7 +10,7 @@ from plone.app.layout.navigation.root import getNavigationRoot
 from plone.app.layout.viewlets import common
 from plone.app.portlets.portlets.navigation import Assignment
 from zope.component import getMultiAdapter
-from zope.interface import implements
+from zope.interface import implementer
 from plone import api
 from Products.CMFCore.interfaces import IContentish
 
@@ -34,13 +34,12 @@ class DropdownQueryBuilder(NavtreeQueryBuilder):
                               'navtree_start': 1,
                               'depth': dropdown_depth}
 
-
+@implementer(IDropdownMenuViewlet)
 class DropdownMenuViewlet(common.GlobalSectionsViewlet):
     """A custom version of the global navigation class that has to have
        dropdown menus for global navigation tabs objects
     """
-    implements(IDropdownMenuViewlet)
-
+    
     #
     # Define a cache key: every instance (probabily only one per site,
     # language and user gets its/his own cache so we don't get the
