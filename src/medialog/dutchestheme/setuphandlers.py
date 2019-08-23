@@ -43,12 +43,9 @@ def load_image(i_image):
     filename = os.path.join(os.path.dirname(__file__), 'theme',
                             i_image)
 
-    try:
-        data=open(filename, 'r').read()
+    #https://community.plone.org/t/python-3-plone-api-read-blob-image/8978
 
-        return NamedBlobImage(
-            data=data,
-            filename=u'{0}'.format(i_image)
-            )
-    finally:
-        return None
+    return NamedBlobImage(
+        data=open(filename, 'rb').read(),
+        filename=u'{0}'.format(i_image)
+    )
