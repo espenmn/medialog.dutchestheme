@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <registry>
 
-    <record name="plone.app.blocks.default_layout">
-      <field type="plone.registry.field.ASCIILine"/>
-      <value>++mosaic_layouts/basic.html</value>
-    </record>
-
   <records interface="medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings">
 		<value key="style">dutchesblue</value>
 		<value key="rules">default</value>
