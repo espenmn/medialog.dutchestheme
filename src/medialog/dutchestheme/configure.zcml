@@ -17,6 +17,12 @@
       name="dutchestheme"
       />
 
+  <plone:static
+      directory="layouts"
+      name="mosaic_layouts"
+      type="contentlayout"
+    />
+
   <genericsetup:registerProfile
       name="default"
       title="Dutchestheme"
