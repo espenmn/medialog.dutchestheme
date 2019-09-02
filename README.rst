@@ -18,6 +18,12 @@ Features
 - Choose between fragment tiles in the Mosaic Layout editor
 - Choose between (layout) styles for each Mosaic Fragment Tile
 
+Sitelayout
+------------
+
+plone.defaultSiteLayout to point the path of your site layout. It could be /
+++sitelayouts/basic.html
+
 
 Installation
 ------------
