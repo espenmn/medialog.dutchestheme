@@ -1,7 +1,15 @@
 /* @override 
 	http://localhost:8086/Plone/++theme++dutchestheme/css/lr_block.css
 	http://localhost:8086/Plone/afgeronde-restauraties/++theme++dutchestheme/css/lr_block.css
+	http://localhost:8888/Ecternal/++theme++dutchestheme/css/lr_block.css
 */
+
+div.container.flex.padding-0.left {
+	flex-direction: row-reverse
+}
+
+
+
 
 @media (max-width: 768px) {
 
@@ -20,7 +28,8 @@ div.half {
 	min-width: 100%
  
 	}
-	.half.bodytext {
+
+.half.bodytext {
 	text-align: left	
 	}
 }

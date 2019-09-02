@@ -1,3 +1,5 @@
+/* @override http://localhost:8888/Ecternal/++theme++dutchestheme/less/dutchesblue/theme2.css */
+
 /* "out": "true" */
 /* theme.less file that will be compiled */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
@@ -392,16 +394,43 @@ h6 {
   margin-bottom: 12.5px;
 }
 h1 {
-  font-size: 51px;
+  font-size: 45px;
 }
 h2 {
-  font-size: 42px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-top:  0;;
 }
+
+div.half.bodytext.black.padding-40 p:first-child{
+	font-size: 140%
+}
+
+div.half.bodytext.black.padding-40 h2:after {
+	content: "";
+	display: block;
+	width: 150px;
+	height:  4px;
+	background: #f8c11a;;
+	margin-top: 6px;
+	margin-bottom: 5px;
+}
+
+section.lrblock {
+   left:  0;
+   right:  0;
+   width: 300%;
+   margin-left:  -100%;
+   margin-right:  -100%;
+}
+
+ 
 h3 {
-  font-size: 34px;
+  font-size: 26px;
+  margin-bottom: 0;
 }
 h4 {
-  font-size: 26px;
+  font-size: 23px;
 }
 h5 {
   font-size: 21px;
