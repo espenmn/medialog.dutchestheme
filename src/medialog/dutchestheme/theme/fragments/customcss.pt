@@ -1,6 +1,7 @@
 <div  id="customcss">
 <tal:define
   tal:define="extra_css python: context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.extra_css'];
+              ext_css   python: context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.external_style'];
               color1    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color1']);
               color2    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color2']);
               color3    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color3']);
@@ -14,7 +15,8 @@
         option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
     <div tal:replace="structure extra_css"/>
     </style>
-    <tal:replace tal:condition="python: iconset != 'fontawesome'" 
+    <link rel="stylesheet" tal:condition="ext_css" href="${ext_css}" />
+    <tal:replace tal:condition="python: iconset != 'fontawesome'"
         tal:replace="structure context/@@fontload"></tal:replace>
 </tal:define>
 </div>

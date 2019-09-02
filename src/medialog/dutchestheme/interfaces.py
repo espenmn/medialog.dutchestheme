@@ -47,6 +47,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
         label=_(u'Dutchestheme'),
         fields=[
             'style',
+            'external_style',
             'rules',
             'load_css',
             'color1',
@@ -58,6 +59,12 @@ class IMedialogDutchesThemeSettings(model.Schema):
     style = schema.Choice(
         title=_(u'Style'),
         values=['blue', 'dutchesblue', 'ploneconf', 'red', 'rood', 'scheme1', 'greyish', 'orange', 'paragraf'],
+        required=False,
+    )
+
+    external_style = schema.URI(
+        title=_(u'External stylesheet'),
+        description=_(u'Remember to enable external files  in theming setup'),
         required=False,
     )
 

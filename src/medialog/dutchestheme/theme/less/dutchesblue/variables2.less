@@ -10,16 +10,16 @@
 @plone-gray-lighter:						lighten(#000, 80%);   // #ccc //disableds like
 
 //colors
-@plone-link-color:							#20a7de; //dutchesblue
-@plone-link-color-on-dark:					#20a7de;
-@plone-link-color-on-grey:		  			#20a7de;
+@plone-link-color:							#f8c11a;; //dutchesblue
+@plone-link-color-on-dark:					#f8c11a;;
+@plone-link-color-on-grey:		  			#f8c11a;;
 @plone-link-secondary: spin(@plone-link-color, -(360 / 3));
 @plone-link-tertiary: spin(@plone-link-color, (360 / 3));
 @plone-link-opposite: spin(@plone-link-color, 180);
 
 //if you need different contrast or color
 
-@plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
+// @plone-link-color-on-grey:		  			#086ca3; //valid wcag 2.0
 @plone-default-published-color:				@plone-link-color; //published and external same color
 @plone-default-draft-color:					darken(@plone-toolbar-draft-color, 15%); // lime-yellow //draft is visible
 @plone-default-pending-color:				darken(@plone-toolbar-pending-color, 15%); // orange
@@ -40,21 +40,21 @@
 
 
 //*// TYPOGRAPHY
-@plone-font-family-sans-serif:  "Encode Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; // Roboto seems Plone's DIN
+@plone-font-family-sans-serif:  "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; // Roboto seems Plone's DIN
 @plone-font-family-condensed:   "Roboto Condensed", "Arial Narrow", sans-serif; //just on toolbar
 @plone-font-family-serif:       "Bitter", "Times New Roman", Times, serif;
 @plone-font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@plone-font-family-base:        @plone-font-family-serif;
+@plone-font-family-base:        @plone-font-family-sans-serif;
 
-@plone-font-size-base:          15px;
+@plone-font-size-base:          17px;
 @plone-font-size-large:         ceil((@plone-font-size-base * 1.25));
 @plone-font-size-small:         ceil((@plone-font-size-base * 0.85));
 
-@plone-font-size-h1:            floor((@plone-font-size-base * 2.8));
-@plone-font-size-h2:            floor((@plone-font-size-base * 2.25));
-@plone-font-size-h3:            ceil((@plone-font-size-base * 1.8));
-@plone-font-size-h4:            ceil((@plone-font-size-base * 1.35));
-@plone-font-size-h5:            ceil((@plone-font-size-base * 1.12));
+@plone-font-size-h1:            floor((@plone-font-size-base * 3));
+@plone-font-size-h2:            floor((@plone-font-size-base * 2.5));
+@plone-font-size-h3:            ceil((@plone-font-size-base * 2));
+@plone-font-size-h4:            ceil((@plone-font-size-base * 1.5));
+@plone-font-size-h5:            ceil((@plone-font-size-base * 1.2));
 @plone-font-size-h6:            ceil((@plone-font-size-base * 1));
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -63,12 +63,12 @@
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @plone-line-height-computed:    floor((@plone-font-size-base * @plone-line-height-base)); // ~20px
 
-@plone-headings-font-family:    'Encode Sans';
+@plone-headings-font-family:    "Montserrat",;
 @plone-headings-font-weight:    @plone-font-weight-light;
 @plone-headings-line-height:    1.2;
-@plone-headings-color:          #2b5d9f;
+//@plone-headings-color:          #2b5d9f;
 
-@plone-font-weight-light:		200;
+@plone-font-weight-light:		300;
 @plone-font-weight-regular:		400;
 @plone-font-weight-medium:		400;
 @plone-font-weight-bold:		700;

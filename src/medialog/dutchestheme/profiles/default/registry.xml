@@ -3,6 +3,7 @@
 
   <records interface="medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings">
 		<value key="style">dutchesblue</value>
+  	<value key="external_style"></value>
 		<value key="rules">default</value>
 		<value key="color1">123456</value>
 		<value key="color2">234561</value>
