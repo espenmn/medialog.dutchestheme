@@ -18,6 +18,15 @@
 
 <div data-tile="./@@plone.app.standardtiles.toolbar"></div>
 
+
+<div class="mosaic-grid-row">
+  <div class="mosaic-width-full">
+    <div id="portal-mainnavigation">
+      <div data-tile="./@@plone.app.standardtiles.global_sections"></div>
+    </div>
+  </div>
+</div>
+
 <div class="mosaic-grid-row">
   <div class="mosaic-width-full">
     <header id="portal-top">
@@ -31,13 +40,7 @@
   </div>
 </div>
 
-<div class="mosaic-grid-row">
-  <div class="mosaic-width-full">
-    <div id="portal-mainnavigation">
-      <div data-tile="./@@plone.app.standardtiles.global_sections"></div>
-    </div>
-  </div>
-</div>
+
 
 <div class="mosaic-grid-row">
   <div class="mosaic-width-full">
@@ -57,7 +60,7 @@
 </div>
 
 <div class="mosaic-grid-row">
-  <div class="mosaic-width-full">
+  <div class="mosaic-width-two-thirds">
     <article id="portal-column-content">
       <article id="content" data-panel="content" data-slots="content">
         <div data-slots="body > header *">
@@ -76,7 +79,20 @@
       </footer>
     </article>
   </div>
-
+  <div class="mosaic-width-third">
+    <aside id="portal-column-one">
+      <div data-tile="./@@plone.app.standardtiles.portletmanager/left-portlets?manager=plone.leftcolumn"
+           data-slots="portal-column-one"></div>
+      <div data-panel="leftcolumn"></div>
+    </aside>
+  </div>
+  <div class="mosaic-width-third">
+    <aside id="portal-column-two">
+      <div data-tile="./@@plone.app.standardtiles.portletmanager/right-portlets?manager=plone.rightcolumn"
+           data-slots="portal-column-two"></div>
+      <div data-panel="rightcolumn"></div>
+    </aside>
+  </div>
 </div>
 
 <div class="mosaic-grid-row">
