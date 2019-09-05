@@ -134,13 +134,21 @@ class IMedialogDutchesThemeSettings(model.Schema):
 
     heading_font = schema.Choice(
         title=_(u'Heading font'),
-        values=['Roboto'],
+        values=['"Lucida Grande", Lucida, Verdana, sans-serif',
+                '"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif',
+                'Georgia, "Times New Roman", Times, serif',
+                '"Courier New", Courier, mono',
+                ],
         required=False,
     )
 
     body_font = schema.Choice(
         title=_(u'Body font'),
-        values=['Roboto'],
+        values=['"Lucida Grande", Lucida, Verdana, sans-serif',
+                '"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif',
+                'Georgia, "Times New Roman", Times, serif',
+                '"Courier New", Courier, mono',
+                ],
         required=False,
     )
 
