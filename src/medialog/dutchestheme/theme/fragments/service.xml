@@ -22,7 +22,7 @@
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Heading color</title>
     <values>
       <element>black</element>

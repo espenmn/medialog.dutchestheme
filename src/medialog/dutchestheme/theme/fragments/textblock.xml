@@ -9,7 +9,7 @@
 <schema>
   <field name="title" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Tittel</title>
   </field>
   <field name="description" type="zope.schema.Text">
@@ -23,7 +23,7 @@
   </field>
   <field name="image1" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Image</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
   </field>
@@ -36,7 +36,7 @@
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Heading color</title>
     <values>
       <element>black</element>

@@ -56,6 +56,24 @@ class IMedialogDutchesThemeSettings(model.Schema):
             'extra_css']
     )
 
+    model.fieldset(
+        'Theme overrides',
+        label=_(u'Theme overrides'),
+        fields=[
+            'enable_overrides',
+            'heading_font',
+            'body_font',
+            'nav_background',
+            'navlink_color',
+            'navlink_hover',
+            'navlink_visited',
+            'footer_background',
+            'footer_color',
+            'footerlink_color',
+            'footerlink_hover',
+            'footerlink_visited']
+    )
+
     style = schema.Choice(
         title=_(u'Style'),
         values=['blue', 'dutchesblue', 'ploneconf', 'red', 'rood', 'scheme1', 'greyish', 'orange', 'paragraf'],
@@ -107,10 +125,78 @@ class IMedialogDutchesThemeSettings(model.Schema):
         description=_('help_extra_css'),
     )
 
+
+    enable_overrides = schema.Bool(
+        title=_(u'Enable overrides'),
+        required=False,
+        default=False,
+    )
+
+    heading_font = schema.Choice(
+        title=_(u'Heading font'),
+        values=['Roboto'],
+        required=False,
+    )
+
+    body_font = schema.Choice(
+        title=_(u'Body font'),
+        values=['Roboto'],
+        required=False,
+    )
+
+    nav_background = schema.Text(
+        title=_('nav_background_color', default=u'Nav background color'),
+        required=False,
+    )
+
+    navlink_color = schema.Text(
+        title=_('navlink_color', default=u'Navlink color'),
+        required=False,
+    )
+    navlink_hover = schema.Text(
+        title=_('navlin_hover', default=u'Navlink hover'),
+        required=False,
+    )
+    navlink_visited = schema.Text(
+        title=_('navlin_visited', default=u'Navlink visited'),
+        required=False,
+    )
+    footer_background = schema.Text(
+        title=_('footer_background', default=u'Footer backgroundcolor'),
+        required=False,
+    )
+
+    footer_color = schema.Text(
+        title=_('footer_color', default=u'Footer text color'),
+        required=False,
+    )
+
+    footerlink_color = schema.Text(
+        title=_('footerlink_color', default=u'Footerlink color'),
+        required=False,
+    )
+    footerlink_hover = schema.Text(
+        title=_('footerlink_hover', default=u'Footerlink hover'),
+        required=False,
+    )
+    footerlink_visited = schema.Text(
+        title=_('footerlink-visited', default=u'Footerlink visited'),
+        required=False,
+    )
+
     widget(
         color1=ColorPickerFieldWidget,
         color2=ColorPickerFieldWidget,
         color3=ColorPickerFieldWidget,
+        navlink_color=ColorPickerFieldWidget,
+        navlink_hover=ColorPickerFieldWidget,
+        nav_background=ColorPickerFieldWidget,
+        navlink_visited=ColorPickerFieldWidget,
+        footer_background=ColorPickerFieldWidget,
+        footer_color=ColorPickerFieldWidget,
+        footerlink_color=ColorPickerFieldWidget,
+        footerlink_hover=ColorPickerFieldWidget,
+        footerlink_visited=ColorPickerFieldWidget,
     )
 
 alsoProvides(IMedialogDutchesThemeSettings, IMedialogControlpanelSettingsProvider)

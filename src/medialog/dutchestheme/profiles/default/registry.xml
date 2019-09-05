@@ -10,6 +10,18 @@
 		<value key="color3">345612</value>
 		<value key="load_css">True</value>
     <value key="extra_css" purge="False">.outer-wrapper div.container, #content-header div.container {max-width: 1450px !important;}</value>
+    <value key="enable_overrides">False</value>
+    <value key="heading_font"></value>
+    <value key="body_font"></value>
+    <value key="nav_background"></value>
+    <value key="navlink_color"></value>
+    <value key="navlink_hover"></value>
+    <value key="navlink_visited"></value>
+    <value key="footer_background"></value>
+    <value key="footer_color"></value>
+    <value key="footerlink_color"></value>
+    <value key="footerlink_hover"></value>
+    <value key="footerlink_visited"></value>
 	</records>
 
 	<records prefix="plone.bundles/imagesloaded-js"

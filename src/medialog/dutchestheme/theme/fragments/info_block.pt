@@ -4,7 +4,7 @@
   data-anchor="anchor-${title2}"
   class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}"
   id="fragment-${view/id}">
-   <div class="container">
+   <div class="container margin-10">
        <div class="info_pre">
            <h3 class="pretext ${view/data/color2}" tal:condition="title1|None">
                ${view/data/title1}
@@ -13,7 +13,7 @@
                ${title2}
            </h1>
        </div>
-       <div class="info_button">
+       <div class="info_button margin-0">
            <div class="button btn btn-primary ${view/data/color4}">
              <a href="${view/data/url}" class=" ${view/data/color5}">${view/data/buttontext}</a>
            </div>

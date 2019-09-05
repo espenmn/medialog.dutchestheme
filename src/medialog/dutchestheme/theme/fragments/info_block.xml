@@ -14,12 +14,12 @@
   </field>
   <field name="title2" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Title</title>
   </field>
   <field name="buttontext" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <default>MORE INFO</default>
     <title>Buttontext</title>
   </field>
@@ -30,7 +30,7 @@
   </field>
   <field name="style" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Style</title>
       <values>
         <element>center-style</element>
@@ -44,8 +44,7 @@
     </field>
   <field name="color1" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
-      <default>plone-background</default>
+      <required>False</required>
       <title>Background color</title>
       <values>
         <element>grey-background</element>
@@ -62,8 +61,8 @@
     </field>
     <field name="color2" type="zope.schema.Choice">
         <description/>
-        <required>True</required>
-        <title>Color 2</title>
+        <required>False</required>
+        <title>Color small title</title>
         <values>
           <element>white</element>
           <element>black</element>
@@ -78,8 +77,8 @@
       </field>
       <field name="color3" type="zope.schema.Choice">
           <description/>
-          <required>True</required>
-          <default>white</default>
+          <required>False</required>
+
           <title>Title color</title>
           <values>
             <element>black</element>
@@ -95,9 +94,9 @@
         </field>
         <field name="color4" type="zope.schema.Choice">
             <description/>
-            <required>True</required>
+            <required>False</required>
             <title>Button Color</title>
-            <default>plone-background-3</default>
+
             <values>
                 <element>grey-background</element>
                 <element>black-background</element>
@@ -113,8 +112,8 @@
         </field>
         <field name="color5" type="zope.schema.Choice">
             <description/>
-            <required>True</required>
-            <default>black</default>
+            <required>False</required>
+
             <title>Button text color</title>
             <values>
               <element>black</element>

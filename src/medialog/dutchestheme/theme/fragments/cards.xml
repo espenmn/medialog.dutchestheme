@@ -18,6 +18,13 @@
       <title>Keyword</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
  </field>
+ <field name="max_chars" type="zope.schema.Int">
+       <description>Max characters of description</description>
+       <required>False</required>
+       <title>Max Description Length</title>
+       <min>0</min>
+       <default>500</default>
+ </field>
  <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale)</description>
      <required>True</required>
@@ -49,7 +56,7 @@
 </field>
 <field name="color1" type="zope.schema.Choice">
         <description/>
-        <required>True</required>
+        <required>False</required>
         <title>Bautton color</title>
         <values>
           <element>grey-background</element>

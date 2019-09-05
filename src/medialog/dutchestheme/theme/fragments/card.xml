@@ -8,7 +8,7 @@
   </field>
   <field name="description" type="zope.schema.Text">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Description</title>
   </field>
   <field name="linktext" type="zope.schema.TextLine">

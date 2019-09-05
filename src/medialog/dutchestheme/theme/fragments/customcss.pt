@@ -5,7 +5,8 @@
               color1    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color1']);
               color2    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color2']);
               color3    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color3']);
-              iconset   python: str(context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset'])">
+              iconset   python: str(context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']);
+              override  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.enable_overrides'])">
     <style>
         option[value=custom-color1], .custom-color1 {color: #${color1} !important}
         option[value=custom-color2], .custom-color2 {color: #${color2} !important}
@@ -14,9 +15,35 @@
         option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
         option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
     <div tal:replace="structure extra_css"/>
+
+    <tal:override tal:condition="override"
+        tal:define="navlink_color     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_color']);
+                    nav_background    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.nav_background']);
+                    navlink_hover     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_hover']);
+                    navlink_visited   python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_visited']);
+                    footer_background python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footer_background']);
+                    footerlink_color  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_color']);
+                    footer_color  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footer_color']);
+                    footerlink_hover  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_hover']);
+                    heading_font      python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.heading_font']);
+                    body_font         python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.body_font']);
+                    footerlink_visited python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_visited']);">
+
+        nav.plone-navbar { background: #${nav_background}}
+        nav.plone-navbar a {color: #${navlink_color} }
+        nav.plone-navbar a:hover, nav.plone-navbar a:selected  {background: #${navlink_hover} }
+        nav.plone-navbar a:visited {background: #${navlink_visited} }
+        footer#portal-footer-wrapper { background: #${footer_background}; color: #${footer_color} }
+        footer#portal-footer-wrapper a {color: #${footerlink_color} }
+        footer#portal-footer-wrapper a:visited {color: #${footerlink_visited} }
+        footer#portal-footer-wrapper a:hover {color: #${footerlink_hover} }
+    </tal:override>
+
     </style>
     <link rel="stylesheet" tal:condition="ext_css" href="${ext_css}" />
     <tal:replace tal:condition="python: iconset != 'fontawesome'"
         tal:replace="structure context/@@fontload"></tal:replace>
+
+
 </tal:define>
 </div>

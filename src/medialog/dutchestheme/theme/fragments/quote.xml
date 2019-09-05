@@ -14,7 +14,7 @@
   </field>
     <field name="quoter" type="zope.schema.TextLine">
       <description>Said by who …</description>
-      <required>True</required>
+      <required>False</required>
       <title>Quoter</title>
   </field>
 </schema>

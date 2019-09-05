@@ -1,15 +1,15 @@
 <div class="card"
 	tal:define="card_linktext view/data/linktext|None;
-				card_link view/load_item">
+				card_link view/load_item;">
 		<img class="img-inline padding-0 margin-0" alt="Thumbnail First"
 			src="${view/item_url}/@@images/image/${view/data/image_size}" />
 
 		<div class="card-block">
-		<h3 class="card-title">
-					${view/data/title|None}
+		<h3 class="card-title" tal:condition="view/data/title|None">
+					${view/data/title}
 		</h3>
-		<p class="card-text">
-				 ${view/data/description|None}
+		<p class="card-text" tal:condition="view/data/description|None">
+				 ${view/data/description}
 		</p>
 		<p>
 			<a class="btn btn-primary" href="${view/item_url}">${view/data/linktext|None}</a>
@@ -21,4 +21,3 @@
             }
 		</style>
 </div>
- 

@@ -8,9 +8,11 @@
     i18n:domain="medialog.dutchestheme">
 <div class="feature-item" id="fragent-${view/id}"
     tal:define="family_css view/family_css;
-        description view/data/description">
-	<i class="${view/data/color1} ${family_css} ${view/data/iconfield}"></i>
-	<h2 class="${view/data/color1}">${view/data/title}</h2>
+        iconfield view/data/iconfield|None;
+        description view/data/description|None;
+        title view/data/title|None">
+	<i class="${view/data/color1} ${family_css} ${iconfield}"></i>
+	<h2 tal:condition="title" class="${view/data/color1}">${title}</h2>
 	<p tal:condition="description" class="${view/data/color2}">${description}</p>
 </div>
 <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">

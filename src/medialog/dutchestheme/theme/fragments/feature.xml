@@ -8,14 +8,14 @@
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
   <field name="iconfield" type="zope.schema.TextLine"
-      form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget"> 
+      form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
     <description/>
     <required>True</required>
     <title>Icon</title>
   </field>
   <field name="title" type="zope.schema.TextLine">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Tittel</title>
   </field>
   <field name="description" type="zope.schema.Text">
@@ -25,7 +25,7 @@
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Header and Icon color</title>
     <values>
       <element>black</element>
@@ -41,7 +41,7 @@
   </field>
   <field name="color2" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Description color</title>
       <values>
         <element>black</element>
