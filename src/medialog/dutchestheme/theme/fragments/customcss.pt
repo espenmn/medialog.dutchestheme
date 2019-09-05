@@ -1,4 +1,5 @@
 <div  id="customcss">
+
 <tal:define
   tal:define="extra_css python: context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.extra_css'];
               ext_css   python: context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.external_style'];
@@ -6,7 +7,14 @@
               color2    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color2']);
               color3    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color3']);
               iconset   python: str(context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']);
+              body_font         python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.body_font']);
+              heading_font      python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.heading_font']);
               override  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.enable_overrides'])">
+
+    <tal:check tal:condition="python: heading_font == 'Montserrat, sans-serif'">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    </tal:check>
+
     <style>
         option[value=custom-color1], .custom-color1 {color: #${color1} !important}
         option[value=custom-color2], .custom-color2 {color: #${color2} !important}
@@ -14,6 +22,7 @@
         option[value=custom-background1], .custom-background1 {background-color: #${color1} !important}
         option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
         option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
+                @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
     <div tal:replace="structure extra_css"/>
 
     <tal:override tal:condition="override"
@@ -25,8 +34,6 @@
                     footerlink_color  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_color']);
                     footer_color  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footer_color']);
                     footerlink_hover  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_hover']);
-                    heading_font      python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.heading_font']);
-                    body_font         python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.body_font']);
                     footerlink_visited python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_visited']);">
 
         nav.plone-navbar { background: #${nav_background}}
@@ -37,6 +44,7 @@
         footer#portal-footer-wrapper a {color: #${footerlink_color} }
         footer#portal-footer-wrapper a:visited {color: #${footerlink_visited} }
         footer#portal-footer-wrapper a:hover {color: #${footerlink_hover} }
+
         <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font}; font-weight: normal}</tal:con>
         <tal:con tal:condition="python: heading_font != 'None'">h1, h2, h3, h4, h5, h6 { font-family: ${heading_font}; font-weight: normal}</tal:con>
     </tal:override>

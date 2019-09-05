@@ -138,6 +138,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
                 '"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif',
                 'Georgia, "Times New Roman", Times, serif',
                 '"Courier New", Courier, mono',
+                'Montserrat, sans-serif',
                 ],
         required=False,
     )
