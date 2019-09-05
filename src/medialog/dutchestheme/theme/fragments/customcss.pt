@@ -25,7 +25,7 @@
                 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
     <div tal:replace="structure extra_css"/>
 
-    <tal:override tal:condition="override"
+    <tal:override tal:condition="python: override == 'True'"
         tal:define="navlink_color     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_color']);
                     nav_background    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.nav_background']);
                     navlink_hover     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_hover']);
@@ -45,8 +45,9 @@
         footer#portal-footer-wrapper a:visited {color: #${footerlink_visited} }
         footer#portal-footer-wrapper a:hover {color: #${footerlink_hover} }
 
-        <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font}; font-weight: normal}</tal:con>
-        <tal:con tal:condition="python: heading_font != 'None'">h1, h2, h3, h4, h5, h6 { font-family: ${heading_font}; font-weight: normal}</tal:con>
+        <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font}; font-weight: normal; }</tal:con>
+        <tal:con tal:condition="python: heading_font != 'None'">h1, h2, h3, h4, h5, h6 { font-family: ${heading_font};}
+        </tal:con>
     </tal:override>
 
     </style>

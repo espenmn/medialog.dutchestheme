@@ -13,15 +13,15 @@
     <value key="enable_overrides">False</value>
     <value key="heading_font"></value>
     <value key="body_font"></value>
-    <value key="nav_background"></value>
+    <value key="nav_background">000000</value>
     <value key="navlink_color"></value>
-    <value key="navlink_hover"></value>
-    <value key="navlink_visited"></value>
-    <value key="footer_background"></value>
+    <value key="navlink_hover">111111</value>
+    <value key="navlink_visited">222222</value>
+    <value key="footer_background">000000</value>
     <value key="footer_color"></value>
-    <value key="footerlink_color"></value>
-    <value key="footerlink_hover"></value>
-    <value key="footerlink_visited"></value>
+    <value key="footerlink_color">fffbd3</value>
+    <value key="footerlink_hover">feedb0</value>
+    <value key="footerlink_visited">fffbd3</value>
 	</records>
 
 	<records prefix="plone.bundles/imagesloaded-js"
