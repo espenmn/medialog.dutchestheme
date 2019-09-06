@@ -24,6 +24,7 @@
 	 <xi:include href="++theme++dutchestheme/default.xml"/>
 	</rules>
 
+
   <rules if="$spot">
 	 <xi:include href="++theme++dutchestheme/spot.xml"/>
 	</rules>

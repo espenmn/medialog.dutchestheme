@@ -7,12 +7,12 @@
               color2    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color2']);
               color3    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.color3']);
               iconset   python: str(context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']);
-              body_font         python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.body_font']);
-              heading_font      python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.heading_font']);
+              font_url  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.font_load_url']);
               override  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.enable_overrides'])">
 
-    <tal:check tal:condition="python: heading_font == 'Montserrat, sans-serif'">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <tal:check >
+      <link href="${font_url}" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
     </tal:check>
 
     <style>
@@ -22,11 +22,12 @@
         option[value=custom-background1], .custom-background1 {background-color: #${color1} !important}
         option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
         option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
-                @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
     <div tal:replace="structure extra_css"/>
 
     <tal:override tal:condition="python: override == 'True'"
         tal:define="navlink_color     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_color']);
+                    body_font         python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.body_font']);
+                    heading_font      python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.heading_font']);
                     nav_background    python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.nav_background']);
                     navlink_hover     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_hover']);
                     navlink_visited   python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_visited']);

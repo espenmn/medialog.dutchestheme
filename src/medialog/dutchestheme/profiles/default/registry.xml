@@ -22,6 +22,7 @@
     <value key="footerlink_color">fffbd3</value>
     <value key="footerlink_hover">feedb0</value>
     <value key="footerlink_visited">fffbd3</value>
+    <value key="font_load_url" key_type="field.TextLine"></value>
 	</records>
 
 	<records prefix="plone.bundles/imagesloaded-js"

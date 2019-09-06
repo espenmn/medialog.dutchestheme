@@ -63,6 +63,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
             'enable_overrides',
             'heading_font',
             'body_font',
+            'font_load_url',
             'nav_background',
             'navlink_color',
             'navlink_hover',
@@ -76,7 +77,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
 
     style = schema.Choice(
         title=_(u'Style'),
-        values=['blue', 'dutchesblue', 'ploneconf', 'red', 'rood', 'scheme1', 'greyish', 'orange', 'paragraf'],
+        values=['dutchesblue', 'blue', 'ploneconf', 'red', 'rood', 'scheme1', 'greyish', 'orange', 'paragraf', 'childtheme'],
         required=False,
     )
 
@@ -132,24 +133,19 @@ class IMedialogDutchesThemeSettings(model.Schema):
         default=False,
     )
 
-    heading_font = schema.Choice(
+    heading_font = schema.TextLine(
         title=_(u'Heading font'),
-        values=['"Lucida Grande", Lucida, Verdana, sans-serif',
-                '"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif',
-                'Georgia, "Times New Roman", Times, serif',
-                '"Courier New", Courier, mono',
-                'Montserrat, sans-serif',
-                ],
         required=False,
     )
 
-    body_font = schema.Choice(
+    body_font = schema.TextLine(
         title=_(u'Body font'),
-        values=['"Lucida Grande", Lucida, Verdana, sans-serif',
-                '"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif',
-                'Georgia, "Times New Roman", Times, serif',
-                '"Courier New", Courier, mono',
-                ],
+        required=False,
+    )
+
+    font_load_url=schema.TextLine(
+        title=_(u"Font URL"),
+        description=u"For example: https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap",
         required=False,
     )
 

@@ -20,6 +20,12 @@
       />
 
   <plone:static
+      directory="childtheme"
+      type="theme"
+      name="childtheme"
+  />
+
+  <plone:static
       directory="layouts"
       name="mosaic_layouts"
       type="contentlayout"
