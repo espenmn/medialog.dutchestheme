@@ -46,7 +46,7 @@
         footer#portal-footer-wrapper a:visited {color: #${footerlink_visited} }
         footer#portal-footer-wrapper a:hover {color: #${footerlink_hover} }
 
-        <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font}; font-weight: normal; }</tal:con>
+        <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font};}</tal:con>
         <tal:con tal:condition="python: heading_font != 'None'">h1, h2, h3, h4, h5, h6 { font-family: ${heading_font};}
         </tal:con>
     </tal:override>
