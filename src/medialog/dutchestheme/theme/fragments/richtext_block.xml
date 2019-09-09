@@ -14,7 +14,7 @@
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Border color</title>
     <values>
       <element>black</element>
@@ -30,7 +30,7 @@
   </field>
   <field name="color2" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Text color</title>
       <values>
         <element>black</element>
@@ -46,7 +46,7 @@
   </field>
   <field name="color3" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Background color</title>
     <values>
       <element>grey-background</element>
@@ -68,14 +68,16 @@
         <source>collective.themefragments.tiles.CatalogSource</source>
   </field>
   <field name="button" type="zope.schema.TextLine">
+    <title>Button text</title>
     <description/>
     <required>False</required>
     <title>Button</title>
   </field>
-  <field name="url" type="zope.schema.URI">
-    <description/>
+  <field name="url" type="zope.schema.TextLine" form:widget="plone.app.z3cform.widget.LinkFieldWidget">
+    <description i18n:translate="description_linktype_url">The link is used almost verbatim, relative links become absolute and the strings "${navigation_root_url}" and "${portal_url}" get replaced with the real navigation_root_url or portal_url. If in doubt which one to use, please use navigation_root_url.
+    </description>
+    <title i18n:translate="">URL</title>
     <required>False</required>
-    <title>Link URL</title>
   </field>
-  </schema>
+ </schema>
 </model>

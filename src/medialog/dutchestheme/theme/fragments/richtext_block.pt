@@ -1,13 +1,16 @@
-<section class="richtext_block ${view/data/color1} 
+<section class="richtext_block ${view/data/color1}
             ${view/data/color3} padding-20" id="fragment-${view/id}"
-            style="background-image: url(${view/background_image|None})">
+            style="background-image: url(${view/background_image|None})"
+            tal:define="line_url view/get_url">
    <div class="container ${view/data/color2}">
     <tal:block define="value nocall:view/data/text|nothing;
                    output_relative_to nocall:value/@@output_relative_to|nothing"
                tal:condition="output_relative_to"
                tal:content="structure python:output_relative_to(context)" />
     <div tal:condition="view/data/button">
-       <a class="btn btn-primary plone-link-color" href="${view/data/url}">
+       <a class="btn btn-primary plone-link-color"
+         href="${line_url}"
+         tal:attributes="href line_url">
          ${view/data/button}
        </a>
     </div>
