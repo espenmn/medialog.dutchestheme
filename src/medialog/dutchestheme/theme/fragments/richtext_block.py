@@ -11,8 +11,8 @@ def background_image(self):
 def get_url(self):
     url = self.data['url']
     if url.startswith('${portal_url}'):
-        a, b, c = url.split('/')
-        url = '{0}/{1}'.format(b, c)
+        spl_url =  (url.split('/'))[1:]
+        url = '/'.join(spl_url)
         context_state = self.context.restrictedTraverse(
             '@@plone_context_state'
         )
