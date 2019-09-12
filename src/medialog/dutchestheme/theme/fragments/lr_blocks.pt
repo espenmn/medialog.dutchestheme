@@ -7,10 +7,10 @@
                 color1 view/data/color1;
                 color2 view/data/color2;
                 load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or ''"
-          class="lrblock ${color1}">
+          class="lrblock">
 
   <tal:repeat tal:repeat="item items">
-    <div class="container flex padding-0 ${css_class} "
+    <div class="container flex padding-0 ${css_class} ${color1}"
         tal:define="title item/title;
         item_url item/getURL|item/absolute_url">
         <div class="half bodytext ${color2} padding-40">
