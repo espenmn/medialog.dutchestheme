@@ -2,6 +2,7 @@
 	http://localhost:8086/Plone/++theme++dutchestheme/css/lr_block.css
 	http://localhost:8086/Plone/afgeronde-restauraties/++theme++dutchestheme/css/lr_block.css
 	http://localhost:8888/Ecternal/++theme++dutchestheme/css/lr_block.css
+	http://xweb14d.plana.dk:9080/Plone3/++theme++dutchestheme/css/lr_block.css
 */
 
 div.container.flex.padding-0.left {
@@ -78,10 +79,19 @@ div.flex.left-right:nth-child(odd){
 
 div.flex.left-right:nth-child(even){
 	 background: white;
-	 padding-top: 3em !important;
-	 padding-bottom: 3em !important;
 }
 
-.black-background div.flex.left-right:nth-child(odd) .black {
+div.flex.black-background.left-right:nth-child(odd) div.half.bodytext.black  {
 	color:  white !important;
+}
+
+div.flex.black-background.left-right:nth-child(odd)   div.half.bodytext.black.padding-40 h2,
+div.flex.black-background.left-right:nth-child(odd)   div.half.bodytext.black.padding-40 h4 {
+	color:  white !important;
+
+}
+
+div.flex.black-background.left-right:nth-child(even)   div.half.bodytext  {
+	background: white !important;
+
 }
