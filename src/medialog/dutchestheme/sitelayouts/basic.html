@@ -1,6 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    lang="en"
+    i18n:domain="medialog.dutchestheme">
+
+<head tal:define="style python: context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.style'];">
+
+  <link href="++theme++dutchestheme/less/${style}/theme.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link data-tile="./@@plone.app.standardtiles.headtitle"/>
   <link data-tile="./@@plone.app.standardtiles.stylesheets"/>
