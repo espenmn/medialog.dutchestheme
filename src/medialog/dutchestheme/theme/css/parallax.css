@@ -18,9 +18,9 @@ section.parallax-background a.btn {
 div.p-text-block.default,
 div.p-text-block.centered ,
 div.p-text-block.box {
-	width: 35%;
-	min-width: 450px;
-	margin-left: 90px !important; 
+	width: 450px;
+	max-width: 92%;
+	margin-left: 4% !important; 
 	padding: 2em;
 	background: white;
 	opacity: 0.95;
