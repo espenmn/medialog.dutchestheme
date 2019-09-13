@@ -1,0 +1,22 @@
+
+<div tal:define="p_image view/one_image;
+    item_url p_image/getURL|item/absolute_url|None" 
+    class="parallax-img parallax-touch" style="min-height: ${view/data/height}vh; background-image: url('${item_url}');">
+</div>
+
+
+<style>
+.parallax-img {
+		position: relative;
+		opacity: 1.0;
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		margin-bottom: 20px;
+	  }
+</style>
+ 
