@@ -22,7 +22,7 @@
     </field>
     <field name="color2" type="zope.schema.Choice">
     <description>Blends with opacity settings</description>
-    <required>True</required>
+    <required>False</required>
     <title>Background color</title>
     <default>white-background</default>
     <values>
@@ -55,7 +55,7 @@
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
-    <required>True</required>
+    <required>False</required>
     <title>Text Color</title>
     <values>
       <element>black</element>
@@ -67,6 +67,17 @@
       <element>custom-color1</element>
       <element>custom-color2</element>
       <element>custom-color3</element>
+    </values>
+  </field>
+
+  <field name="style" type="zope.schema.Choice">
+    <description/>
+    <required>False</required>
+    <title>Layout style</title>
+    <values>
+      <element>default</element>
+      <element>centered</element>
+      <element>box</element>
     </values>
   </field>
 
