@@ -34,11 +34,14 @@
 
 <div class="mosaic-grid-row">
   <div class="mosaic-width-full">
+    <div id="portal-mainnavigation">
+      <div data-tile="./@@plone.app.standardtiles.global_sections"></div>
+    </div>
     <header id="portal-top">
-      <div id="portal-header">
+      <div id="portal-header" class="container">
         <div data-tile="./@@plone.app.standardtiles.languageselector"></div>
         <div data-tile="./@@plone.app.standardtiles.logo"></div>
-        <div data-tile="./@@plone.app.standardtiles.searchbox"></div>
+
       </div>
       <div data-tile="./@@plone.app.standardtiles.anontools"></div>
     </header>
@@ -57,6 +60,7 @@
   <div class="mosaic-width-full">
     <aside id="global_statusmessage" data-slots="&gt; global_statusmessage">
       <div data-tile="./@@plone.app.standardtiles.global_statusmessage"></div>
+              <div data-tile="./@@plone.app.standardtiles.searchbox"></div>
     </aside>
   </div>
 </div>
@@ -72,7 +76,7 @@
 
 <div class="mosaic-grid-row">
   <div class="mosaic-width-full">
-    <article id="portal-column-content">
+    <article id="portal-column-content" class="container">
       <article id="content" data-panel="content" data-slots="content">
         <div data-slots="body > header *">
           <header data-slots="main > * content-core">
@@ -96,7 +100,9 @@
 <div class="mosaic-grid-row">
   <div class="mosaic-width-full">
     <footer id="portal-footer-wrapper">
+      <div class="container">
       <div data-tile="./@@plone.app.standardtiles.portletmanager/footer-portlets?manager=plone.footerportlets"></div>
+    </div>
     </footer>
   </div>
 </div>

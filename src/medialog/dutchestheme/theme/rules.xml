@@ -19,11 +19,13 @@
       <xsl:if test="//section[@id='fragment-left-portlets'] and //section[@id='fragment-right-portlets']">col-xs-12 col-sm-12</xsl:if>
   </xsl:variable>
 
+  <rules if="$diazo_off">
+    <xi:include href="++theme++dutchestheme/disabled.xml"/>
+	</rules>
 
   <rules if="$default">
 	 <xi:include href="++theme++dutchestheme/default.xml"/>
 	</rules>
-
 
   <rules if="$spot">
 	 <xi:include href="++theme++dutchestheme/spot.xml"/>
@@ -65,13 +67,13 @@
     <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
   </after>
 
-  <replace css:theme="#customcss" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
+  <after css:theme="body" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
 
   <!-- Footer -->
   <xsl:variable name="footer_portlets" select="//footer[@id='portal-footer-wrapper']//div[@class='portletWrapper']/*[not(contains(@id,'portal-colophon')) and not(contains(@id,'portal-footer-signature')) and not(contains(@class,'portletActions'))]"></xsl:variable>
   <xsl:variable name="footer_portlets_count" select="count($footer_portlets)"></xsl:variable>
 
-
+<rules if="$diazo_on">
   <!-- Replace footer information with Plone version. -->
   <replace
       css:theme-children="#portal-footer .copyright > div"
@@ -145,5 +147,5 @@
       css:theme-children="html body"
       content="//footer[@id='portal-footer-wrapper']/*[not(@class='row')]"
       />
-
+</rules>
 </rules>

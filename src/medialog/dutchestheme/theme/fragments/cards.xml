@@ -25,6 +25,12 @@
        <min>0</min>
        <default>500</default>
  </field>
+ <field name="buttontext" type="zope.schema.TextLine">
+       <description>Leave empty for no button</description>
+       <required>False</required>
+       <title>Buttontext</title>
+       <default>Read more</default>
+ </field>
  <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale)</description>
      <required>True</required>
@@ -57,7 +63,7 @@
 <field name="color1" type="zope.schema.Choice">
         <description/>
         <required>False</required>
-        <title>Bautton color</title>
+        <title>Button color</title>
         <values>
           <element>grey-background</element>
           <element>black-background</element>

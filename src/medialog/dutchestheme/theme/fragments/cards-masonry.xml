@@ -78,7 +78,7 @@
 <field name="color1" type="zope.schema.Choice">
         <description/>
         <required>False</required>
-        <title>Bautton color</title>
+        <title>Button color</title>
         <values>
           <element>grey-background</element>
           <element>black-background</element>
