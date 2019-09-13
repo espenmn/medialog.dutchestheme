@@ -10,9 +10,9 @@
     <div tal:condition="folder_url">
   		<div class="center wow fadeInDown animated container servicetext"
            style="visibility: visible; animation-name: fadeInDown;">
-          <h2 class="${view/data/color2}" tal:content="context/?folder_url/Title|None" />
+          <h2 class="${view/data/color2}" tal:content="context/?folder_url/Title|None"/>
           <p class="lead ${view/data/color2}"
-                	tal:content="context/?folder_url/Description|None"  />
+                	tal:content="context/?folder_url/Description|None"/>
       </div>
       <div class="service-items container">
 				<div tal:repeat="item context/?folder_url/@@contentlisting|None"

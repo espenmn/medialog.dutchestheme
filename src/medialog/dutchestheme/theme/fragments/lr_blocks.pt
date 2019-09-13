@@ -10,7 +10,7 @@
           class="lrblock">
 
   <tal:repeat tal:repeat="item items">
-    <div class="container flex padding-0 ${css_class} ${color1} margin-20-0"
+    <div class="container flex padding-0 ${css_class} ${color1} margin-40-0"
         tal:define="title item/title;
         item_url item/getURL|item/absolute_url">
         <div class="half bodytext ${color2} padding-40">

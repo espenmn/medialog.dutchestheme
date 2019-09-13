@@ -2,7 +2,7 @@
 	tal:define="card_linktext view/data/linktext|None;
 				card_link view/load_item;">
 		<img class="img-inline padding-0 margin-0" alt="Thumbnail First"
-			src="${view/item_url}/@@images/image/${view/data/image_size}" />
+			src="${view/item_url}/@@images/image/${view/data/image_size}"/>
 
 		<div class="card-block">
 		<h3 class="card-title" tal:condition="view/data/title|None">
@@ -20,4 +20,5 @@
                 height: auto !important;
             }
 		</style>
+	</div>
 </div>

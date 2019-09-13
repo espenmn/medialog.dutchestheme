@@ -23,7 +23,7 @@
 								    		<h1 tal:content="item/title|None" />
 												<tal:condition
 														tal:condition="exists: item/description">
-														<h3>${item/description}<h3>
+
 													</tal:condition>
 											 </div>
 			              </div>

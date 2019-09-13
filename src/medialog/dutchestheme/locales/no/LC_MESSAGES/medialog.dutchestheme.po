@@ -1,0 +1,187 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-09-13 12:49+0000\n"
+"PO-Revision-Date: 2019-09-13 15:10+0100\n"
+"Last-Translator: espen <post@medialog.no>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: no\n"
+"Language-Name: Norsk\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: medialog.dutchestheme\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: ../theme/fragments/events.pt:22
+msgid "${item/location|None}"
+msgstr ""
+
+#: ../theme/fragments/news.pt:13
+msgid "${item/portal_type}"
+msgstr ""
+
+#: ../vocabulary.py:103
+msgid "-- select fragment --"
+msgstr ""
+
+#: ../configure.zcml:47
+msgid "A configurable theme with themefragments"
+msgstr ""
+
+#: ../interfaces.py:142
+msgid "Body font"
+msgstr ""
+
+#: ../theme/fragments/countdown.pt:13
+msgid "Days"
+msgstr "Dager"
+
+#: ../configure.zcml:47 ../interfaces.py:47
+msgid "Dutchestheme"
+msgstr ""
+
+#: ../interfaces.py:131
+msgid "Enable overrides"
+msgstr ""
+
+#: ../interfaces.py:85
+msgid "External stylesheet"
+msgstr ""
+
+#: ../interfaces.py:147
+msgid "Font URL"
+msgstr ""
+
+#: ../interfaces.py:137
+msgid "Heading font"
+msgstr "Tittelfont"
+
+#: ../theme/fragments/countdown.pt:14
+msgid "Hours"
+msgstr "Timer"
+
+#: ../interfaces.py:91
+msgid "Layout Rules"
+msgstr ""
+
+#: ../interfaces.py:97
+msgid "Load CSS? Put it in your theme and disable it here"
+msgstr ""
+
+#: ../theme/fragments/countdown.pt:15
+msgid "Minutes"
+msgstr "Minutter"
+
+#: ../interfaces.py:86
+msgid "Remember to enable external files  in theming setup"
+msgstr ""
+
+#: ../theme/fragments/countdown.pt:16
+msgid "Seconds"
+msgstr "Sekunder"
+
+#: ../interfaces.py:79
+msgid "Style"
+msgstr "Stil"
+
+#. Default: "Tab text"
+#: ../interfaces.py:39
+msgid "Text"
+msgstr "Tekst"
+
+#: ../interfaces.py:61
+msgid "Theme overrides"
+msgstr ""
+
+#: ../configure.zcml:57
+msgid "Uninstall: Dutchestheme"
+msgstr ""
+
+#: ../configure.zcml:57
+msgid "Uninstalls the Plone theme package medialog.dutchestheme."
+msgstr ""
+
+#. Default: "Custom Color 1"
+#: ../interfaces.py:103
+msgid "color1"
+msgstr "Farge 1"
+
+#. Default: "Custom Color 2"
+#: ../interfaces.py:110
+msgid "color2"
+msgstr "Farge 2"
+
+#. Default: "Custom Color 3"
+#: ../interfaces.py:117
+msgid "color3"
+msgstr "Farge 3"
+
+#. Default: "Extra CSS"
+#: ../interfaces.py:124
+msgid "extra_css"
+msgstr "Ekstra CSS"
+
+#. Default: "Footer backgroundcolor"
+#: ../interfaces.py:170
+msgid "footer_background"
+msgstr "Footer backgrunnsfarge"
+
+#. Default: "Footer text color"
+#: ../interfaces.py:175
+msgid "footer_color"
+msgstr "Footer farge"
+
+#. Default: "Footerlink visited"
+#: ../interfaces.py:188
+msgid "footerlink-visited"
+msgstr ""
+
+#. Default: "Footerlink color"
+#: ../interfaces.py:180
+msgid "footerlink_color"
+msgstr ""
+
+#. Default: "Footerlink hover"
+#: ../interfaces.py:184
+msgid "footerlink_hover"
+msgstr "Footer, lenker farge mouse over"
+
+#. Default: "Choose Color"
+#: ../interfaces.py:105
+msgid "help_color"
+msgstr ""
+
+#: ../interfaces.py:126
+msgid "help_extra_css"
+msgstr ""
+
+#. Default: "Tab title"
+#: ../interfaces.py:36
+msgid "legend"
+msgstr ""
+
+#. Default: "Nav background color"
+#: ../interfaces.py:153
+msgid "nav_background_color"
+msgstr ""
+
+#. Default: "Navlink hover"
+#: ../interfaces.py:162
+msgid "navlin_hover"
+msgstr ""
+
+#. Default: "Navlink visited"
+#: ../interfaces.py:166
+msgid "navlin_visited"
+msgstr ""
+
+#. Default: "Navlink color"
+#: ../interfaces.py:158
+msgid "navlink_color"
+msgstr ""
