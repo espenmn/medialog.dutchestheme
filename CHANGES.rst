@@ -44,16 +44,13 @@ to do:
 - moved aboveportlets, just for default layout, to above portlets
 - Fixes for before after fragment for mosaic-IRichTextBehavior-text-tile
 - Add Folder Grid view for images
+- Removed a lot of required color settings if we want to do this with css
+- Fix parallax fragment
+- Add parallax image fragment
+- Add tabs fragment
+- Added settings for max characters for cards and cards masonry
+- Added translations
+- Added overrides in control panel
+- Added extra CSS setting in control panel
 
-1.1 (2019-03-30)
-------------------
 
-- Added lots of fragments
-- Added one more menu option
-
-
-1.0 (2018-05-30)
-----------------
-
-- Initial release.
-  [espenmn]
