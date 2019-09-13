@@ -1,9 +1,8 @@
 
 <div tal:define="p_image view/one_image;
     item_url p_image/getURL|item/absolute_url|None" 
-    class="parallax-img parallax-touch" style="min-height: ${view/data/height}vh; background-image: url('${item_url}');">
+    class="parallax-img parallax-touch" style="background-image: url(${item_url}); min-height: ${view/data/height}vh">
 </div>
-
 
 <style>
 .parallax-img {
@@ -17,6 +16,8 @@
 		-o-background-size: cover;
 		background-size: cover;
 		margin-bottom: 20px;
-	  }
+		width: 100vw;
+		margin-left: calc((50vw - 50%)/-1);
+}
 </style>
  
