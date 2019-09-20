@@ -7,7 +7,7 @@
 
     <browser:page
     	for="*"
-    	name="mobile_site_map"
+    	name="mobile_sitemap"
     	class=".menu_sitemap.SitemapView"
     	template="mobile_sitemap.pt"
     	permission="zope.Public"
@@ -17,7 +17,7 @@
 
     <browser:page
     	for="*"
-    	name="visual-sitemap"
+    	name="visual_sitemap"
     	class=".visual_sitemap.VisualSitemapView"
     	template="visual_sitemap.pt"
     	permission="zope.Public"
@@ -27,7 +27,7 @@
 
     <browser:page
     	for="*"
-    	name="menu-sitemap"
+    	name="menu_sitemap"
     	class=".menu_sitemap.SitemapView"
     	template="menu_sitemap.pt"
     	permission="zope.Public"
@@ -37,7 +37,7 @@
 
     <browser:page
     	for="*"
-    	name="left-sitemap"
+    	name="left_sitemap"
     	class=".left_sitemap.SitemapView"
     	template="left_sitemap.pt"
     	permission="zope.Public"

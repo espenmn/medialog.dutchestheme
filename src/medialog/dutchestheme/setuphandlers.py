@@ -5,6 +5,10 @@ from plone import api
 import os
 #from plone.app.textfield.value import RichTextValue
 from plone.namedfile.file import NamedBlobImage
+from zope.interface import noLongerProvides
+from medialog.controlpanel.interfaces import \
+    IMedialogControlpanelSettingsProvider
+from medialog.dutchestheme.interfaces import IMedialogDutchesThemeSettings 
 
 def post_install(context):
     """add favicons etc"""
@@ -14,6 +18,8 @@ def post_install(context):
 def uninstall(context):
     """Uninstall script"""
     # Do something at the end of the uninstallation of this package.
+    noLongerProvides(IMedialogDutchesThemeSettings, IMedialogControlpanelSettingsProvider)
+
 
 def _create_content(portal):
     """Lets create the icons and the user can customize them"""

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <portletmanager
+   name="medialog.dutchestheme.belowportlets"
+   type="medialog.dutchestheme.interfaces.IBelow"
+   remove="true"
+   />
+
+ <portletmanager
+   name="medialog.dutchestheme.aboveportlets"
+   type="medialog.dutchestheme.interfaces.IAbove"
+   remove="true"
+   />
+
+</portlets>
