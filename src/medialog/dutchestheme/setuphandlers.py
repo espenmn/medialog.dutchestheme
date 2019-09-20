@@ -6,14 +6,16 @@ import os
 #from plone.app.textfield.value import RichTextValue
 from plone.namedfile.file import NamedBlobImage
 from zope.interface import noLongerProvides
+from zope.interface import alsoProvides
 from medialog.controlpanel.interfaces import \
     IMedialogControlpanelSettingsProvider
-from medialog.dutchestheme.interfaces import IMedialogDutchesThemeSettings 
+from medialog.dutchestheme.interfaces import IMedialogDutchesThemeSettings
 
 def post_install(context):
     """add favicons etc"""
     portal = api.portal.get()
     _create_content(portal)
+    alsoProvides(IMedialogDutchesThemeSettings, IMedialogControlpanelSettingsProvider)
 
 def uninstall(context):
     """Uninstall script"""
