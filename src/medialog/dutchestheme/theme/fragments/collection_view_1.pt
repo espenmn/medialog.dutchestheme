@@ -5,10 +5,11 @@
              show_csubject python: view.csubject;
              show_ctype  view/ctype"
              id="fragment-${view/id}">
-<div class="collection_item margin-10" tal:repeat="item items">
+
+<div tal:repeat="item items" class="collection_item margin-10 ${item/Type}" >
         <div tal:define="item_url item/getURL|item/absolute_url">
         <p class="${item/portal_type} portal-type white black-background">
-           <span class="sans-serif" i18n:translate="" tal:condition="show_ctype">
+           <span class="sans-serif filterme" i18n:translate="" tal:condition="show_ctype">
                 ${item/portal_type}</span>
             <span class="sans-serif" i18n:translate="" tal:condition="show_csubject">
                 <tal:repeat tal:repeat="subject item/subject">  /  ${subject}</tal:repeat>
@@ -29,6 +30,7 @@
         <p class="description padding-0-20" tal:condition="item/Description">${item/Description}</p>
      </div>
 </div>
+
 
  <style>
 #fragment-${view/id} .portal-type {
@@ -53,4 +55,17 @@
     height: auto;
 }
  </style>
+
+
+ <!--script>require([
+   'jquery',
+   ], function(Base) {
+     'use strict';
+     $( "span.filterme" ).click(function() {
+      var value = $(this).html();
+      alert(value);
+      $(".collection_item").filter( ".Nyhetsartikkel" ).addClass("hidden");
+      });
+   });
+ </script-->
  </section>
