@@ -16,6 +16,7 @@
     </tal:check>
 
     <style>
+      div.mosaic-grid-row-fluid {position: relative; width: 100vw; margin-left: calc((50vw - 50%)/-1) !important; }
         option[value=custom-color1], .custom-color1 {color: #${color1} !important}
         option[value=custom-color2], .custom-color2 {color: #${color2} !important}
         option[value=custom-color3], .custom-color3 {color: #${color3} !important}
