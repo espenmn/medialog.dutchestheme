@@ -155,7 +155,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
     )
 
     navlink_color = schema.Text(
-        title=_('navlink_color', default=u'Navlink color'),
+        title=_('navlink_color', default=u'Navlink background color'),
         required=False,
     )
     navlink_hover = schema.Text(
@@ -163,7 +163,7 @@ class IMedialogDutchesThemeSettings(model.Schema):
         required=False,
     )
     navlink_visited = schema.Text(
-        title=_('navlin_visited', default=u'Navlink visited'),
+        title=_('navlin_visited', default=u'Navlink visited text color'),
         required=False,
     )
     footer_background = schema.Text(
