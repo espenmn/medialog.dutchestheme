@@ -41,6 +41,12 @@
       css:content="#portal-logo"
       />
 
+  <!-- Add language-selecto -->
+  <replace css:theme="#portal-languageselector"
+         css:content="#portal-languageselector"
+  />
+
+
   <!-- Add searchbox -->
   <replace css:theme="#portal-searchbox"
       css:content="#portal-searchbox"
