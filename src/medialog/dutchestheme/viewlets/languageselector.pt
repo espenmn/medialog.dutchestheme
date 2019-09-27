@@ -18,12 +18,13 @@
            tal:attributes="href string:${here_url}?set_language=${code};
                            title name"
             ><tal:flag condition="showflag">
-                <img alt=""
-                     tal:attributes="src string:${portal_url}${flag};
-                                     alt name;
-                                     title name;" />
+                <img width="30px"
+                     height="30px"
+                     alt="${name}"
+                     title="${name}"
+                     src="++theme++dutchestheme/flag/${short_name}.png" />
             </tal:flag
-            > <span>${short_name}</span
+            > <span class="sans-serif">${short_name}</span
         ></a>
     </li>
     </tal:language>
