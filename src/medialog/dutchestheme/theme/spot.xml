@@ -40,6 +40,12 @@
   <replace css:theme="#portal-logo"
       css:content="#portal-logo"
       />
+      
+  <!-- Add language-selecto -->
+  <replace css:theme="#portal-languageselector"
+         css:content="#portal-languageselector"
+  />
+
 
   <!-- Portal Navigation -->
   <replace css:theme-children="#portal-globalnav-wrapper" css:content-children="#portal-globalnav-wrapper > .container" method="raw" />
