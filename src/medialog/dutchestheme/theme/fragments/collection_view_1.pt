@@ -6,7 +6,14 @@
              show_ctype  view/ctype"
              id="fragment-${view/id}">
 
-<div tal:repeat="item items" class="collection_item margin-10 ${item/Type}" >
+<div>
+<p class="data-filter" data-filter="Nyhetsartikkel">Nyhetsartikkel</p>
+<p class="data-filter" data-filter="Bilde">Bilde</p>
+</div>
+<tal:repeat tal:repeat="item items">
+    <div tal:define="subject item/Subject|None;
+          tags python: ' '.join(subject)"
+          class="collection_item margin-10 ${item/Type} ${tags}">
         <div tal:define="item_url item/getURL|item/absolute_url">
         <p class="${item/portal_type} portal-type white black-background">
            <span class="sans-serif filterme" i18n:translate="" tal:condition="show_ctype">
@@ -29,8 +36,8 @@
         </h3>
         <p class="description padding-0-20" tal:condition="item/Description">${item/Description}</p>
      </div>
-</div>
-
+   </div>
+</tal:repeat>
 
  <style>
 #fragment-${view/id} .portal-type {
@@ -57,15 +64,14 @@
  </style>
 
 
- <!--script>require([
+ <script>require([
    'jquery',
    ], function(Base) {
      'use strict';
-     $( "span.filterme" ).click(function() {
-      var value = $(this).html();
-      alert(value);
-      $(".collection_item").filter( ".Nyhetsartikkel" ).addClass("hidden");
+     $( ".data-filter" ).click(function() {
+      var value_not = ".collection_item:not(." + $(this).attr("data-filter") + ")";
+      $(".collection_item").filter( $(value_not)  ).toggle();
       });
    });
- </script-->
+ </script>
  </section>
