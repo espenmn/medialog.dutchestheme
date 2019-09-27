@@ -1,5 +1,5 @@
 <div class="count-item" id="fragment-${view/id}">
-    <span class="fa ${view/data/icon|None} black"></span>
+    <span tal:condition="view/data/icon|None" class="fa ${view/data/icon|None} black"></span>
     <h1><span class="countme count-{${view/id}">${view/data/number|None}</span> ${view/data/title|None}</h1>
     <p tal:condition="view/data/description|None">${view/data/description|None}</p>
 </div>
