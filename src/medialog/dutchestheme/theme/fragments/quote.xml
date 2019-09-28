@@ -34,5 +34,12 @@
         <element>custom-color3</element>
       </values>
    </field>
+     <field name="char" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>Quote character</title>
+      <max_length>2</max_length>
+      <default>&#8220;</default>
+   </field>
 </schema>
 </model>

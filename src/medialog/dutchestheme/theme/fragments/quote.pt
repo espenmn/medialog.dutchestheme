@@ -1,7 +1,9 @@
 <section tal:define="col view/data/color|None;
-            color python: col or '#00b9f2'">
+            color python: col or '#00b9f2';
+            char view/data/char|None;
+            charac python: char or '&#8220;';">
     <div class="quote-card">
-      <span class="quote-thing serif ${view/data/color|None}">&#8220;</span>
+      <span class="quote-thing serif ${view/data/color|None}">${charac}</span>
         <p>${view/data/quote}</p>
 
    <div class="from-person" tal:condition="view/data/quoter|None">
