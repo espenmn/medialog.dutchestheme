@@ -35,7 +35,7 @@
       </values>
    </field>
      <field name="char" type="zope.schema.TextLine">
-      <description/>
+      <description></description>
       <required>False</required>
       <title>Quote character</title>
       <max_length>2</max_length>
