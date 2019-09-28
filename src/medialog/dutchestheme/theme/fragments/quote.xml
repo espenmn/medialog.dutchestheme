@@ -17,5 +17,22 @@
       <required>False</required>
       <title>Quoter</title>
   </field>
+  <field name="color" type="zope.schema.Choice">
+      <description/>
+      <required>False</required>
+      <title>Text color</title>
+      <values>
+        <element>black</element>
+        <element>white</element>
+        <element>grey</element>
+        <element>plone-link</element>
+        <element>plone-link-2</element>
+        <element>plone-link-3</element>
+        <element>plone-link-opposite</element>
+        <element>custom-color1</element>
+        <element>custom-color2</element>
+        <element>custom-color3</element>
+      </values>
+   </field>
 </schema>
 </model>
