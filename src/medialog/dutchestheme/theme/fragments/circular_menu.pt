@@ -1,39 +1,58 @@
 <section id="fragment-circular_menu-${view/id}"
 				 class="${view/data/color3}"
 				 tal:define="items view/get_items|None;
+				 showimage view/data/show-image|None;
 				 height view/get_height|None;
+				 w_size   view/data/width|None;
+				 size python: w_size or 70;
 				 color1 view/data/color1;
 				 color2 view/data/color2;
 				 family_css view/family_css;"
 				 style= "height: ${height}px">
-<div id="circular_menu-${view/id}" tal:condition="items">
-	  <input type="checkbox" id="toggle-${view/id}" onClick="toggle();"/>
-		<label id="show-menu-${view/id}" for="toggle-${view/id}">
-		<tal:check tal:condition="items">
-					<div class="btn ${color1}">
-						<i class="${color2} ${family_css} ${view/data/menuicon}"></i>
-					</div>
-					<tal:repeat tal:repeat="item items">
-
-							<a href="${link}" class="btn ${color1} ${color2}"
-							    tal:define="mi python:item['item'];
-							                   x python:item['x'];
-							                   y python:item['y'];
-											   index python:item['index'];
-											   link python:item['obj'];"
-							     style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
-								  href="${link}" >
-									<i class="${color2} family_css ${item/iconfield|None}"></i>
-							</a>
-
-        	</tal:repeat>
-			</tal:check>
+<div id="circular_menu-${view/id}" tal:condition="items" >
+	<input type="checkbox" id="toggle-${view/id}" onClick="toggle();"/>
+	<label id="show-menu-${view/id}" for="toggle-${view/id}">
+	<tal:check tal:condition="items">
+		<div tal:condition="not:showimage" class="btn ${color1}">
+			<i class="${color2} ${family_css} ${view/data/menuicon}"></i>
+		</div>
+		<div tal:condition="showimage" class="btn ${color1}"
+		    tal:define="linked_folder view/get_item_image;
+		    img_url linked_folder/getURL|linked_folder/absolute_url|None"
+		    style="background-image: url('${img_url}/@@images/image/preview')">
+		</div>
+		<tal:repeat tal:repeat="item items">
+            <a tal:condition="not:showimage" href="${link}" class="btn ${color1} ${color2} show-${view/data/show-on-load|None}"
+                tal:define="mi python:item['item'];
+                               x python:item['x'];
+                               y python:item['y'];
+                               index python:item['index'];
+                               link python:item['obj'];"
+                style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms'
+                href="${link}" >
+                <i class="${color2} family_css fa ${item/iconfield|None}"></i>
+            </a>
+            
+            <a tal:condition="showimage" href="${link}" class="btn ${color1} ${color2} show-${view/data/show-on-load|None}"
+                tal:define="mi python:item['item'];
+                               x python:item['x'];
+                               y python:item['y'];
+                               index python:item['index'];
+                               link python:item['obj'];"
+                style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms;
+                    background-image: url(${link}/@@images/image/preview)'
+                href="${link}" >
+            </a>         
+        </tal:repeat>
+	</tal:check>
 </div>
 <style>
 	
 #fragment-circular_menu-${view/id} {padding: 35px}
 
-#circular_menu-${view/id} input {position: absolute; display: none}
+#circular_menu-${view/id} input {
+    position: absolute; 
+    display: none}
 
 #circular_menu-${view/id} {
 	   margin: 0 auto;
@@ -43,9 +62,9 @@
 	  }
 
 #circular_menu-${view/id} .btn {
-	   width: 70px;
-	   height: 70px;
-  	 line-height: 70px;
+	   width: ${size}px;
+	   height: ${size}px;
+  	   line-height: ${size}px;
 	   font-size: 30px;
 	   border-radius: 50%;
 	   position: absolute;
@@ -56,28 +75,32 @@
 
 #circular_menu-${view/id} .btn {
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+     background-size: auto 105%;
+     background-repeat: no-repeat;
+     background-position: center center; 
      }
 
-#circular_menu-${view/id} .btn:not(:first-child) {
-	   opacity: 0;
-	   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	 }
+#circular_menu-${view/id} .btn.show-:not(:first-child),
+#circular_menu-${view/id} .btn.show-False:not(:first-child) {
+	display: none;
+}
+
 
 #circular_menu-${view/id} input#toggle-${view/id}:checked ~ #show-menu-${view/id} .btn {
-	   opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	   display: block;
 	 }
 
-	#circular_menu-${view/id} {
-			margin-top: ${view/data/radius}px;
-			margin-bottom: ${view/data/radius}px;
-	}
-	#circular_menu-${view/id} ::selection {
-		background: none; /* WebKit/Blink Browsers */
-	}
-	::-moz-selection {
-	  background: none; /* Gecko Browsers */
-	}
-
+#circular_menu-${view/id} {
+	margin-top: ${view/data/radius}px;
+	margin-bottom: ${view/data/radius}px;
+}
 	
+#circular_menu-${view/id} ::selection {
+	background: none; /* WebKit/Blink Browsers */
+}
+	
+::-moz-selection {
+	background: none; /* Gecko Browsers */
+}	
 </style>
 </section>

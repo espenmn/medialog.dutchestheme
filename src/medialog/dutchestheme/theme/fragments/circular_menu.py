@@ -1,3 +1,10 @@
+def get_item_image(self):
+    linked = self.data['linked_folder']
+    if linked:
+        folder = self.context.portal_catalog(UID=linked)
+        return folder[0]
+    return self.context
+
 def get_items(self):
     linked = self.data['linked_folder']
     radius = self.data['radius']

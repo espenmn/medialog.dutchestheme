@@ -20,6 +20,13 @@
         <title>Radius</title>
       </field>
 
+      <field name="width" type="zope.schema.Int">
+        <description/>
+        <required>True</required>
+        <title>Width / Height</title>
+        <default>70</default>
+      </field>
+      
       <field name="menuicon" type="zope.schema.TextLine"
           form:widget="medialog.iconpicker.widgets.widget.IconPickerFieldWidget">
         <description>Icon for the 'hamburger menu'</description>
@@ -88,6 +95,16 @@
             <element>custom-color2</element>
             <element>custom-color3</element>
           </values>
-        </field>
+    </field>
+    <field name="show-on-load" type="zope.schema.Bool">
+        <required>false</required>
+        <title>Show (sub) menus on load</title>
+        <description>Show all buttons without clicking</description>
+    </field>
+    <field name="show-image" type="zope.schema.Bool">
+        <required>false</required>
+        <title>Image instead of icon</title>
+        <description>Show image instead of icon</description>
+    </field>
 </schema>
 </model>
