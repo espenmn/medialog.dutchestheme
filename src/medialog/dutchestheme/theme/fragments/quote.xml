@@ -20,7 +20,7 @@
   <field name="color" type="zope.schema.Choice">
       <description/>
       <required>False</required>
-      <title>Text color</title>
+      <title>Quote character color</title>
       <values>
         <element>black</element>
         <element>white</element>
@@ -41,5 +41,10 @@
       <max_length>2</max_length>
       <default>&#8220;</default>
    </field>
+   <field name="hideborder" type="zope.schema.Bool">
+    <required>false</required>
+    <title>No border</title>
+    <description>Hide border</description>
+  </field>
 </schema>
 </model>

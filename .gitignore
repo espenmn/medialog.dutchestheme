@@ -4,3 +4,14 @@
 src/medialog.dutchestheme.egg-info/
 
 src/medialog.dutchestheme.egg-info/*
+bin
+bin/
+eggs
+eggs/
+lib/
+lib
+var
+var/
+parts
+include
+develop-eggs
