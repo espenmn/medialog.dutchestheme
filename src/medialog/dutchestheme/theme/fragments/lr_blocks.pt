@@ -1,15 +1,15 @@
 
 <section id="fragment-${view/id}"
-         tal:define="folder view/get_items|None;
-                items folder/@@contentlisting|context/@@contentlisting;
+         tal:define="folder view/get_items|view/get_item|None;
+                items folder/@@contentlisting|context/@@contentlisting|None;
                 image_size view/data/image_size;
                 css_class view/data/css_class;
                 color1 view/data/color1;
                 color2 view/data/color2;
                 load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or ''"
-          class="lrblock">
+            class="lrblock">
 
-  <tal:repeat tal:repeat="item items">
+  <tal:repeat tal:repeat="item items" tal:condition="items|None">
     <div class="container flex padding-0 ${css_class} ${color1} margin-40-0"
         tal:define="title item/title;
         item_url item/getURL|item/absolute_url">

@@ -5,10 +5,23 @@
 
 
   <!--  Input (edit) widget  -->
-  <z3c:widgetTemplate
+  <!--z3c:widgetTemplate
       mode="input"
       widget="z3c.form.browser.select.SelectWidget"
       layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
-      template="imagepicker_input.pt" />
+      template="imagepicker_input.pt" /-->
+
+  <!--  Pat related items widget  -->
+  <z3c:widgetTemplate
+      mode="input"
+      widget="medialog.dutchestheme.widgets.widgets.PickerWidget"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      template="relateditems_input.pt" />
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget="medialog.dutchestheme.widgets.widgets.FolderPickerWidget"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      template="select_folder_input.pt" />
 
 </configure>
