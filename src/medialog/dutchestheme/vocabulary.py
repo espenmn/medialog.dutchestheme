@@ -14,7 +14,18 @@ def ShowImagesVocabulary(context):
 
     if images:
         terms = [ SimpleTerm(value=img.UID, token=img.UID, title=img.Title) for img in images ]
-
     return SimpleVocabulary(terms)
 
 directlyProvides(ShowImagesVocabulary, IVocabularyFactory)
+
+
+
+def ShowFoldersVocabulary(context):
+
+    folders = api.content.find(portal_type='Folder')
+
+    if folders:
+        terms = [ SimpleTerm(value=img.UID, token=img.UID, title=img.Title) for img in folders ]
+    return SimpleVocabulary(terms)
+
+directlyProvides(ShowFoldersVocabulary, IVocabularyFactory)
