@@ -88,7 +88,7 @@
       name="medialog.dutchestheme.ShowImagesVocabulary" />
 
     <utility
-      component=".vocabulary.ShowFolderssVocabulary"
+      component=".vocabulary.ShowFoldersVocabulary"
       name="medialog.dutchestheme.ShowFoldersVocabulary" />
 
 </configure>
