@@ -7,6 +7,10 @@ from zope.i18nmessageid import MessageFactory
 
 _ = MessageFactory('medialog.dutchestheme')
 
+def format_title(folder):
+    return "{}  ...   [ {} ]".format( folder.Title, folder.getURL())
+
+
 
 def ShowImagesVocabulary(context):
 
@@ -25,7 +29,7 @@ def ShowFoldersVocabulary(context):
     folders = api.content.find(portal_type=['Folder', 'Collection'])
 
     if folders:
-        terms = [ SimpleTerm(value=folder.UID, token=folder.UID, title=folder.Title) for folder in folders ]
+        terms = [ SimpleTerm(value=folder.UID, token=folder.UID, title=format_title(folder)) for folder in folders ]
     return SimpleVocabulary(terms)
 
 directlyProvides(ShowFoldersVocabulary, IVocabularyFactory)
