@@ -3,12 +3,17 @@
 	http://localhost:8086/Plone/afgeronde-restauraties/++theme++dutchestheme/css/lr_block.css
 	http://localhost:8888/Ecternal/++theme++dutchestheme/css/lr_block.css
 	http://xweb14d.plana.dk:9080/Plone3/++theme++dutchestheme/css/lr_block.css
+	http://localhost:8052/NL/en/++theme++dutchestheme/css/lr_block.css
 */
 
 div.container.flex.padding-0.left {
 	flex-direction: row-reverse
 }
 
+.lrblock div.container.flex {
+ 
+	margin: auto !important;
+}
 
 
 
