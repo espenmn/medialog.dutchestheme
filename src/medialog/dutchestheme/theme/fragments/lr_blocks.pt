@@ -6,6 +6,7 @@
                 css_class view/data/css_class;
                 color1 view/data/color1;
                 color2 view/data/color2;
+                buttontext view/data/buttontext|None;
                 load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or ''"
             class="lrblock">
 
@@ -22,6 +23,9 @@
                   output_relative_to nocall:value/@@output_relative_to|nothing"
                   tal:condition="output_relative_to"
                   tal:content="structure python:output_relative_to(context)" />
+
+
+            <a class="${color2}" tal:condition="buttontext"  href="" >${buttontext}</a>
         </div>
         <div class="half image margin-0 padding-0"
             tal:define="obj item/getObject;

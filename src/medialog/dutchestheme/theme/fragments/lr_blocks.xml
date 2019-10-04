@@ -17,6 +17,12 @@
     <title>Alternatively choose folder here</title>
     <vocabulary>medialog.dutchestheme.ShowFoldersVocabulary</vocabulary>
 </field>
+<field name="buttontext" type="zope.schema.TextLine">
+    <description>If you add this a readmore link will be added</description>
+    <required>False</required>
+    <title>Read more text</title>
+    <default></default>
+</field>
 <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale)</description>
      <required>True</required>

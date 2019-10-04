@@ -5373,10 +5373,6 @@ fieldset[disabled] .btn-default.active {
 #portal-globalnav-wrapper {
   z-index: 10;
 }
-/* remove this if we want to add back the 'wide width' */
-#content-header div.container {
-  max-width: 1170px !important;
-}
 /* fix for mosaic padding and margin on fluid rows */
 #content div.mosaic-grid-row.mosaic-grid-row-fluid {
   padding: 0;
@@ -5455,6 +5451,9 @@ div.padding-20-0 {
 }
 .padding-40 {
   padding: 40px !important;
+}
+.margin-40-0 {
+  margin: 40px 0 !important;
 }
 .margin-0 {
   margin: 0 !important;
