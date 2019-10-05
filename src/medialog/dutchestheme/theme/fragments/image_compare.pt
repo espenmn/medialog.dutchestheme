@@ -1,10 +1,8 @@
-<section>
+<section tal:define="image_scale view/data/image_size;
+              image1 view/image1|view/image1a|None;
+              image2 view/image2|view/image2a|None;">
   <figure class="cd-image-container"
-     tal:define="image_scale view/data/image_size;
-              image_1 view/image1;
-              image_2 view/image2;
-              image1 image_1/getObject;
-              image2 image_2/getObject">
+     tal:condition="python:image1 and image2">
     <tal:define tal:define="scale_func1 image1/@@images;
               scale_func2 image2/@@images;
               scaled_image1 python:scale_func1.scale('image', scale=image_scale);
@@ -30,3 +28,4 @@
     <link rel="stylesheet" href="++theme++dutchestheme/css/before-after.css" tal:condition="load_css">
   </tal:define>
 </section>
+ 

@@ -10,6 +10,12 @@
       <title>Select a folder (or folderish object)</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
  </field>
+ <field name="select_folder" type="zope.schema.Choice">
+    <description>Useful for Multilingual setups</description>
+    <required>False</required>
+    <title>Alternatively choose folder here</title>
+    <vocabulary>medialog.dutchestheme.ShowFoldersVocabulary</vocabulary>
+ </field>
 
   <field name="image_size" type="zope.schema.Choice">
    <description>Choose Image Size (scale) for you image wall</description>

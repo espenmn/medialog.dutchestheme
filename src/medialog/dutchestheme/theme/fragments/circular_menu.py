@@ -1,12 +1,12 @@
 def get_item_image(self):
-    linked = self.data['linked_folder']
+    linked = self.data['linked_folder'] or self.data['select_folder']
     if linked:
         folder = self.context.portal_catalog(UID=linked)
         return folder[0]
     return self.context
 
 def get_items(self):
-    linked = self.data['linked_folder']
+    linked = self.data['linked_folder'] or self.data['select_folder']
     radius = self.data['radius']
     standard_icon = self.data['iconfield']
     

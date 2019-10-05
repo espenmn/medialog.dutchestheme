@@ -1,8 +1,7 @@
-
 <section id="fragment-${view/id}"
          tal:define="scale view/data/image_size;
-                title view/data/title | nothing;
-                image view/one_image;
+                title view/data/title|None;
+                image view/one_image|view|None;
                 image_url image/getURL;
                 css_class view/data/css_class;
                 color1 view/data/color1;

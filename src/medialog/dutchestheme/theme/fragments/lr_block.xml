@@ -7,9 +7,15 @@
 <schema>
 <field name="background_image" type="zope.schema.Choice">
         <description/>
-        <required>True</required>
+        <required>False</required>
         <title>Choose image</title>
         <source>collective.themefragments.tiles.CatalogSource</source>
+</field>
+<field name="bkground_image" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>Alternative Choose image here </title>
+        <vocabulary>medialog.dutchestheme.ShowImagesVocabulary</vocabulary>
 </field>
 <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale)</description>

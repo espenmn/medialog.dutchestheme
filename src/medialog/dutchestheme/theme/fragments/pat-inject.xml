@@ -7,7 +7,7 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-  <field name="content_item" type="zope.schema.Choice">
+    <field name="content_item" type="zope.schema.Choice">
         <description>Needs plone patternslib installed</description>
         <required>True</required>
         <title>Choose conten item to inject (load)</title>

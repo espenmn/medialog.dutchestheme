@@ -1,5 +1,5 @@
 def get_wallitems(self):
-    linked = self.data['linked_folder']
+    linked = self.data['linked_folder'] or self.data['select_folder']
     folder = self.context.portal_catalog(UID=linked)
     return folder[0].getObject()
 

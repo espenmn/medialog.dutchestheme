@@ -8,12 +8,18 @@
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
 
-      <field name="linked_folder" type="zope.schema.Choice">
+    <field name="linked_folder" type="zope.schema.Choice">
           <description/>
           <required>False</required>
           <title>Select a folder or a folderish object</title>
           <source>collective.themefragments.tiles.CatalogSource</source>
-      </field>
+    </field>
+    <field name="select_folder" type="zope.schema.Choice">
+      <description>Useful for Multilingual setups</description>
+      <required>False</required>
+      <title>Alternatively choose folder here</title>
+      <vocabulary>medialog.dutchestheme.ShowFoldersVocabulary</vocabulary>
+    </field>
     <field name="radius" type="zope.schema.Int">
         <description/>
         <required>True</required>

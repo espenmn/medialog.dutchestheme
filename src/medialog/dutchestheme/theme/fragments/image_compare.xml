@@ -9,15 +9,27 @@
 <schema>
     <field name="image1" type="zope.schema.Choice">
         <description/>
-        <required>True</required>
+        <required>False</required>
         <title>Image 1 (Before)</title>
         <source>collective.themefragments.tiles.CatalogSource</source>
     </field>
+    <field name="image1b" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>Alternative Choose image 1 here </title>
+        <vocabulary>medialog.dutchestheme.ShowImagesVocabulary</vocabulary>
+    </field>
      <field name="image2" type="zope.schema.Choice">
         <description/>
-        <required>True</required>
+        <required>False</required>
         <title>Image 2 (After)</title>
         <source>collective.themefragments.tiles.CatalogSource</source>
+    </field>
+    <field name="image2b" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>Alternative Choose image 2 here </title>
+        <vocabulary>medialog.dutchestheme.ShowImagesVocabulary</vocabulary>
     </field>
    <field name="image_size" type="zope.schema.Choice">
      <description>Choose Image Size (scale) for you images</description>

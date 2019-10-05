@@ -4,7 +4,7 @@
               collection_items view/get_items|None;
               order view/data/order;
               show_text python: order != 'only-image';
-              items collection_items/@@contentlisting|context/@@contentlisting">
+              items collection_items/@@contentlisting|context/@@contentlisting|None">
     <tal:repeat tal:repeat="item items">
             <tal:define tal:define="obj item/getObject;
                   item_url item/getURL|item/absolute_url;
