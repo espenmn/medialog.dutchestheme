@@ -14,9 +14,15 @@
   </field>
   <field name="link" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Choose Link to</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
+  </field>
+  <field name="select" type="zope.schema.TextLine" form:widget="plone.app.z3cform.widget.LinkFieldWidget">
+    <description i18n:translate="description_linktype_url">Alternatively, use this for link
+    </description>
+    <title i18n:translate="">URL link</title>
+    <required>False</required>
   </field>
   <field name="color1" type="zope.schema.Choice">
           <description/>
