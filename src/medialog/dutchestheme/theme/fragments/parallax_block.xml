@@ -8,17 +8,17 @@
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
 
-    <field name="background_image" type="zope.schema.TextLine"
-    form:widget="medialog.dutchestheme.widgets.widgets.PickerFieldWidget">
-      <description/>
-      <required>False</required>
-      <title>Choose image</title>
+    <field name="background_image" type="zope.schema.Choice">
+            <description/>
+            <required>False</required>
+            <title>Choose image</title>
+            <source>collective.themefragments.tiles.CatalogSource</source>
     </field>
-    <field name="bkground_image" type="zope.schema.Choice">
+    <field name="bkground_image" type="zope.schema.TextLine"
+        form:widget="medialog.dutchestheme.widgets.widgets.PickerFieldWidget">
         <description/>
         <required>False</required>
-        <title>Alternative Choose image here </title>
-        <vocabulary>medialog.dutchestheme.ShowImagesVocabulary</vocabulary>
+        <title>NOT WORKING YET: Alternative Choose image here </title> 
     </field>
     <field name="opacity" type="zope.schema.Float">
         <description/>
