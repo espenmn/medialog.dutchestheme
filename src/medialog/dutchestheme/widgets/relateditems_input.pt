@@ -29,11 +29,12 @@
   <option id="" value="${item/UID}"
          tal:attributes="id item/id;"
          data-img-src="${item/getURL|None}/@@images/image/mini">
-         ${item/Title} … 
-          [${item/getURL}]</option>
+         ${item/Title}</option>
 </tal:block>
 
 </select>
+ 
+</div>
 
 <div id="image-placeholder"/>
 <script>
@@ -45,6 +46,3 @@ $("select").change(function() {
 <style>
 #image-placeholder { float: right; width: 200px; height: 200px; background-repeat: no-repeat }
 </style>
- 
-</div>
-

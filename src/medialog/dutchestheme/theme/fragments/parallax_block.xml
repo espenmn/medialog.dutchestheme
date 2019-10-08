@@ -14,12 +14,12 @@
             <title>Choose image</title>
             <source>collective.themefragments.tiles.CatalogSource</source>
     </field>
-    <field name="bkground_image" type="zope.schema.TextLine"
+    <!--field name="bkground_image" type="zope.schema.Text" 
         form:widget="medialog.dutchestheme.widgets.widgets.PickerFieldWidget">
         <description/>
         <required>False</required>
         <title>NOT WORKING YET: Alternative Choose image here </title> 
-    </field>
+    </field-->
     <field name="opacity" type="zope.schema.Float">
         <description/>
         <max>1.0</max>
