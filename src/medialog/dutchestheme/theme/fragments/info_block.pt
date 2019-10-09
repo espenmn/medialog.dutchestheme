@@ -1,5 +1,6 @@
 <section tal:define="title2 view/data/title2;
-  title1 view/data/title1|None"
+  title1 view/data/title1|None;
+  link_url view/get_url|None;"
   title="${title2}"
   data-anchor="anchor-${title2}"
   class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}"
@@ -13,9 +14,9 @@
                ${title2}
            </h1>
        </div>
-       <div class="info_button margin-0">
+       <div class="info_button margin-0" tal:condition="link_url|None">
            <div class="button btn btn-primary ${view/data/color4}">
-             <a href="${view/data/url}" class=" ${view/data/color5}">${view/data/buttontext}</a>
+             <a href="${link_url}" class=" ${view/data/color5}">${view/data/buttontext}</a>
            </div>
        </div>
    </div>
