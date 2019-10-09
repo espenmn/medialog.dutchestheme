@@ -12,9 +12,10 @@
     <source>collective.themefragments.tiles.CatalogSource</source>
 </field>
 <field name="select_folder" type="zope.schema.Choice">
+    <klass>multilingual-widget</klass>
     <description>Useful for Multilingual setups</description>
     <required>False</required>
-    <title>Alternatively choose folder here</title>
+    <title>Alternatively choose folder here. </title>
     <vocabulary>medialog.dutchestheme.ShowFoldersVocabulary</vocabulary>
 </field>
 <field name="buttontext" type="zope.schema.TextLine">
