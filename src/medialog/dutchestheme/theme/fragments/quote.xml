@@ -39,7 +39,7 @@
       <required>False</required>
       <title>Quote character</title>
       <max_length>2</max_length>
-      <default>&#8220;</default>
+      <default></default>
    </field>
    <field name="hideborder" type="zope.schema.Bool">
     <required>false</required>
