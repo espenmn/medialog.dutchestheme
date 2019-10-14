@@ -38,9 +38,12 @@
                     footerlink_hover  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_hover']);
                     footerlink_visited python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_visited']);">
 
-        nav.plone-navbar, #portal-globalnav li a, .plone-nav li a { background: #${nav_background}; }
+        nav.plone-navbar, #portal-globalnav li a, .plone-nav li a { background: #${nav_background};  color: #${navlink_color}  }
+        input.searchButton { background: #${nav_background};  border-color: #${nav_background}; color: #${navlink_color}  }
+        input.searchField { border-color: #${nav_background}; }
         nav.plone-navbar li a {color: #${navlink_color};}
         #portal-globalnav li.current a, nav.plone-navbar a:hover, nav.plone-navbar a.selected {background: #${navlink_hover} !important}
+        input.searchButton:hover { background:  #${navlink_hover}; border-color: #${nav_background}; }
         nav.plone-navbar a:visited {color: #${navlink_visited} }
         footer#portal-footer-wrapper { background: #${footer_background}; color: #${footer_color} }
         footer#portal-footer-wrapper a {color: #${footerlink_color} }

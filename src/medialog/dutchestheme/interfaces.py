@@ -151,15 +151,18 @@ class IMedialogDutchesThemeSettings(model.Schema):
 
     nav_background = schema.Text(
         title=_('nav_background_color', default=u'Nav background color'),
+        description=u"Also affects the seach field",
         required=False,
     )
 
     navlink_color = schema.Text(
-        title=_('navlink_color', default=u'Navlink background color'),
+        title=_('navlink_color', default=u'Navlink color'),
+        description=u"Also affects the seach field",
         required=False,
     )
     navlink_hover = schema.Text(
         title=_('navlin_hover', default=u'Navlink hover'),
+        description=u"Also affects the seach field",
         required=False,
     )
     navlink_visited = schema.Text(
