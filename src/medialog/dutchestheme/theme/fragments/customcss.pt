@@ -15,15 +15,15 @@
       <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
     </tal:check>
 
-    <style>
-      div.mosaic-grid-row-fluid {position: relative; width: 100vw; margin-left: calc((50vw - 50%)/-1) !important; }
-        option[value=custom-color1], .custom-color1 {color: #${color1} !important}
-        option[value=custom-color2], .custom-color2 {color: #${color2} !important}
-        option[value=custom-color3], .custom-color3 {color: #${color3} !important}
-        option[value=custom-background1], .custom-background1 {background-color: #${color1} !important}
-        option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
-        option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
-    <div tal:replace="structure extra_css"/>
+<style>
+div.mosaic-grid-row-fluid {position: relative; width: 100vw; margin-left: calc((50vw - 50%)/-1) !important; }
+option[value=custom-color1], .custom-color1 {color: #${color1} !important}
+option[value=custom-color2], .custom-color2 {color: #${color2} !important}
+option[value=custom-color3], .custom-color3 {color: #${color3} !important}
+option[value=custom-background1], .custom-background1 {background-color: #${color1} !important}
+option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
+option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
+<div tal:replace="structure extra_css"/>
 
     <tal:override tal:condition="python: override == 'True'"
         tal:define="navlink_color     python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.navlink_color']);
