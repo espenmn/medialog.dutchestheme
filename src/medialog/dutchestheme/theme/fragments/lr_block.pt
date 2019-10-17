@@ -7,10 +7,10 @@
                 color1 view/data/color1;
                 color2 view/data/color2;
                 load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or ''"
-          class="lrblock ${color1}"
+          class="lrblock"
           data-anchor="anchor-${title}"
           title="${title}">
-  <div class="container flex padding-0 ${css_class}">
+  <div class="container flex padding-0 ${css_class} ${color1}">
     <div class="half bodytext ${color2} padding-40">
         <h2 class="${color2}" tal:condition="title">${title}</h2>
         <h4  class="${color2}" tal:condition="view/data/description">${view/data/description}</h4>
@@ -35,7 +35,7 @@
         object-position: 0 ${view/data/position-y|None}%;
     }
 </tal:check>
-    
+
  #fragment-${view/id} .half {
     min-width: 30px;
     box-sizing: border-box;
