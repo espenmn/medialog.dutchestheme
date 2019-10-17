@@ -6,10 +6,10 @@
              show_ctype  view/ctype"
              id="fragment-${view/id}">
 
-<div>
+<!--div>
 <p class="data-filter" data-filter="Nyhetsartikkel">Nyhetsartikkel</p>
 <p class="data-filter" data-filter="Bilde">Bilde</p>
-</div>
+</div-->
 <tal:repeat tal:repeat="item items">
     <div tal:define="subject item/Subject|None;
           tags python: ' '.join(subject)"
