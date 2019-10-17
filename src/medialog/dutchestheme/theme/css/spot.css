@@ -101,6 +101,11 @@ body ul.dropdown li {
 }
 /* @group Search */
 
+span.top-searchicon {
+	cursor:  pointer;
+	width:  auto;
+}
+
 div#seach-wrapper {
 	top:  0;
 	left:  0;

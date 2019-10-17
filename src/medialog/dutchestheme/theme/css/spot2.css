@@ -105,6 +105,7 @@ body ul.dropdown li {
 
 span.top-searchicon {
 	cursor:  pointer;
+	width:  auto;
 }
 
 div#seach-wrapper {
