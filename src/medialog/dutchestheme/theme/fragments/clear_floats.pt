@@ -4,6 +4,6 @@
   </div>
   <style>
     .spacer-hidden {display: none}
-    .template-edit .spacer-hidden { display: inline-block width:auto; !important; text-align: center; margin: auto; background: whitesmoke; color: white;}
+    .template-edit .add-spacer, .template-edit .spacer-hidden { display: inline-block; width:auto; !important; text-align: center; margin: auto; background: whitesmoke; color: #666;}
   </style>
 </tal:define>
