@@ -3,5 +3,5 @@
 </div>
 <style>
   .spacer-hidden {display: none}
-  .template-edit .spacer-hidden { display: block !important; text-align: center;}
+  .template-edit .spacer-hidden { display: inline-block !important; text-align: center; line-height: ${view/data/height} }
 </style>
