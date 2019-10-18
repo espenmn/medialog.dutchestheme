@@ -1,7 +1,10 @@
-<div class="clearfloats add-spacer" style="clear: both; height: ${view/data/height}">
-  <span class="spacer-hidden hidden"><i class="fa fa-arrows-v"> ${view/data/height} <i class="fa fa-arrows-v"></span>
-</div>
-<style>
-  .spacer-hidden {display: none}
-  .template-edit .spacer-hidden { display: inline-block !important; text-align: center; line-height: ${view/data/height} }
-</style>
+<tal:define tal:define="height view/data/height|None">
+  <div class="clearfloats add-spacer" style="clear: both; height: ${height}">
+    <span class="spacer-hidden hidden"><i class="fa fa-arrows-v"> ${height} <i class="fa fa-arrows-v"></span>
+  </div>
+  <style>
+    .clearfloats.add-spacer { line-height: ${height}}
+    .spacer-hidden {display: none}
+    .template-edit .spacer-hidden { display: inline-block !important; text-align: center; line-height: ${height} }
+  </style>
+</tal:define>
