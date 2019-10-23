@@ -1,0 +1,87 @@
+#content-header div.container {
+	max-width: 1450px !important;
+}
+
+div.searchSection {
+	display: none !important
+}
+
+header div#portal-searchbox {
+	background-color: #d20000
+}
+
+nav#portal-breadcrumbs {
+	background: whitesmoke;
+	margin-bottom: 1.5em
+}
+
+body.section-front-page nav#portal-breadcrumbs {
+	display: none
+}
+
+div.nav-togglers span  {
+	width: auto; 
+}
+
+li.bli-fadder a {
+    background: #d20000 !important;
+    border-radius: 6px;
+    color: white !important;
+    padding: 6px 10px !important;
+    margin-top: 7px;
+    margin-left: 1em;
+}
+
+.collection_item h3 { font-size: 20px}
+
+span.top-searchicon {width: auto !important}
+
+
+.plone-breadcrumb {
+margin-bottom: 0;
+margin-top: 0;
+}
+
+.plone-navbar-toggle .icon-bar::after {
+    content:'\2630';
+   color: black;
+   font-size: 1.7em;
+  line-height: 1em;
+
+}
+ 
+
+.plone-nav li label:after {
+background: none;
+}
+
+body button.plone-navbar-toggle,
+body .plone-navbar-toggle:hover {
+background-color: none !important;
+border-color:  none !important;
+margin-top: 0
+}
+
+
+#portal-globalnav-collapse {
+	padding-bottom: 1em
+}
+
+div.doormat.row {
+	text-align:  center;
+}
+
+
+button.plone-navbar-toggle,
+button.plone-navbar-toggle::after {
+	background:  white !important;
+}
+
+
+body button.plone-navbar-toggle  {
+	background:  white !important;
+}
+
+#portal-globalnav-collapse {
+	padding-bottom: 1em
+}
