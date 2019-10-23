@@ -12,6 +12,7 @@
         <a href=""
            tal:define="flag lang/flag|nothing;
                        name lang/native|lang/name;
+                       short_name python: name[:2].upper();
                        showflag python:showFlags and flag;"
            tal:attributes="href lang/url;
                            title name"
