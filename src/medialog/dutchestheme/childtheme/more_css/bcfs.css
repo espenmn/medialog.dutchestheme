@@ -3969,6 +3969,18 @@ ul.picker__list {
 .plone-nav li.has_subtree a {
   padding-right: 2.5em;
 }
+
+body ul.has_subtree.dropdown > li {
+	padding: 0;
+	margin:  0 !important;
+	border-bottom:  1px solid silver;
+}
+
+body ul.has_subtree.dropdown > li a {
+	padding: 13px 18px !important
+}
+
+
 .plone-nav li label {
   margin: 0;
 }

@@ -1,0 +1,17 @@
+/* @override https://fonts.googleapis.com/css?family=Modak&display=swap */
+
+@font-face {
+  font-family: 'Modak';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Modak'), url(https://fonts.gstatic.com/s/modak/v5/EJRYQgs1XtIEskMA-hE.ttf) format('truetype');
+}
+
+
+body ul.has_subtree.dropdown > li {
+	padding: 0;
+	margin:  0 !important;
+	border-bottom:  1px solid silver;
+	line-height: 30px;
+}
