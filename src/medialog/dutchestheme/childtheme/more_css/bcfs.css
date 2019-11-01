@@ -2,6 +2,7 @@
 	http://bcfs.medialog.no/++theme++dutchestheme/less/red/theme.css
 	http://bcfs.medialog.no/++theme++dutchestheme/less//theme.css
 	http://bcfs.medialog.no/None
+	http://xweb14d.plana.dk:8098/Plone5//++theme++bcfstheme/bcfs_theme.css
 */
 
 /* theme.less file that will be compiled */
@@ -54,6 +55,57 @@
   font-weight: 300;
   src: local('Roboto Condensed Thin Italic'), local('RobotoCondensed-LightItalic'), url("roboto/RobotoCondensed-LightItalic.ttf") format('truetype');
 }
+
+ul#portal-globalnav.plone-nav.plone-navbar-nav,
+ul.short-links {
+	width:  100%;
+	text-align: right;
+	margin: 0;
+}
+
+div#portal-globalnav-wrapper {
+ padding-left: 0 !important;
+}
+
+#portal-globalnav li  {
+	margin-top: 0 !important;
+
+}
+
+
+div#menu-div {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+ul.short-links li {
+	color: #7a869c;
+	list-style-image: none;
+	list-style-type: none;
+	display: inline-block;
+	padding-left: 1em;
+	
+}
+
+ul.short-links a {
+	color: #7a869c;
+}
+
+@media screen and (max-width: 998px) {
+	
+ul#portal-globalnav.plone-nav.plone-navbar-nav li.has_subtree,
+ul#portal-globalnav.plone-nav.plone-navbar-nav li.has_subtree a {
+	width:  100%;
+	display: block;
+}
+
+ 
+}
+	
+}
+
+
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5577,9 +5629,7 @@ img.img-responsive {
 	clear:  both;;	
 }
 
-#portal-globalnav li.stott-barna,
-#portal-globalnav li.vart-arbeid,
-#portal-globalnav li.bli-fadder {
+#portal-globalnav li {
     background: #d20000 !important;
     border-radius: 6px;
     margin-top: 8px;
@@ -5599,8 +5649,7 @@ span.top-searchicon {
 }
 
 #portal-globalnav li.stott-barna > a,
-#portal-globalnav li.vart-arbeid > a,
-#portal-globalnav li.bli-fadder > a {
+#portal-globalnav li.has_subtree > a{
     background: #d20000 !important;
     border-radius: 6px;
     color: white !important;
@@ -5626,10 +5675,6 @@ span.top-searchicon {
  
 }
 
-ul#portal-globalnav.plone-nav.plone-navbar-nav {
-	margin-right:  1em;
-	margin-top:  0;
-}
 
  
 
