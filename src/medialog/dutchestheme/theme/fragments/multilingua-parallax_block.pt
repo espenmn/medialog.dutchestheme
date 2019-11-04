@@ -32,7 +32,6 @@
 #fragment-${f_id} .p-text-block {
   position: relative;
   display: block;
-  xtext-align: center;
   margin: 0;
   top: 50%;
   transform: translateY(-50%);

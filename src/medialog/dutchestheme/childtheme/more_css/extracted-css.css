@@ -1,4 +1,7 @@
-/* @override https://fonts.googleapis.com/css?family=Modak&display=swap */
+/* @override 
+	https://fonts.googleapis.com/css?family=Modak&display=swap
+	http://xweb14d.plana.dk:8098/Plone5/None
+*/
 
 @font-face {
   font-family: 'Modak';
@@ -9,9 +12,59 @@
 }
 
 
+ 
+ 
+.subsection-bli-fadder > div  {
+	background: red url(http://bcfs.medialog.no/bilder/katanga04.jpg);
+	background-size: cover;
+
+}
+
+.subsection-bli-fadder fieldset#fieldset-default,
+.subsection-bli-fadder fieldset#fieldset-belop  {
+	border:  1px solid silver !important;
+	padding: 2em;
+	margin-top:  1em;
+}
+
+ 
+
+.subsection-bli-fadder article#content {
+	background: #fafafa;
+	padding: 2.4em;
+	border-radius: 10px;
+	max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:  8em;;
+}
+
+#formfield-form-widgets-antall {
+	width: 200px;
+	float:  left;
+	margin-right: 1.5em;
+}
+
+div.formControls {
+	padding-left: 0;
+}
+
+
+
 body ul.has_subtree.dropdown > li {
 	padding: 0;
 	margin:  0 !important;
 	border-bottom:  1px solid silver;
 	line-height: 30px;
 }
+
+input#form-buttons-submit.submit-widget.button-field {
+	background-color: #009f4f;
+	padding: 7px 35px;
+	color: white;
+	font-size: 1.3em;
+	margin-top: 20px;
+	border-radius: 8px;
+	border:  0px solid white;;
+}
+
