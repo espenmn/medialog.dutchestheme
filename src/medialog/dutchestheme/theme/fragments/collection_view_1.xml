@@ -20,23 +20,30 @@
     <vocabulary>medialog.dutchestheme.ShowFoldersVocabulary</vocabulary>
  </field>
  <field name="image_size" type="zope.schema.Choice">
-  <description>Choose Image Size (scale)</description>
-  <required>True</required>
-  <title>Image Size</title>
-  <default>preview</default>
-  <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+      <description>Choose Image Size (scale)</description>
+      <required>True</required>
+      <title>Image Size</title>
+      <default>preview</default>
+      <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+ </field>
+ <field name="max_chars" type="zope.schema.Int">
+      <description>Max characters of description</description>
+      <required>False</required>
+      <title>Max Description Length</title>
+      <min>0</min>
+      <default>500</default>
  </field>
   <field name="ctype" type="zope.schema.Bool">
-  <description></description>
-  <required>False</required>
-  <title>Show Content type name</title>
-  <default>True</default>
+      <description></description>
+      <required>False</required>
+      <title>Show Content type name</title>
+      <default>True</default>
  </field>
-  <field name="csubject" type="zope.schema.Bool">
-  <description>Show  tags/keywords</description>
-  <required>False</required>
-  <title>Show Subjects</title>
-  <default>False</default>
+      <field name="csubject" type="zope.schema.Bool">
+      <description>Show  tags/keywords</description>
+      <required>False</required>
+      <title>Show Subjects</title>
+      <default>False</default>
  </field>
 </schema>
 </model>
