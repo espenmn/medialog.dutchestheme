@@ -2,7 +2,8 @@
 <section id="card-items"
     tal:define="keyword view/data/keyword|None;
 		buttontext view/data/buttontext|None;
-		items python:context.portal_catalog(Subject='%s' % keyword, sort_on='modified', sort_order='descending');
+    language context/Language;
+		items python:context.portal_catalog(Subject=keyword, Language=language, sort_on='modified', sort_order='descending');
 		f_id view/id"
     class="cards-${f_id}">
 <tal:check tal:condition="items"

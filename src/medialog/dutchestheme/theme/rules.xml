@@ -63,7 +63,7 @@
     <link rel="apple-touch-icon-precomposed"
           href="{$portal_url}/apple-touch-icon.png" />
 
-  	<link tal:condition="cssfile" href="++theme++dutchestheme/less/{$cssfile}/theme.css" rel="stylesheet"/>
+  	<link  rel="stylesheet" href="++theme++dutchestheme/less/{$cssfile}/theme.css"/>
     <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
   </after>
 

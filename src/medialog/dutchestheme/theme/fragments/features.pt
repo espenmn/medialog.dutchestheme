@@ -2,7 +2,8 @@
 		 tal:define="keyword view/data/keyword|None;
 		 css_file view/data/css_file|None;
 		 title view/data/title|None;
-		 family_css view/family_css|None"
+		 family_css view/family_css|None;
+		 language context/Language"
 		 class="${css_file}">
     <div  tal:condition="keyword">
     	<div class="center wow fadeInDown">
@@ -12,7 +13,7 @@
       	</tal:condition>
       </div>
 
-			<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword)">
+			<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword, Language='%s' % language)">
 
 			<tal:check tal:condition="items">
 				<div class="feature-items">
