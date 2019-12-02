@@ -1,10 +1,12 @@
+
 <div class="card"
 	tal:define="card_linktext view/data/linktext|None;
+	            inline view/data/inline-readmore|None;
 				card_link view/load_item;">
-		<img class="img-inline padding-0 margin-0" alt="Thumbnail First"
-			src="${view/item_url}/@@images/image/${view/data/image_size}"/>
+	<img class="img-inline padding-0 margin-0" alt="Thumbnail First"
+		src="${view/item_url}/@@images/image/${view/data/image_size}"/>
 
-		<div class="card-block">
+	<div class="card-block" id="block-${view/id}">
 		<h3 class="card-title" tal:condition="view/data/title|None">
 					${view/data/title}
 		</h3>
@@ -12,13 +14,25 @@
 				 ${view/data/description}
 		</p>
 		<p>
-			<a class="btn btn-primary" href="${view/item_url}">${view/data/linktext|None}</a>
-		</p>
-		<style>
-		    .card img.img-inline {
-		        width: 100%;
-                height: auto !important;
-            }
-		</style>
+         <a class="btn btn-primary" href="${view/item_url}" tal:condition="not: inline|None">
+                 ${view/data/linktext|None}
+         </a>  
+        <a href="${view/item_url}" 
+               tal:condition="inline|None" class="btn btn-primary pat-contentloader"
+               data-pat-contentloader="url:${view/item_url|None}?ajax_load=1;
+               target:#block-${view/id};content:#content">
+                   <span>${view/data/linktext|None}</span>
+         </a>
+      </p>	
 	</div>
+
+     <style>
+         .card img.img-inline {
+             width: 100%;
+             height: auto !important;
+         }
+         .card article {
+            margin: 1rem;
+         }
+     </style>
 </div>

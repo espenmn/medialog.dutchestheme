@@ -22,6 +22,10 @@
       <title>Choose Link to</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
   </field>
+<field name="inline-readmore" type="zope.schema.Bool">
+      <description>Load bodytext inline</description>
+      <title>Inline load</title>
+  </field>
   <field name="image_size" type="zope.schema.Choice">
    <description>Choose Image Size</description>
    <required>True</required>
