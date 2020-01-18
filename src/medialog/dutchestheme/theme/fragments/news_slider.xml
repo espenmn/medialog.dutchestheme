@@ -10,13 +10,24 @@
         <required>True</required>
   </field>
 
-<field name="subjects" type="zope.schema.Choice">
- <description>Keyword</description>
- <required>False</required>
- <title>If you want to find items with keywords, choose here</title>
- <default></default>
- <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
-</field>
+  <field name="sort_on" type="zope.schema.Choice">
+        <description/>
+        <required>True</required>
+        <title>Sort on</title>
+         <default>modified</default>
+        <values>
+          <element>modified</element>
+          <element>created</element>
+          <element>Date</element>
+        </values>
+  </field>
+  <field name="subjects" type="zope.schema.Choice">
+   <description>Keyword</description>
+   <required>False</required>
+   <title>If you want to find items with keywords, choose here</title>
+   <default></default>
+   <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
+  </field>
 
   <field name="image_size" type="zope.schema.Choice">
    <description>Choose Image Size (scale) for you image wall</description>
