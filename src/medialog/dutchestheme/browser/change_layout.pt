@@ -9,15 +9,17 @@
 <body>
 
     <metal:main fill-slot="content-core">
-    ${view/folder_prev_next}   ---
-    ${view/hide_images}
-          <h1 class="documentFirstHeading">Change layout</h1>
-          <form method="post"
+      Fixed cordinates: ${view/fix_map_cordinates}
+
+    <!--${view/folder_prev_next}   ---
+    ${view/hide_images}-->
+          <h1 class="documentFirstHeading">Change layout 4</h1>
+          <!--form method="post"
           		tal:attributes="action request/getURL">
     		        <input name="fra" />
                 <input name="til" />
       		      <input type="submit" name="submit" value="Submit" />
-		       </form>
+		       </form-->
 
 
     </metal:main>

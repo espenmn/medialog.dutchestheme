@@ -33,6 +33,31 @@ class IChangelayoutView(BrowserView):
         self.request = request
 
 
+
+    def fix_map_cordinates(self):
+        #every image that does not have a proper name should be renamed
+        import pdb; pdb.set_trace()
+        
+        items = api.content.find(Type='MapLocation')
+        a = 0
+        for item in items:
+            #obj = item.getObject()
+            obj = item.getObject()
+            old_cordinates = item.old_cordinates()
+            long = eval(old_cordinates)[0]
+            lat =  eval(old_cordinates)[1]
+            #obj.coordinates     = "POINT({0} {1})".format.(long, lat)
+            ICoordinates.coordinates = "POINT({0} {1})".format.(long, lat)
+            #obj.new_coordinates = "POINT({0} {1})".format.(long, lat)
+            #Might as well reindex everything, it is migrated after all…
+            obj.reindexObject()
+            #import pdb; pdb.set_trace()
+
+            #obj.reindexObject(idxs=['Title'])
+                a = a + 1
+
+        return a
+
     def hide_images(self):
         #every image that does not have a proper name should be hidden
         items = api.content.find(Type='Image')
