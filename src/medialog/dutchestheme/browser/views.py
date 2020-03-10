@@ -37,7 +37,6 @@ class IChangelayoutView(BrowserView):
     def fix_map_cordinates(self):
         #every image that does not have a proper name should be renamed
         import pdb; pdb.set_trace()
-        
         items = api.content.find(Type='MapLocation')
         a = 0
         for item in items:
@@ -54,7 +53,7 @@ class IChangelayoutView(BrowserView):
             #import pdb; pdb.set_trace()
 
             #obj.reindexObject(idxs=['Title'])
-                a = a + 1
+            a = a + 1
 
         return a
 
