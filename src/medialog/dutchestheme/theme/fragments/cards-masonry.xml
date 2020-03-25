@@ -7,6 +7,17 @@
       <title>Keyword</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
 </field>
+<field name="sort_on" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Sort on</title>
+       <default>modified</default>
+      <values>
+        <element>modified</element>
+        <element>created</element>
+        <element>Date</element>
+      </values>
+</field>
 <field name="max_chars" type="zope.schema.Int">
       <description>Max characters of description</description>
       <required>False</required>
