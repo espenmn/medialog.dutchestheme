@@ -1,12 +1,68 @@
 /* @override 
 	http://xweb14d.plana.dk:8091/soyland/news/++theme++dutchestheme/less/dutchesblue/theme.css
 	http://xweb14d.plana.dk:8091/++theme++dutchestheme/less/dutchesblue/theme.css
+	http://xweb14d.plana.dk:8091/soyland/++theme++childtheme/more_css/bie.css
 */
 
 /* "out": "true" */
 /* theme.less file that will be compiled */
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Encode+Sans:200,400');
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+
+.outer-wrapper div.container, #content-header div.container {max-width: 1450px !important;}
+.media-body {margin-top: 1em; }
+ .section-produkter.site-soyland.template-layout div.outer-wrapper {
+	background-color: #FFBF00 !important;
+}
+
+figure.newsImageContainer  { display: none !important; }
+
+div.leadimage   {
+	padding-bottom: 2em;
+}
+
+  
+@media only screen and (min-width: 1000px) {
+div.leadimage.image-large,
+div.leadimage.image-nyhetsbilde, 
+div.leadimage.image-spalte, 
+div.leadimage.image-preview, 
+div.leadimage.image-mini   {
+	float:  right;
+	padding-left:  2em;
+	padding-bottom: 2em;
+	background: white;
+}
+}
+
+h1  {
+	color: #f80 !important;
+}
+
+ h2, h3,h4, h5, h6 {
+	color: #333 !important;
+}
+.documentDescription,
+.document-Description {
+	border-bottom: 1px solid  #f80 !important;
+	color:  #f80 !important;
+}
+
+.portlet .portletHeader {
+	background: #f80 !important;
+}
+
+
+.service-item a.custom-background3.white.btn {
+	display: none;
+}
+
+div.wow.fadeInDown.animated.service-item.white-background {
+	border-radius: 10px;
+	padding: 1.6%;
+}
+
 
 .slick-slider i.slick-arrow::before {
 	font-size: 2.6em !important;
