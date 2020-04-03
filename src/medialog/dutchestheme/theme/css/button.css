@@ -1,5 +1,7 @@
-/* @override http://localhost:8080/Plone2/++theme++dutchestheme/css/button.css */
-
+/* @override 
+	http://localhost:8080/Plone2/++theme++dutchestheme/css/button.css
+	http://themes.medialog.no/fragments/++theme++dutchtheme/css/button.css
+*/
 
 .roundbutton .button {
   padding: 1em 2em;
@@ -9,7 +11,7 @@
 }
  
 
-.buttonzoom a:hover {
+.buttonzoom .button:hover {
 	z-index: 2;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.05);

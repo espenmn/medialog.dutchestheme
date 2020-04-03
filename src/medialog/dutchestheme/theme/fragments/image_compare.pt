@@ -21,11 +21,9 @@
     'jquery',
     '++theme++dutchestheme/javascript/before-after'
     ], function(Base) {
-      'use strict';
   });
   </script>
   <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
     <link rel="stylesheet" href="++theme++dutchestheme/css/before-after.css" tal:condition="load_css">
   </tal:define>
 </section>
- 
