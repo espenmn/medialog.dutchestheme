@@ -61,6 +61,10 @@ class AboveViewlet(ViewletBase):
         return portlet_manager.render()
 
 
+#class AboveAllViewlet(AboveViewlet):
+#    index = ViewPageTemplateFile('aboveallportlets.pt')
+
+
 
 class AboveFooterViewlet(AboveViewlet):
     index = ViewPageTemplateFile('abovefooterportlets.pt')

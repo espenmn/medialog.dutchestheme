@@ -1,3 +1,18 @@
+#content-core a {
+	border-bottom: 0 none;
+}
+
+
+#plone-document-byline {
+	border: 1px solid @plone-gray-light;
+	border-right-style: none;
+	border-left-style: none;
+	display: inline-block;
+	padding:  0 2px;
+	font-size: 90%;
+}
+
+
 .flex {display: flex;   justify-content: space-between;}
 
 img,
@@ -12,6 +27,16 @@ img,
 
 .flex .portletWrapper {
 	margin: 1em;;
+}
+
+
+.arrow_down {
+  width: 134px;
+	height: 50px;
+	border-left: 67px solid transparent;
+	border-right: 67px solid transparent;
+	border-top: 50px solid @plone-body-bg;;
+	margin-bottom: 15px;
 }
 
 
@@ -68,8 +93,8 @@ a.event_ical img {
 	margin-top: 0;
 }
 
-.formControls {
-	background: lighten(@plone-link-color, 40%);
+.forxmControls {
+	background: @plone-state-info-bg;
 
 }
 

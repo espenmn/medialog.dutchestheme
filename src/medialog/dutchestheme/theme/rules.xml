@@ -95,6 +95,12 @@
       />
   <drop css:theme="#portal-footer .site-actions" css:if-not-content="#portal-footer-wrapper .actions-site_actions" />
 
+    <!-- move aboveallportlets -->
+    <replace
+        css:theme-children="#aboveall-portlets-wrapper"
+        css:content="#aboveall-portlets-wrapper"
+        />
+
   <!-- Move all other footer portlets into doormat area. -->
   <replace css:theme-children="#portal-footer .doormat">
     <xsl:variable name="columns">

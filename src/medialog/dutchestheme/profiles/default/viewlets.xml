@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
 <object>
- <hidden manager="plone.portalheader" skinname="Plone Default">
+ <hidden manager="plone.portalheader">
   <viewlet name="medialog.dutchestheme.menuviewlet"/>
   <viewlet name="medialog.dutchtheme.languageselector"/>
  </hidden>
+
+ <hidden manager="plone.portaltop">
+  <viewlet name="medialog.dutchestheme.aboveallportlets"/>
+ </hidden>
+
 </object>

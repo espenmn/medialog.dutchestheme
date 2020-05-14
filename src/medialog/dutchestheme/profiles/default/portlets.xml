@@ -11,4 +11,13 @@
    type="medialog.dutchestheme.interfaces.IAbove"
    />
 
+   <portletmanager
+     name="medialog.dutchestheme.aboveallportlets"
+     type="medialog.dutchestheme.interfaces.IPortalTop"
+  />
+
+  <hidden manager="plone.portaltop" skinname="Plone Default">
+   <viewlet name="medialog.dutchestheme.aboveallportlets"/>
+  </hidden>
+  
 </portlets>

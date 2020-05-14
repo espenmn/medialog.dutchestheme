@@ -10,19 +10,19 @@
 @plone-gray-lighter:						lighten(#000, 90%);
 
 //colors
-@plone-link-color:							#000;
+@plone-link-color:							#2F4F4F;
 @plone-link-color-on-dark:					#FFF;
 @plone-link-color-on-grey:		  			#000;
-@plone-link-secondary: #FF710B;
+@plone-link-secondary: orange;
 @plone-link-tertiary: #E83A0C;
-@plone-link-opposite:  #FF0000;
+@plone-link-opposite:  #3e7b91;
 
 
 
 //if you need different contrast or color
 
 // @plone-link-color-on-grey:		  			#000; //valid wcag 2.0
-@plone-default-published-color:				@plone-link-color; //published and external same color
+@plone-default-published-color:				#9ACD32; //published and external same color
 @plone-default-draft-color:					darken(@plone-toolbar-draft-color, 15%); // lime-yellow //draft is visible
 @plone-default-pending-color:				darken(@plone-toolbar-pending-color, 15%); // orange
 @plone-default-private-color:				@plone-toolbar-private-color; // red
@@ -35,9 +35,9 @@
 
 //*// SCAFFOLDING
 @plone-body-bg:            				   #FFF;
-@plone-footer-bg:            				 #DDD; //portland
+@plone-footer-bg:            				 @plone-gray-darker; //portland
 @plone-text-color:           				 #000;
-@plone-link-hover-color:     				 darken(@plone-link-color, 15%);
+@plone-link-hover-color:     				 @plone-link-opposite;
 
 
 
@@ -106,7 +106,7 @@
 @plone-table-cell-padding:            8px;
 @plone-table-condensed-cell-padding:  5px;
 @plone-table-bg:                      #fff;
-@plone-table-bg-accent:               lighten(@plone-link-color, 40%);
+@plone-table-bg-accent:               lighten(@plone-link-color, 94%);
 @plone-table-bg-hover:                #f0f0f0;
 @plone-table-bg-active:               @plone-table-bg-hover;
 @plone-table-border-color:            @plone-link-color;
@@ -169,29 +169,29 @@
 
 
 //*// Buttons
-@plone-btn-standalone-color:          		#FFF;
-	@plone-btn-standalone-bg:             	#111;
-	@plone-btn-standalone-border:          	darken(@plone-btn-standalone-bg, 5%);
-@plone-btn-context-color:              		#fff;
-	@plone-btn-context-bg:                 	#CCC;
+  @plone-btn-standalone-color:          		@plone-gray-lighter;
+	@plone-btn-standalone-bg:             	@plone-link-secondary;
+	@plone-btn-standalone-border:          	darken(@plone-link-secondary, 5%); //darken(@plone-btn-standalone-bg, 5%);
+  @plone-btn-context-color:              		@plone-gray-lighter;
+	@plone-btn-context-bg:                 	@plone-link-opposite;
 	@plone-btn-context-border:             	darken(@plone-btn-context-bg, 5%);
-@plone-btn-destructive-color:              #fff;
-	@plone-btn-destructive-bg:               @plone-link-opposite;
+  @plone-btn-destructive-color:              @plone-gray-lighter;
+	@plone-btn-destructive-bg:               @plone-link-tertiary;
 	@plone-btn-destructive-border:           darken(@plone-btn-destructive-bg, 5%);
 
 //*// FORMS
 //** `<input>` background color
 @plone-input-bg:                       #fff;
 //** `<input disabled>` background color
-@plone-input-bg-disabled:              @plone-table-border-color;
+@plone-input-bg-disabled:              @plone-gray-lighter;
 //** Text color for `<input>`s
-@plone-input-color:                    @plone-gray;
+@plone-input-color:                    @plone-gray-dark;
 //** `<input>` border color
 @plone-input-border:                   @plone-gray-dark;
 //** `<input>` border radius
 @plone-input-border-radius:            @plone-border-radius-base;
 //** Border color for inputs on focus
-@plone-input-border-focus:             orange;
+@plone-input-border-focus:             @plone-link-secondary;
 //** Placeholder text color
 @plone-input-color-placeholder:        @plone-gray-light;
 //** Default `.form-control` height
@@ -305,7 +305,7 @@
 	@plone-code-bg:                     #f9f2f4;
 	@plone-kbd-color:                   #fff;
 	@plone-kbd-bg:                      #333;
-@plone-pre-bg:                      	#f5f5f5;
+  @plone-pre-bg:                      	#f5f5f5;
 	@plone-pre-color:                   @plone-gray-dark;
 	@plone-pre-border-color:            #ccc;
 	@plone-pre-scrollable-max-height:   340px;
@@ -318,9 +318,9 @@
 //** Abbreviations and acronyms border color
 @plone-abbr-border-color:           @plone-gray-light;
 //** Headings small color
-@plone-headings-small-color:        @plone-gray-light;
+@plone-headings-small-color:        @plone-gray;
 //** Blockquote small color
-@plone-blockquote-small-color:      @plone-gray-light;
+@plone-blockquote-small-color:      @plone-gray;
 //** Blockquote font size
 @plone-blockquote-font-size:        (@plone-font-size-base * 1.25);
 //** Blockquote border color
