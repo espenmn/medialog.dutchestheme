@@ -7,11 +7,41 @@
 	border: 1px solid @plone-gray-light;
 	border-right-style: none;
 	border-left-style: none;
-	display: inline-block;
+	display: inline;
 	padding:  0 2px;
-	font-size: 90%;
+	font-size: 80%;
 }
 
+@media (max-width: 768px) {
+
+	div.leadimage.image-preview,
+	div.leadimage.image-large,
+	div.leadimage.image-boks  {
+		float:  left;
+		width: 100%;
+	}
+
+	div.leadimage.image-preview img,
+	div.leadimage.image-large img,
+	div.leadimage.image-boks img{
+		 width: 100%;;
+		 margin-bottom: 2em;
+	}
+}
+
+@media (min-width: 769px) {
+	div.leadimage.image-boks { max-width: 50%}
+	div.leadimage.image-preview,
+	div.leadimage.image-large,
+	div.leadimage.image-boks,
+	div.leadimage.image-mini,
+	div.leadimage.image-thumb {
+		float:  right;
+		margin-left:  2em;
+		margin-bottom:  2em;
+		clear: both;
+	}
+}
 
 .flex {display: flex;   justify-content: space-between;}
 
