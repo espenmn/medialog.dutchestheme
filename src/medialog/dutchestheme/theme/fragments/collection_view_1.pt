@@ -16,8 +16,7 @@
           class="collection_item margin-10 ${item/Type} ${tags}">
         <div tal:define="item_url item/getURL|item/absolute_url">
         <p class="${item/portal_type} portal-type white black-background">
-           <span class="sans-serif filterme" i18n:translate="" tal:condition="show_ctype">
-                ${item/portal_type}</span>
+           <span class="sans-serif filterme" xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone" i18n:translate="" tal:condition="show_ctype">${item/portal_type}</span>
             <span class="sans-serif" i18n:translate="" tal:condition="show_csubject">
                 <tal:repeat tal:repeat="subject item/subject">  /  ${subject}</tal:repeat>
             </span>

@@ -10,7 +10,7 @@
 
     <div tal:define="obj item/getObject">
     <p class="pre_title">
-       <span i18n:translate="">${item/portal_type}</span>
+       <span xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone" i18n:translate="">${item/portal_type}</span>
      </p>
     <h1 class="users" tal:define="item_url item/getURL|item/absolute_url">
         <a href="${item_url}">${item/Title}</a>
