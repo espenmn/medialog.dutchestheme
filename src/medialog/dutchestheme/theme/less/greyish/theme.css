@@ -5036,6 +5036,7 @@ body.template-logged_out #content-core .portletFooter {
   display: inline;
   padding: 0 2px;
   font-size: 80%;
+  margin-bottom: 1em;
 }
 @media (max-width: 768px) {
   div.leadimage.image-preview,
