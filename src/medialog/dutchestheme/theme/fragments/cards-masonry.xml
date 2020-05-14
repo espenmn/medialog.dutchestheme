@@ -16,6 +16,18 @@
         <element>modified</element>
         <element>created</element>
         <element>Date</element>
+        <element>sortable_title</element>
+        <element>id</element>
+      </values>
+</field>
+<field name="sort_order" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Sort order</title>
+       <default>descending</default>
+      <values>
+        <element>descending</element>
+        <element>ascending</element>
       </values>
 </field>
 <field name="max_chars" type="zope.schema.Int">

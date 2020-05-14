@@ -1,0 +1,3 @@
+<div class="css-dummy">Placeholder for CSS code</div>
+<style>.css-dummy {display: none} .template-edit .css-dummy {display: block}
+${view/data/css}</style>

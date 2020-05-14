@@ -10,9 +10,15 @@ def large(self):
     large = self.data['large']
     return 100/large - 2
 
-def sort_on(self):
+def get_items(self):
+    keyword = self.data['keyword']
+    language = self.context.Language()
     sorton = 'modified'
-    if 'sort_on' in data.keys():
-        sorton = data['sort_on']
+    if 'sort_on' in self.data.keys():
+        sorton = self.data['sort_on']
 
-    return sorton
+    sort_order = 'descending'
+    if 'sort_order' in self.data.keys():
+        sort_order = str(self.data['sort_order'])
+
+    return self.context.portal_catalog(sort_on=sorton, Language=language, sort_order=sort_order, Subject=keyword)
