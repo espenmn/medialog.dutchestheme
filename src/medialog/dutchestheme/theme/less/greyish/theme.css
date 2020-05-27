@@ -5033,7 +5033,7 @@ body.template-logged_out #content-core .portletFooter {
   border: 1px solid #909090;
   border-right-style: none;
   border-left-style: none;
-  display: inline;
+  display: inline-block;
   padding: 0 2px;
   font-size: 80%;
   margin-bottom: 1em;
