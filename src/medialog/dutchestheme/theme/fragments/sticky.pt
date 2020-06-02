@@ -1,0 +1,11 @@
+<script>
+require([
+      'jquery',
+      '++theme++dutchestheme/javascript/jquery.sticky'
+      ], function(Base) {
+        'use strict';
+        $(document).ready(function(){
+          $("${view/data/classId}").sticky({ topSpacing:${view/data/spacing }});
+        });
+      });
+</script>

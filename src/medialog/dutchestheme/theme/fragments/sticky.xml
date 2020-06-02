@@ -1,0 +1,22 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
+  xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
+  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
+  xmlns:security="http://namespaces.plone.org/supermodel/security"
+  xmlns="http://namespaces.plone.org/supermodel/schema">
+<schema>
+  <field name="classId" type="zope.schema.Text">
+    <description/>
+    <required>True</required>
+    <default></default>
+    <title>CSS class or id for sticky</title>
+  </field>
+  <field name="spacing" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <default>0</default>
+    <title>Topspacing</title>
+  </field>
+  </schema>
+</model>
