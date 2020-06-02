@@ -18,5 +18,12 @@
     <default>0</default>
     <title>Topspacing</title>
   </field>
+
+  <field name="zindex" type="zope.schema.Int">
+    <description/>
+    <required>True</required>
+    <default>9999</default>
+    <title>Z-index</title>
+  </field>
   </schema>
 </model>

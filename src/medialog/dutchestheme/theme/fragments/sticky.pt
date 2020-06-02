@@ -9,3 +9,6 @@ require([
         });
       });
 </script>
+<style>
+${view/data/classId} { z-index: ${view/data/zindex} }
+</style>
