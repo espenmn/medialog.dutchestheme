@@ -25,7 +25,8 @@
             <figure tal:define="obj item/getObject;
                     scale_func obj/@@images;
                     scaled_image python:scale_func.scale('image', scale=size)"
-                    tal:on-error="">
+                    tal:on-error=""
+                    class="no-pop-up">
                 <img tal:replace="structure python:scaled_image.tag()"
                      tal:condition="scaled_image" />
            </figure>
@@ -35,7 +36,9 @@
         </h3>
         <p tal:define="max_chars view/data/max_chars|1000; description item/Description"
           class="description padding-0-20" tal:condition="description">
-          ${python: description[:max_chars]}…
+          ${python: description[:max_chars]}
+          <tal:check
+             tal:condition="python: max_chars > 0">…</tal:check>
         </p>
      </div>
    </div>

@@ -30,8 +30,8 @@
       <description>Max characters of description</description>
       <required>False</required>
       <title>Max Description Length</title>
-      <min>0</min>
-      <default>500</default>
+      <min>1</min>
+      <default></default>
  </field>
   <field name="ctype" type="zope.schema.Bool">
       <description></description>
