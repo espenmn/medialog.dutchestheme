@@ -25,7 +25,7 @@
                   tal:content="structure python:output_relative_to(context)" />
 
 
-            <a class="${color2}" tal:condition="buttontext"  href="" >${buttontext}</a>
+            <a href="${item_url}" class="lrlink ${color2}" tal:condition="buttontext"  href="" >${buttontext}</a>
         </div>
         <div class="half image margin-0 padding-0"
             tal:define="obj item/getObject;
