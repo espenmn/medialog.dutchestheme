@@ -40,6 +40,10 @@
    <default>preview</default>
    <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
   </field>
+  <field name="dont_link" type="zope.schema.Bool">
+   <description>Do not link to image Content</description>
+   <title>No linking</title>
+  </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
     <required>False</required>
