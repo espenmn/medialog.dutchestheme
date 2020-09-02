@@ -27,4 +27,9 @@ def family_css(self):
 def iconset(self):
     """Returns current iconset name This is also used for loading the resources below"""
     return self.context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']
-    
+
+
+def get_items(self):
+    keyword = self.data['keyword'].encode('ascii','ignore')
+    language = self.context.Language
+    return self.context.portal_catalog(Subject=keyword, Language=language)

@@ -13,7 +13,7 @@
       	</tal:condition>
       </div>
 
-			<div tal:define="items python:context.portal_catalog(Subject='%s' % keyword, Language='%s' % language)">
+			<div tal:define="items view/get_items">
 
 			<tal:check tal:condition="items">
 				<div class="feature-items">
