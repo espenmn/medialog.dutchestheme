@@ -71,9 +71,6 @@ $( ".news_item a" ).mouseleave(function() {
     width: 100%;
 }
 
-#fragment-${view/id} .news_item:last-child {
-    margin-right: 0 !important;
-}
 
 #fragment-${view/id} .opacity-x {
     opacity: 0.70;
