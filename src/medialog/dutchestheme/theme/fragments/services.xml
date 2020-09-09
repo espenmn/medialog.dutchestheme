@@ -36,6 +36,7 @@
         <element>services2</element>
         <element>services3</element>
         <element>services4</element>
+        <element>withbodytext</element>
       </values>
     </field>
     <field name="image_size" type="zope.schema.Choice">

@@ -36,6 +36,12 @@
 							<div  tal:condition="python: css_file=='services'">
 								<a href="${item_url}" class="${view/data/color1} ${view/data/color2} btn" i18n:translate="">Read more</a>
 							</div>
+							<tal:cond  tal:condition="python: css_file=='withbodytext'">
+								<tal:block define="value nocall:item/text|nothing;
+		                           output_relative_to nocall:value/@@output_relative_to|nothing"
+		                       tal:condition="output_relative_to"
+		                       tal:content="structure python:output_relative_to(context)" />
+							</tal:cond>
           	</tal:define>
 				  </div>
     	</div>
