@@ -4,6 +4,6 @@ def css_class(self):
 
 def get_items(self):
  card_items = int(self.data['card_items'])
- keyword = self.data['keyword']
+ keyword = self.data['keyword'].encode('ascii','ignore')
  language = self.context.Language()
  return self.context.portal_catalog(sort_on='modified', Language=language, sort_order='ascending', Subject=keyword)[:card_items]

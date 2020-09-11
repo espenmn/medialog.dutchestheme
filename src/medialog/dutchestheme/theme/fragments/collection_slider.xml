@@ -18,7 +18,7 @@
  </field>
 
   <field name="image_size" type="zope.schema.Choice">
-   <description>Choose Image Size (scale) for you image wall</description>
+   <description>Choose Image Size (scale) for you images</description>
    <required>True</required>
    <title>Image Size</title>
    <default>preview</default>
@@ -106,25 +106,33 @@
       <default></default>
       <required>False</required>
     </field>
+    <field name="item_c" type="zope.schema.Int">
+      <description>Number of items to fetch</description>
+      <title>Items</title>
+      <min>1</min>
+      <max>1000</max>
+      <default>1000</default>
+      <required>False</required>
+    </field>
 
     <field name="slides-1" type="zope.schema.Int">
           <description/>
           <required>True</required>
-          <title>Slides to show</title>
+          <title>Slides to show on each row</title>
           <min>0</min>
-          <max>10</max>
+          <max>20</max>
     </field>
     <field name="slides-2" type="zope.schema.Int">
           <description/>
           <required>True</required>
-          <title>Slides to show for 1024 width</title>
+          <title>Slides to show on each row for 1024 width</title>
           <min>0</min>
-          <max>10</max>
+          <max>15</max>
     </field>
     <field name="slides-3" type="zope.schema.Int">
           <description/>
           <required>True</required>
-          <title>Slides to show for 768 width</title>
+          <title>Slides to show on each row for 768 width</title>
           <min>0</min>
           <max>10</max>
     </field>

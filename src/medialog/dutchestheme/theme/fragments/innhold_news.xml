@@ -1,24 +1,28 @@
 <model xmlns:form="http://namespaces.plone.org/supermodel/form"
-  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-  xmlns:indexer="http://namespaces.plone.org/supermodel/indexer"
   xmlns:lingua="http://namespaces.plone.org/supermodel/lingua"
-  xmlns:marshal="http://namespaces.plone.org/supermodel/marshal"
-  xmlns:security="http://namespaces.plone.org/supermodel/security"
-  xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
-<schema>
-     <field name="content_type" type="zope.schema.Choice">
-      <description>Select content type</description>
-      <title>Content type</title>
-      <default>News Item</default>
-      <vocabulary>plone.app.vocabularies.PortalTypes</vocabulary>
-    </field>
+
+    <schema>
+      <field name="content_type" type="zope.schema.List">
+        <description/>
+        <title>Content Types</title>
+        <value_type type="zope.schema.Choice">
+          <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
+        </value_type>
+      </field>
+      <field name="keyword" type="zope.schema.List">
+        <description/>
+        <title>Tagged with Keywords</title>
+        <value_type type="zope.schema.Choice">
+          <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
+        </value_type>
+      </field>
     <field name="item_c" type="zope.schema.Int">
       <description>Number of items to fetch</description>
       <title>Items</title>
       <min>1</min>
-      <max>8</max>
-      <default>3</default>
+      <max>1000</max>
+      <default>12</default>
     </field>
     <field name="item_r" type="zope.schema.Int">
       <description>Number of items in row</description>

@@ -11,7 +11,7 @@ def large(self):
     return 100/large - 2
 
 def get_items(self):
-    keyword = self.data['keyword']
+    keyword = self.data['keyword'].encode('ascii','ignore')
     language = self.context.Language()
     sorton = 'modified'
     if 'sort_on' in self.data.keys():

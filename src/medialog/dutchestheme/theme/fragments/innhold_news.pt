@@ -1,4 +1,4 @@
-<section id="fragment-${view/id}">
+ <section id="fragment-${view/id}">
     <div class="flex flex-between flex-wrap margin-0--10 padding-0">
         <tal:repeat tal:repeat="item view/get_items|None">
               <tal:define tal:define="obj item/getObject;
@@ -90,3 +90,4 @@ $( ".news_item a" ).mouseleave(function() {
 </style>
 
 </section>
+ 

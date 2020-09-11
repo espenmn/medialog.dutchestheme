@@ -4,8 +4,9 @@
               collection_items view/get_items|None;
               order view/data/order;
               show_text python: order != 'only-image';
+              item_c view/data/item_c|None;
               items collection_items/@@contentlisting|context/@@contentlisting|None">
-    <tal:repeat tal:repeat="item items">
+    <tal:repeat tal:repeat="item python:items[:item_c]">
             <tal:define tal:define="obj item/getObject;
                   item_url item/getURL|item/absolute_url;
                   obj item/getObject;
@@ -31,6 +32,13 @@
               </div>
             </tal:define>
       </tal:repeat>
+      <div tal:condition="python: item_c <= len(items)" class="slick_slide padding-20"
+        tal:define="folder collection_items/absolute_url|context/absolute_url|None">
+        <div class="slick-text" >
+            <a href="${folder}" title="See all items">
+                <h2>See all</h2>
+            </a>
+        </div>
     </div>
 </div>
 <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
