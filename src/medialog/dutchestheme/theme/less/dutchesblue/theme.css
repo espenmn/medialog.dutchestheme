@@ -5559,3 +5559,9 @@ img.img-responsive {
     display: none;
   }
 }
+
+div.mosaic-grid-row-fluid {
+    position: relative;
+    width: 100vw !important;
+    margin-left: calc((50vw - 50%)/-1) !important;
+}
