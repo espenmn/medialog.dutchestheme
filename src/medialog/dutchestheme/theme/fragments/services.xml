@@ -112,5 +112,11 @@
                 <element>custom-color3</element>
               </values>
             </field>
+            <field name="button" type="zope.schema.TextLine">
+              <title>Button text</title>
+              <description/>
+              <required>True</required>
+              <title>Button</title>
+            </field>
 </schema>
 </model>

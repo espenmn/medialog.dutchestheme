@@ -34,7 +34,7 @@
                   <p>${item/Description}</p>
               </div>
 							<div  tal:condition="python: css_file=='services'">
-								<a href="${item_url}" class="${view/data/color1} ${view/data/color2} btn" i18n:translate="">Read more</a>
+								<a href="${item_url}" class="${view/data/color1} ${view/data/color2} btn" i18n:translate="">${view/data/button}</a>
 							</div>
 							<tal:cond  tal:condition="python: css_file=='withbodytext'">
 								<tal:block define="value nocall:item/text|nothing;
