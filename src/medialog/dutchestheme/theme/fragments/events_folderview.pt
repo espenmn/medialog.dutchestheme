@@ -5,16 +5,13 @@
     lang="en"
     i18n:domain="medialog.dutchestheme">
 
+
 <div class="eventitems"
   tal:define="image_size view/data/image_size|None; ">
 <div class="programicon_item ckFilter-obj"  tal:repeat="item view/get_items|None">
 
     <div tal:define="obj item/getObject">
-        <!--p class="pre_title">
-            <a href="link to subject">
-               item/Subject repeat</a>
-        </p-->
-
+ 
     <h1 class="users" tal:define="item_url item/getURL|item/absolute_url">
         <a href="${item_url}">${item/Title}</a>
     </h1>

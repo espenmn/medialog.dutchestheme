@@ -30,6 +30,13 @@ def iconset(self):
 
 
 def get_items(self):
-    keyword = self.data['keyword'].encode('ascii','ignore')
+    data = self.data
+    keyword = data['keyword'].encode('ascii','ignore')
+    sorton = 'modified'
+    sort_order = 'descending'
+    if 'sort_order' in data.keys():
+        sort_order = str(data['sort_order'])
+    if 'sort_on' in data.keys():
+        sorton = data['sort_on']
     language = self.context.Language
-    return self.context.portal_catalog(Subject=keyword, Language=language)
+    return self.context.portal_catalog(Subject=keyword, sort_on=sorton, sort_order=sort_order, Language=language)

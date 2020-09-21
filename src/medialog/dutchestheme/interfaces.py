@@ -6,6 +6,7 @@ from plone.supermodel import model
 from plone.autoform.directives import widget
 from zope import schema
 from zope.i18nmessageid import MessageFactory
+from zope.interface import Interface
 from zope.interface import alsoProvides
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from plone.app.portlets.interfaces import IColumn
@@ -17,6 +18,19 @@ from zope import interface
 
 _ = MessageFactory('medialog.dutchestheme')
 
+class IMailColumns(Interface):
+    """ Datagrid for contact_info mail
+    """
+
+    label = schema.TextLine(
+        title=_(u'Navn'),
+        required=False,
+    )
+
+    email = schema.TextLine(
+        title=_(u'E-mail'),
+        required=False,
+    )
 
 class IMedialogDutchesthemeLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""

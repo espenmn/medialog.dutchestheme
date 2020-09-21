@@ -21,6 +21,27 @@
       <title>Keyword</title>
       <vocabulary>plone.app.vocabularies.Keywords</vocabulary>
     </field>
+    <field name="sort_on" type="zope.schema.Choice">
+      <description/>
+      <title>Sort on</title>
+      <values>
+        <element>modified</element>
+        <element>Date</element>
+        <element>created</element>
+        <element>effective</element>
+        <element>id</element>
+        <element>sortable_title</element>
+        <element>total_comments</element>
+      </values>
+    </field>
+    <field name="sort_order" type="zope.schema.Choice">
+      <description/>
+      <title>Sort order</title>
+      <values>
+        <element>descending</element>
+        <element>ascending</element>
+      </values>
+    </field>
     <field name="css_file" type="zope.schema.Choice">
         <description/>
         <required>True</required>
