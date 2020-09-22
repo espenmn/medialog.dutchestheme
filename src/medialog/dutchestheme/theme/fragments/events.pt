@@ -7,6 +7,7 @@
 
 <div class="eventitems"
   tal:define="image_size view/data/image_size|None; ">
+
 <div class="programicon_item ckFilter-obj"  tal:repeat="item view/get_items|None">
 
     <div tal:define="obj item/getObject">

@@ -1,4 +1,4 @@
- <section id="fragment-${view/id}">
+ <section id="fragment-${view/id}" class="selectfragment">
 
     <label for="folder_select-${view/id}">${view/data/labeltext|None}</label>
     <select name="folder_select-${view/id}" id="folder_select-${view/id}" onchange="location = this.value;">

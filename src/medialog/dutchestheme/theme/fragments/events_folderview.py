@@ -3,11 +3,18 @@ def get_items(self):
     language = self.context.Language()
     linked = self.data['linked_folder']
     folder_path = '/'.join(context.getPhysicalPath())
+    from DateTime import DateTime
+    date_range = {
+        'query': (
+            DateTime(),
+        ),
+        'range': 'min',
+    }
 
     if linked:
         folder_path = self.get_path()
 
-    return self.context.portal_catalog(portal_type='Event', path={'query': folder_path,}, Language=language, sort_on='start')[:item_count]
+    return self.context.portal_catalog(portal_type='Event', path={'query': folder_path,},  Language=language, end=date_range, sort_on='start')[:item_count]
 
 def get_path(self):
     linked = self.data['linked_folder']
