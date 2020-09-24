@@ -48,8 +48,8 @@
 			<link rel="stylesheet" href="++theme++dutchestheme/css/${css_file}.css" tal:condition="load_css">
 			<style>
 				.service-item {
-  				width: ${view/item_width}%;
-					min-width: ${view/data/min_width|None}px;
+  				width: ${python: view.item_width}%;
+					min-width: ${python: view.data/min_width|None}px;
 				}
 			</style>
 </section>

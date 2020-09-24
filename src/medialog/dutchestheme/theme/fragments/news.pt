@@ -6,7 +6,7 @@
     i18n:domain="medialog.dutchestheme">
 <div class="newsitems">
 <div class="programicon_item ckFilter-obj"
- tal:repeat="item view/get_items">
+ tal:repeat="item python: view.get_items">
 
     <div tal:define="obj item/getObject">
     <p class="pre_title">
@@ -29,7 +29,7 @@
 
  <style>
 div.newsitems .ckFilter-obj {
-	width: ${view/item_width}%;
+	width: ${python: view.item_width}%;
 	margin:  10px;
   min-width: 150px;
 }

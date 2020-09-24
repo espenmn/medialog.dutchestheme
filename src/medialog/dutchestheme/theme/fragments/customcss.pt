@@ -17,12 +17,12 @@
 
 <style>
 div.mosaic-grid-row-fluid {position: relative; width: 100vw; margin-left: calc((50vw - 50%)/-1) !important; }
-option[value=custom-color1], .custom-color1 {color: #${color1} !important}
-option[value=custom-color2], .custom-color2 {color: #${color2} !important}
-option[value=custom-color3], .custom-color3 {color: #${color3} !important}
-option[value=custom-background1], .custom-background1 {background-color: #${color1} !important}
-option[value=custom-background2], .custom-background2 {background-color: #${color2} !important}
-option[value=custom-background3], .custom-background3 {background-color: #${color3} !important}
+option[value=custom-color1], .custom-color1 {color: #${python: color1} !important}
+option[value=custom-color2], .custom-color2 {color: #${python: color2} !important}
+option[value=custom-color3], .custom-color3 {color: #${python: color3} !important}
+option[value=custom-background1], .custom-background1 {background-color: #${python: color1} !important}
+option[value=custom-background2], .custom-background2 {background-color: #${python: color2} !important}
+option[value=custom-background3], .custom-background3 {background-color: #${python: color3} !important}
 <div tal:replace="structure extra_css"/>
 
     <tal:override tal:condition="python: override == 'True'"
@@ -38,17 +38,17 @@ option[value=custom-background3], .custom-background3 {background-color: #${colo
                     footerlink_hover  python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_hover']);
                     footerlink_visited python: str(context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.footerlink_visited']);">
 
-        nav.plone-navbar, #portal-globalnav li a, .plone-nav li a { background: #${nav_background};  color: #${navlink_color}  }
-        input.searchButton { background: #${nav_background};  border-color: #${nav_background}; color: #${navlink_color}  }
-        input.searchField { border-color: #${nav_background}; }
-        nav.plone-navbar li a {color: #${navlink_color};}
-        #portal-globalnav li.current a, nav.plone-navbar a:hover, nav.plone-navbar a.selected {background: #${navlink_hover} !important}
-        input.searchButton:hover { background:  #${navlink_hover}; border-color: #${nav_background}; }
-        nav.plone-navbar a:visited {color: #${navlink_visited} }
-        footer#portal-footer-wrapper { background: #${footer_background}; color: #${footer_color} }
-        footer#portal-footer-wrapper a {color: #${footerlink_color} }
-        footer#portal-footer-wrapper a:visited {color: #${footerlink_visited} }
-        footer#portal-footer-wrapper a:hover {color: #${footerlink_hover} }
+        nav.plone-navbar, #portal-globalnav li a, .plone-nav li a { background: #${python: nav_background};  color: #${python: navlink_color}  }
+        input.searchButton { background: #${python: nav_background};  border-color: #${python: nav_background}; color: #${python: navlink_color}  }
+        input.searchField { border-color: #${python: nav_background}; }
+        nav.plone-navbar li a {color: #${python: navlink_color};}
+        #portal-globalnav li.current a, nav.plone-navbar a:hover, nav.plone-navbar a.selected {background: #${python: navlink_hover} !important}
+        input.searchButton:hover { background:  #${python: navlink_hover}; border-color: #${python: nav_background}; }
+        nav.plone-navbar a:visited {color: #${python: navlink_visited} }
+        footer#portal-footer-wrapper { background: #${python: footer_background}; color: #${python: footer_color} }
+        footer#portal-footer-wrapper a {color: #${python: footerlink_color} }
+        footer#portal-footer-wrapper a:visited {color: #${python: footerlink_visited} }
+        footer#portal-footer-wrapper a:hover {color: #${python: footerlink_hover} }
 
         <tal:con tal:condition="python: body_font != 'None'">body { font-family: ${body_font};}</tal:con>
         <tal:con tal:condition="python: heading_font != 'None'">h1, h2, h3, h4, h5, h6 { font-family: ${heading_font};}
