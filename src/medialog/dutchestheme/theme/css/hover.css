@@ -1,10 +1,6 @@
-.hovercolumn {
-	margin: 15px 15px 0;
-	padding: 0;
-}
-.hovercolumn:last-child {
-	padding-bottom: 60px;
-}
+/* @override http://xweb14d.plana.dk:8052/Plone/++theme++dutchestheme/css/hover.css */
+
+
 
 .hovercolumn::after {
 	content: '';
@@ -14,7 +10,7 @@
 
 .hovercolumn div {
 	position: relative;
-	margin: 0 0 0 25px;
+	margin: 0;
 	padding: 0;
 }
 
