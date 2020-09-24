@@ -17,5 +17,5 @@ def get_path(self):
     mappe =  folder[0].getObject()
     return  '/'.join(mappe.getPhysicalPath())
 
-def get_effect(self)
-    return 'self.data['effekt']'
+def get_effect(self):
+    return self.data['effekt']
