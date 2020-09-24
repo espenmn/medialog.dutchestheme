@@ -15,17 +15,39 @@
           <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
         </value_type>
       </field>
-      <field name="maxwidth" type="zope.schema.Int">
+      <field name="imagewidth" type="zope.schema.Int">
+        <description>What should we crop the image to</description>
+        <required>True</required>
+        <title>Image Size Width</title>
+        <default>600</default>
+      </field>
+      <field name="imageheight" type="zope.schema.Int">
+        description>What should we crop the image to</description>
+        <required>True</required>
+        <title>Image Size width100</title>
+        <default>400</default>
+      </field>
+      <field name="minwidth" type="zope.schema.Int">
         <description/>
         <required>True</required>
-        <title>Max Width</title>
+        <title>Min Width</title>
         <default>300</default>
       </field>
-      <field name="maxheight" type="zope.schema.Int">
+      <field name="width" type="zope.schema.Int">
         <description/>
         <required>True</required>
-        <title>Max Height</title>
-        <default>200</default>
+        <title>Width in percent</title>
+        <default>30</default>
+        <min>10</min>
+        <max>100</max>
+      </field>
+      <field name="breakpoint" type="zope.schema.Int">
+        <description/>
+        <required>True</required>
+        <title>What width to show only one column</title>
+        <default>60</default>
+        <min>0</min>
+        <max>1000</max>
       </field>
       <field name="effekt" type="zope.schema.Choice">
         <description/>
