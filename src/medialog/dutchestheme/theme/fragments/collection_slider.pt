@@ -106,6 +106,6 @@ require([
     object-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
     }
 </tal:condition>
-  .news-container {background: #${color2}; }
+  .news-container {background: #${python: color2}; }
 </style>
 </section>
