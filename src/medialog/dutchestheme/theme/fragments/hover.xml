@@ -24,7 +24,7 @@
       <field name="maxheight" type="zope.schema.Int">
         <description/>
         <required>True</required>
-        <title>Max Width</title>
+        <title>Max Height</title>
         <default>200</default>
       </field>
       <field name="effekt" type="zope.schema.Choice">

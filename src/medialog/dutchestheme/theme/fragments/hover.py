@@ -19,3 +19,11 @@ def get_path(self):
 
 def get_effect(self):
     return self.data['effekt'][:2]
+
+def width100(self):
+    bredde = self.data['max_width'] + 100
+    return bredde
+
+def width50(self):
+    bredde = self.data['max_width'] + 50
+    return bredde
