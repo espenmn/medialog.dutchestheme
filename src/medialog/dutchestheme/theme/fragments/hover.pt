@@ -1,13 +1,12 @@
  <section id="fragment-${python: view.id}"
    class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
-   tal:define="min_width  view/data/maxwidth;
+   tal:define="min_width  view/data/minwidth;
                width view/data/maxheight;
                breakpoint view/data/breakpoint;
                image_width  view/data/imagewidth;
                image_height view/data/imageheight;
                            ">
    <tal:repeat tal:repeat="item view/get_items|None">
-
         <div tal:define="obj item/getObject;
                 scale_func obj/@@images;
                 scale context/@@images;
@@ -20,13 +19,11 @@
           </a>
         </div>
     </tal:repeat>
-
 <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
   <link rel="stylesheet" href="++theme++dutchestheme/css/hover.css" tal:condition="load_css">
 </tal:define>
 
 <style>
-
 .hovercolumn div,
 .figure img,
 .hover04 figure:hover img {
@@ -37,15 +34,12 @@
 	min-width: calc(${min_width}px + 50px);
   width: calc(${width}% + 50px);
 }
-
 .hover04 figure img {
 	min-width: calc(${min_width}px + 100px);
   width: calc(${width}% + 100px);
 }
-
 @media only screen and (max-width: ${breakpoint}px) {
   .hovercolumn div{ width: 100%}
 }
-
 </style>
 </section>
