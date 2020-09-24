@@ -37,7 +37,7 @@
 	overflow: hidden;
 }
 .hovercolumn figure:hover+span {
-	bottom: -36px;
+	bottom: -20px;
 	opacity: 1;
 }
 
@@ -56,14 +56,11 @@
 
 /* Zoom In #2 */
 .hover02 figure img {
-	width: 300px;
 	height: auto;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.hover02 figure:hover img {
-	width: 350px;
-}
+ 
 
 /* Zoom Out #1 */
 .hover03 figure img {
@@ -79,14 +76,12 @@
 
 /* Zoom Out #2 */
 .hover04 figure img {
-	width: 400px;
+ 
 	height: auto;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.hover04 figure:hover img {
-	width: 300px;
-}
+ 
 
 /* Slide */
 .hover05 figure img {

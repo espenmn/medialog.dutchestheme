@@ -1,12 +1,13 @@
  <section id="fragment-${python: view.id}"
    class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
-   tal:define="image_size view/data/image_size">
+   tal:define="image_width  view/data/image_width|None;
+               image_height view/data/image_height|None;">
    <tal:repeat tal:repeat="item view/get_items|None">
       <a href="${item/getURL|item/absolute_url}">
         <div tal:define="obj item/getObject;
                 scale_func obj/@@images;
                 scale context/@@images;
-                scaled_image python:scale_func.scale('image', scale=image_size);
+                scaled_image python:scale_func.scale('image', width=image_width, height=image_height, direction='down')">
                 item_url item/getURL|item/absolute_url"
                 tal:on-error="">
           <figure  tal:condition="scaled_image" >
@@ -22,8 +23,22 @@
 </tal:define>
 
 <style>
-.hovercolumn div {
-  	width: 300px;
-  	height: 200px;
+.hovercolumn div,
+figure {
+  	max-height: ${view/data/maxheight};
 }
+
+.hovercolumn div,
+.figure img,
+.hover04 figure:hover img {
+	max-width: ${view/data/maxwidth};
+}
+.hover02 figure:hover img {
+	max-width: calc(${view/data/maxwidth} + 50px);
+}
+
+.hover04 figure img {
+	max-width: calc(${view/data/maxwidth + 100px);
+}
+
 </style>

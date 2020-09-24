@@ -15,12 +15,17 @@
           <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
         </value_type>
       </field>
-      <field name="image_size" type="zope.schema.Choice">
-           <description>Choose Image Size (scale)</description>
-           <required>True</required>
-           <title>Image Size</title>
-           <default>preview</default>
-         <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+      <field name="maxwidth" type="zope.schema.Int">
+        <description/>
+        <required>True</required>
+        <title>Max Width</title>
+        <default>300</default>
+      </field>
+      <field name="maxheight" type="zope.schema.Int">
+        <description/>
+        <required>True</required>
+        <title>Max Width</title>
+        <default>200</default>
       </field>
       <field name="effekt" type="zope.schema.Choice">
         <description/>
