@@ -24,7 +24,9 @@
 
 <style>
 .hovercolumn div,
-figure {max-height: ${max_height}px;}
+figure {
+  max-height: ${max_height}px;
+}
 
 .hovercolumn div,
 .figure img,
