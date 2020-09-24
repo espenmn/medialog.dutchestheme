@@ -14,4 +14,4 @@ def get_url(self):
         url = '/'.join([
             context_state.canonical_object_url(), url
         ])
-    return url
+    return url.encode('ascii','ignore')
