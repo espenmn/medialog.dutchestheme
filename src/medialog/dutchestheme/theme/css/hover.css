@@ -1,9 +1,13 @@
 /* @override http://xweb14d.plana.dk:8052/Plone/++theme++dutchestheme/css/hover.css */
 
-
+ .hovercolumn {
+	margin-left:  -15px;
+	margin-right:  -15px;
+}
+ 
  .hovercolumn div {
 	position: relative;
-	margin: 0 0 50px;;
+	margin: 15px 15px  50px;;
 	padding: 0;
 	
 }
