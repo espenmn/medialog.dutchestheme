@@ -22,7 +22,8 @@
 </tal:define>
 
 <style>
-  .hovercolumn div {
+.hovercolumn div {
   	width: 300px;
   	height: 200px;
+}
 </style>
