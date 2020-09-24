@@ -1,5 +1,5 @@
  <section id="fragment-${python: view.id}"
-   class="hover${python: view.data['effekt'][:1]} hovercolumn flex flex-wrap"
+   class="hover${python: view.data['effekt'][:2]} hovercolumn flex flex-wrap"
    tal:define="image_size view/data/image_size">
    <tal:repeat tal:repeat="item view/get_items|None">
       <a href="${item/getURL|item/absolute_url}">
