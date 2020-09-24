@@ -14,6 +14,4 @@
       </a>
     </tal:repeat>
 </section>
-
-
 <link rel="stylesheet" href="++theme++dutchestheme/css/hover.css" tal:condition="load_css">

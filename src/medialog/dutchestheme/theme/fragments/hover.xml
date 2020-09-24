@@ -15,6 +15,13 @@
           <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
         </value_type>
       </field>
+      <field name="image_size" type="zope.schema.Choice">
+           <description>Choose Image Size (scale)</description>
+           <required>True</required>
+           <title>Image Size</title>
+           <default>preview</default>
+         <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
+      </field>
       <field name="effekt" type="zope.schema.Choice">
         <description/>
         <title>Choose effect</title>
