@@ -1,17 +1,11 @@
 /* @override http://xweb14d.plana.dk:8052/Plone/++theme++dutchestheme/css/hover.css */
 
 
-
-.hovercolumn::after {
-	content: '';
-	clear: both;
-	display: block;
-}
-
-.hovercolumn div {
+ .hovercolumn div {
 	position: relative;
-	margin: 0;
+	margin: 0 0 50px;;
 	padding: 0;
+	
 }
 
 .hovercolumn div span {
@@ -37,7 +31,7 @@
 	overflow: hidden;
 }
 .hovercolumn figure:hover+span {
-	bottom: -20px;
+	bottom: -30px;
 	opacity: 1;
 }
 
