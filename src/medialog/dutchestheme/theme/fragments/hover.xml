@@ -24,7 +24,7 @@
       <field name="imageheight" type="zope.schema.Int">
         <description>What should we crop the image to</description>
         <required>True</required>
-        <title>Image Size width</title>
+        <title>Image Size height</title>
         <default>400</default>
       </field>
       <field name="minwidth" type="zope.schema.Int">
@@ -45,7 +45,7 @@
         <description/>
         <required>True</required>
         <title>What width to show only one column</title>
-        <default>60</default>
+        <default>600</default>
         <min>0</min>
         <max>1000</max>
       </field>

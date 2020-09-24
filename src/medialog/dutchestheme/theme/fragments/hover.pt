@@ -30,13 +30,11 @@
 	min-width: ${min_width}px;
   width: ${width}%;
 }
-.hover02 figure:hover img {
-	min-width: calc(${min_width}px + 50px);
-  width: calc(${width}% + 50px);
+.hover02 figure img:hover {
+	width: calc(100% + 50px);
 }
 .hover04 figure img {
-	min-width: calc(${min_width}px + 100px);
-  width: calc(${width}% + 100px);
+	width: calc(100% + 100px);
 }
 @media only screen and (max-width: ${breakpoint}px) {
   .hovercolumn div{ width: 100%}
