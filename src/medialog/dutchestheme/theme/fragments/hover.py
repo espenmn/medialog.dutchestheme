@@ -18,4 +18,5 @@ def get_path(self):
     return  '/'.join(mappe.getPhysicalPath())
 
 def get_effect(self)
-    return self.data['effekt'][:2]
+    effect = self.data['effekt']
+    return effect
