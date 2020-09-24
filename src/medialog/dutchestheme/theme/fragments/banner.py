@@ -1,7 +1,7 @@
 def item_url(self):
     item =  self.data['link']
     items =self.context.portal_catalog(UID=item)
-    return items[0].getURL()
+    return items[0].getURL().encode('ascii','ignore')
 
 def get_url(self):
     url = self.data['select']
