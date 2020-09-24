@@ -32,10 +32,14 @@
 }
 .hover02 figure img:hover {
 	width: calc(100% + 50px);
+  max-width: calc(100% + 50px);
 }
 .hover04 figure img {
 	width: calc(100% + 100px);
+  max-width: calc(100% + 100px);
 }
+
+
 @media only screen and (max-width: ${breakpoint}px) {
   .hovercolumn div{ width: 100%}
 }
