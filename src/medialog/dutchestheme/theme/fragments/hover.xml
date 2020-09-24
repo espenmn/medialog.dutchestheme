@@ -27,13 +27,11 @@
         <title>Image Size width100</title>
         <default>400</default>
       </field>
-
         <required>True</required>
         <title>Min Width</title>
         <default>300</default>
       </field>
       <field name="width" type="zope.schema.Int">
-
         <required>True</required>
         <title>Width in percent</title>
         <default>30</default>
@@ -41,7 +39,6 @@
         <max>100</max>
       </field>
       <field name="breakpoint" type="zope.schema.Int">
-
         <required>True</required>
         <title>What width to show only one column</title>
         <default>60</default>
@@ -49,7 +46,6 @@
         <max>1000</max>
       </field>
       <field name="effekt" type="zope.schema.Choice">
-
         <title>Choose effect</title>
         <values>
           <element>01 Zoom In 1</element>
@@ -70,7 +66,6 @@
         </values>
       </field>
       <field name="sort_on" type="zope.schema.Choice">
-
         <title>Sort on</title>
         <values>
           <element>modified</element>
@@ -82,9 +77,7 @@
           <element>total_comments</element>
         </values>
       </field>
-
       <field name="sort_order" type="zope.schema.Choice">
- 
         <title>Sort order</title>
         <values>
           <element>descending</element>
