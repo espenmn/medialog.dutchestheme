@@ -16,3 +16,6 @@ def get_path(self):
     folder = self.context.portal_catalog(UID=linked)
     mappe =  folder[0].getObject()
     return  '/'.join(mappe.getPhysicalPath())
+
+def get_effect(self)
+    return self.data['effekt'][:2]
