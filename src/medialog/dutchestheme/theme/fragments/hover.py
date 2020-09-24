@@ -18,5 +18,5 @@ def get_path(self):
     return  '/'.join(mappe.getPhysicalPath())
 
 def get_effect(self)
-    effect = self.data['effekt']
+    effect = 'hover' + self.data['effekt']
     return effect
