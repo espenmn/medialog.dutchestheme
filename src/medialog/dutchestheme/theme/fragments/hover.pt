@@ -1,7 +1,7 @@
  <section id="fragment-${python: view.id}"
    class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
-   tal:define="image_width  view/data/image_width|None;
-               image_height view/data/image_height|None;">
+   tal:define="max_width  view/data/max_width|None;
+               max_height view/data/maxheight|None;">
    <tal:repeat tal:repeat="item view/get_items|None">
       <a href="${item/getURL|item/absolute_url}">
         <div tal:define="obj item/getObject;
@@ -25,20 +25,20 @@
 <style>
 .hovercolumn div,
 figure {
-  	max-height: ${view/data/maxheight};
+  	max-height: ${max_height};
 }
 
 .hovercolumn div,
 .figure img,
 .hover04 figure:hover img {
-	max-width: ${view/data/maxwidth};
+	max-width: ${max_width};
 }
 .hover02 figure:hover img {
-	max-width: calc(${view/data/maxwidth} + 50px);
+	max-width: calc(${max_width} + 50px);
 }
 
 .hover04 figure img {
-	max-width: calc(${view/data/maxwidth + 100px);
+	max-width: calc(${max_width + 100px);
 }
 
 </style>
