@@ -26,15 +26,15 @@
         <description/>
         <title>Choose effect</title>
         <values>
-           <element>1</element>
-           <element>2</element>
-           <element>3</element>
-           <element>4</element>
-           <element>5</element>
-           <element>6</element>
-           <element>7</element>
-           <element>8</element>
-           <element>9</element>
+          <element>01</element>
+          <element>02</element>
+          <element>03</element>
+          <element>04</element>
+          <element>05</element>
+          <element>06</element>
+          <element>07</element>
+          <element>08</element>
+          <element>09</element>
           <element>10</element>
           <element>11</element>
           <element>12</element>
