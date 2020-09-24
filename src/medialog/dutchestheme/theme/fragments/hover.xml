@@ -26,18 +26,18 @@
         <description/>
         <title>Choose effect</title>
         <values>
-          <element>01 Zoom In #1</element>
-          <element>02 Zoom In #2</element>
-          <element>03 Zoom Out #1</element>
-          <element>04 Zoom Out #2</element>
+          <element>01 Zoom In 1</element>
+          <element>02 Zoom In 2</element>
+          <element>03 Zoom Out 1</element>
+          <element>04 Zoom Out 2</element>
           <element>05 Slide</element>
-          <element>06 Rotate(+Zoom Out)</element>
+          <element>06 Rotate and Zoom Out</element>
           <element>07 Blur</element>
           <element>08 Gray Scale</element>
           <element>09 Sepia</element>
-          <element>10 Blur + Gray Scale</element>
-          <element>11 Opacity #1</element>
-          <element>12 Opacity #2</element>
+          <element>10 Blur and Gray Scale</element>
+          <element>11 Opacity 1</element>
+          <element>12 Opacity 2</element>
           <element>13 Flashing</element>
           <element>14 Shine</element>
           <element>15 Circle</element>
