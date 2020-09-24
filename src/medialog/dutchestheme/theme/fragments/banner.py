@@ -5,7 +5,7 @@ def item_url(self):
     return irurl.encode('ascii','ignore')
 
 def get_url(self):
-    url = self.data['select'].encode('ascii','ignore')
+    url = self.data['select']
     if url.startswith('${portal_url}'):
         spl_url =  (url.split('/'))[1:]
         url = '/'.join(spl_url)
