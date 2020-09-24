@@ -1,7 +1,7 @@
 <section tal:define="wall view/get_wallitems|None;
          items wall/@@contentlisting|context/@@contentlisting;
          image_size view/data/image_size|None"
-         id="fragment-${view/id}"
+         id="fragment-${python: view.id}"
          data-anchor="anchor-images"
          title="images">
     <div class="wall-of-images" tal:condition="image_size">

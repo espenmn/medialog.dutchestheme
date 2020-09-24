@@ -7,7 +7,7 @@
     lang="en"
     i18n:domain="medialog.dutchestheme">
 <div class="feature-item feature-item-2"
-    id="fragent-${view/id}"
+    id="fragent-${python: view.id}"
     tal:define="family_css view/family_css;
     title view/data/title|None;
     item_url view/item_url|view/get_url|None;

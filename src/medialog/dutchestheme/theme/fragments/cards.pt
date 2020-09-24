@@ -1,7 +1,7 @@
 <section tal:define="keyword view/data/keyword|None;
         items view/get_items;
         buttontext view/data/buttontext|None;
-        f_id view/id"
+        f_id python: view.id"
         id="cards-${f_id}">
 	<tal:check tal:condition="items"
 	    tal:define="image_size view/data/image_size|None;

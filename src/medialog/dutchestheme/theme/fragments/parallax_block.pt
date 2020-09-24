@@ -1,11 +1,11 @@
 <section  tal:define="scale view/data/image_size;
-         f_id view/id;
+         f_id python: view.id;
          title view/data/title|None;
          image view/one_image;
          image_url image/getURL;
          image_size view/data/image_size;
          color1 view/data/color1"
-         id="fragment-${view/id}"
+         id="fragment-${python: view.id}"
          class="${view/data/color2} padding-20">
 
     <img src="${image_url}/@@images/image/${view/data/image_size}"

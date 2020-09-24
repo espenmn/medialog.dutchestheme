@@ -1,7 +1,7 @@
-<section id="fragment-${view/id}" >
+<section id="fragment-${python: view.id}" >
     <div class="line ${view/data/color|None}"/>
   <style>
-    #fragment-${view/id} {
+    #fragment-${python: view.id} {
       margin: ${view/data/margin1|None}px ${view/data/margin2|None}px;
       vertical-align: middle;
     }

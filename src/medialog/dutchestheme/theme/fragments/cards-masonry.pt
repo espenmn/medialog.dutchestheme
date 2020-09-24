@@ -2,7 +2,7 @@
 <section id="card-items"
     tal:define="buttontext view/data/buttontext|None;
     items view/get_items|None;
-		f_id view/id"
+		f_id python: view.id"
     class="cards-${f_id}">
 
 <tal:check tal:condition="items"

@@ -1,4 +1,4 @@
-<section id="fragment-circular_menu-${view/id}"
+<section id="fragment-circular_menu-${python: view.id}"
 				 class="${view/data/color3}"
 				 tal:define="items view/get_items|None;
 				 showimage view/data/show-image|None;
@@ -9,9 +9,9 @@
 				 color2 view/data/color2;
 				 family_css view/family_css;"
 				 style= "height: ${height}px">
-<div id="circular_menu-${view/id}" tal:condition="items" >
-	<input type="checkbox" id="toggle-${view/id}" onClick="toggle();"/>
-	<label id="show-menu-${view/id}" for="toggle-${view/id}">
+<div id="circular_menu-${python: view.id}" tal:condition="items" >
+	<input type="checkbox" id="toggle-${python: view.id}" onClick="toggle();"/>
+	<label id="show-menu-${python: view.id}" for="toggle-${python: view.id}">
 	<tal:check tal:condition="items">
 		<div tal:condition="not:showimage" class="btn ${color1}">
 			<i class="${color2} ${family_css} ${view/data/menuicon}"></i>
@@ -32,7 +32,7 @@
                 href="${link}" >
                 <i class="${color2} family_css fa ${item/iconfield|None}"></i>
             </a>
-            
+
             <a tal:condition="showimage" href="${link}" class="btn ${color1} ${color2} show-${view/data/show-on-load|None}"
                 tal:define="mi python:item['item'];
                                x python:item['x'];
@@ -42,26 +42,26 @@
                 style='top:${y}px; left:${x}px; -webkit-transition-delay: ${index}0ms;transition-delay: ${index}0ms;
                     background-image: url(${link}/@@images/image/preview)'
                 href="${link}" >
-            </a>         
+            </a>
         </tal:repeat>
 	</tal:check>
 </div>
 <style>
-	
-#fragment-circular_menu-${view/id} {padding: 35px}
 
-#circular_menu-${view/id} input {
-    position: absolute; 
+#fragment-circular_menu-${python: view.id} {padding: 35px}
+
+#circular_menu-${python: view.id} input {
+    position: absolute;
     display: none}
 
-#circular_menu-${view/id} {
+#circular_menu-${python: view.id} {
 	   margin: 0 auto;
 	   position: absolute;
 	   left: 50%;
 	   margin-left: -35px;
 	  }
 
-#circular_menu-${view/id} .btn {
+#circular_menu-${python: view.id} .btn {
 	   width: ${size}px;
 	   height: ${size}px;
   	   line-height: ${size}px;
@@ -73,34 +73,34 @@
 	   padding: 0;
 	 }
 
-#circular_menu-${view/id} .btn {
+#circular_menu-${python: view.id} .btn {
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
      background-size: auto 105%;
      background-repeat: no-repeat;
-     background-position: center center; 
+     background-position: center center;
      }
 
-#circular_menu-${view/id} .btn.show-:not(:first-child),
-#circular_menu-${view/id} .btn.show-False:not(:first-child) {
+#circular_menu-${python: view.id} .btn.show-:not(:first-child),
+#circular_menu-${python: view.id} .btn.show-False:not(:first-child) {
 	display: none;
 }
 
 
-#circular_menu-${view/id} input#toggle-${view/id}:checked ~ #show-menu-${view/id} .btn {
+#circular_menu-${python: view.id} input#toggle-${python: view.id}:checked ~ #show-menu-${python: view.id} .btn {
 	   display: block;
 	 }
 
-#circular_menu-${view/id} {
+#circular_menu-${python: view.id} {
 	margin-top: ${view/data/radius}px;
 	margin-bottom: ${view/data/radius}px;
 }
-	
-#circular_menu-${view/id} ::selection {
+
+#circular_menu-${python: view.id} ::selection {
 	background: none; /* WebKit/Blink Browsers */
 }
-	
+
 ::-moz-selection {
 	background: none; /* Gecko Browsers */
-}	
+}
 </style>
 </section>

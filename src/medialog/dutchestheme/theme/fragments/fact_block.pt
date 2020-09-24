@@ -1,5 +1,5 @@
 <aside class="padding-10-0" role="complementary"
-    id="frag${view/id}">
+    id="frag${python: view.id}">
     <div class="accordian sans-serif">
         <h3 class=""><!--i class="fa fa-info-circle plone-link large large-text"/--> ${view/data/title}</h3>
         <div class="accordian-body"
@@ -18,9 +18,9 @@
 <script>require([
       'jquery',
       ], function(Base) {
-        $("#frag${view/id} .accordian-expand,  #frag${view/id} .accordian").click(function() {
-            $('#frag${view/id} .accordian').toggleClass('open');
-             $('#frag${view/id} .fa-chevron-down').toggleClass('fa-rotate-180');
+        $("#frag${python: view.id} .accordian-expand,  #frag${python: view.id} .accordian").click(function() {
+            $('#frag${python: view.id} .accordian').toggleClass('open');
+             $('#frag${python: view.id} .fa-chevron-down').toggleClass('fa-rotate-180');
         });
       });
 </script>
@@ -65,12 +65,12 @@
 
 .accordian-body:after {
   position: absolute;
-  top:0;  
+  top:0;
   height: 38px;
   width: 100%;
   content: "";
   background: linear-gradient(to top,
-     rgba(255,255,255, 1) 0%, 
+     rgba(255,255,255, 1) 0%,
      rgba(255,255,255, 0) 80%
   );
   pointer-events: none; /* so the text is still selectable */
@@ -103,6 +103,6 @@
     right: 0;
     position: absolute;
     z-index:3;
-} 
+}
 
 </style>

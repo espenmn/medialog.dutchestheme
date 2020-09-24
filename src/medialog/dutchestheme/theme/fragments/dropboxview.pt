@@ -1,4 +1,4 @@
-<section id="section-${view/id}" class=""
+<section id="section-${python: view.id}" class=""
   tal:define="image_width  view/data/image_width|None;
               image_height view/data/image_height|None;
               folder view/get_items|None;
@@ -22,7 +22,7 @@
     </ol>
 <style>
 
-#section-${view/id} ol.flex.flex-wrap  {
+#section-${python: view.id} ol.flex.flex-wrap  {
   padding: 0;
   list-style-image: none;
   list-style-type: none;
@@ -31,7 +31,7 @@
   margin: auto;
 }
 
-#section-${view/id} li { 
+#section-${python: view.id} li { 
     width: ${image_width}px;
     margin: ${view/get_margin}px;
     list-style-image: none;
@@ -39,11 +39,11 @@
     overflow: hidden;
 }
 
-#section-${view/id} img {
+#section-${python: view.id} img {
   width: 100%;
 }
 
-#section-${view/id} p.center {
+#section-${python: view.id} p.center {
   text-align: center;
   margin-top: 1em;
   overflow: hidden;

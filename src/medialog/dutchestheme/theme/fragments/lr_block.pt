@@ -1,4 +1,4 @@
-<section id="fragment-${view/id}"
+<section id="fragment-${python: view.id}"
          tal:define="scale view/data/image_size;
                 title view/data/title|None;
                 image view/one_image|view|None;
@@ -28,7 +28,7 @@
  <link rel="stylesheet" href="++theme++dutchestheme/css/lr_block.css" tal:condition="load_css">
  <style>
 <tal:check tal:condition="view/data/image_height|None">
-    #fragment-${view/id} img.image-inline {
+    #fragment-${python: view.id} img.image-inline {
         object-fit: cover;
         width: 100%;
         max-height: ${view/data/image_height}px;
@@ -36,7 +36,7 @@
     }
 </tal:check>
 
- #fragment-${view/id} .half {
+ #fragment-${python: view.id} .half {
     min-width: 30px;
     box-sizing: border-box;
  }

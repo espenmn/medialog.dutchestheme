@@ -1,4 +1,4 @@
- <section id="fragment-${view/id}">
+ <section id="fragment-${python: view.id}">
     <div class="flex flex-between flex-wrap margin-0--10 padding-0">
         <tal:repeat tal:repeat="item view/get_items|None">
               <tal:define tal:define="obj item/getObject;
@@ -35,19 +35,19 @@ $( ".news_item a" ).mouseleave(function() {
 
 .margin-0--10 {margin: 0 -10px;}
 
-#fragment-${view/id} .news_text {
+#fragment-${python: view.id} .news_text {
     position:absolute;
     top:0;
     display:none;
     background: linear-gradient(0deg,  rgba(0,0,0,0), #333);
     width: 100%
 }
-#fragment-${view/id} h3 {
+#fragment-${python: view.id} h3 {
     margin-bottom: 0;
     color: white;
 }
 
-#fragment-${view/id} .news_item {
+#fragment-${python: view.id} .news_item {
     position:relative;
     background: black !important;
     width: ${view/item_width|none}%;
@@ -55,32 +55,32 @@ $( ".news_item a" ).mouseleave(function() {
     max-width: ${view/data/image_width|None}px;
 }
 
-#fragment-${view/id} a,
-#fragment-${view/id} img {
+#fragment-${python: view.id} a,
+#fragment-${python: view.id} img {
 	height: 100%;
 	padding: 0;
 	margin: 0;
 }
 
-#fragment-${view/id} img {
+#fragment-${python: view.id} img {
     width: 100%;
     object-fit: cover;
 }
 
-#fragment-${view/id} a {
+#fragment-${python: view.id} a {
     width: 100%;
 }
 
 
-#fragment-${view/id} .opacity-x {
+#fragment-${python: view.id} .opacity-x {
     opacity: 0.70;
 }
-#fragment-${view/id}  p {
+#fragment-${python: view.id}  p {
     padding-bottom:: 170px;
     display: block;
 }
 @media screen and (max-width: 768px) {
-    #fragment-${view/id} div.news_item.margin-10  {
+    #fragment-${python: view.id} div.news_item.margin-10  {
         margin-left:0 !important;
         margin-right: 0 !important
         width: 100%;
@@ -90,4 +90,3 @@ $( ".news_item a" ).mouseleave(function() {
 </style>
 
 </section>
- 

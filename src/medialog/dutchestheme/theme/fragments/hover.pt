@@ -1,4 +1,4 @@
- <section id="fragment-${view/id}" class="hover01 hovercolumn">
+ <section id="fragment-${python: view.id}" class="hover01 hovercolumn">
    <tal:repeat tal:repeat="item view/get_items|None">
       <a href="${item/getURL|item/absolute_url}">
         <div>

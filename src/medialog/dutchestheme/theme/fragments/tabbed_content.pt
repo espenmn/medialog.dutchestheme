@@ -1,5 +1,5 @@
 
-<section id="fragment-${view/id}"
+<section id="fragment-${python: view.id}"
   class="tabblock no-border">
 
   <div class="pat-autotoc autotabs no-border" data-pat-autotoc="section:fieldset;levels:legend;">

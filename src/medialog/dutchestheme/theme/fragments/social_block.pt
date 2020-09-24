@@ -1,4 +1,4 @@
-<section id="fragment-${view/id}"
+<section id="fragment-${python: view.id}"
 				 class="sosial-block ${view/data/style|None}"
 				 tal:define="email view/data/email|None;
 					  twitter view/data/twitter|None;

@@ -1,10 +1,11 @@
 <section>
-<div id="fragment-${view/id}" class="news-container ${view/data/color1|None}">
+<div id="fragment-${python: view.id}" class="news-container ${view/data/color1|None}">
   <div class="slick" tal:define="image_size view/data/image_size|None;
               collection_items view/get_items|None;
               order view/data/order;
               show_text python: order != 'only-image';
               item_c view/data/item_c|None;
+              color2 view/data/color2;
               items collection_items/@@contentlisting|context/@@contentlisting|None">
     <tal:repeat tal:repeat="item python:items[:item_c]">
             <tal:define tal:define="obj item/getObject;
@@ -50,7 +51,7 @@ require([
       '++theme++dutchestheme/javascript/slick.min'
       ], function(Base) {
         'use strict';
-        $('#fragment-${view/id} .slick').slick({
+        $('#fragment-${python: view.id} .slick').slick({
             infinite: true,
             slidesToShow: ${view/data/slides-1|None},
             slidesToScroll: ${view/data/slides-1|None},
@@ -79,37 +80,32 @@ require([
       });
 </script>
 <style>
-#fragment-${view/id} .slick-arrow { position: absolute; top: 40%;}
-#fragment-${view/id} .fa-angle-left.slick-arrow {left: -1em}
-.fa-angle-right.slick-arrow {right: -1em}
-#fragment-${view/id} .slick ul {
-	list-style-image: none;
-	list-style-type: none;
-	display: block;
-	width: 100%;
-	text-align: center;
-	padding: 1em;
-}
+#fragment-${python: view.id} .slick-arrow { position: absolute; top: 40%;}
+#fragment-${python: view.id} .fa-angle-left.slick-arrow {left: -1em;}
 
-#fragment-${view/id} div.slick_slide a {
+.fa-angle-right.slick-arrow {right: -1em;}
+#fragment-${python: view.id} .slick ul { list-style-image: none;
+	list-style-type: none;
+	display: block;	width: 100%;	text-align: center;	padding: 1em;}
+
+#fragment-${python: view.id} div.slick_slide a {
  display:  block;
 }
 
-#fragment-${view/id} .slick li.slick-active  button  {
+#fragment-${python: view.id} .slick li.slick-active  button  {
 	background: #333;
 }
 
-#fragment-${view/id} div.slick_slide img {
+#fragment-${python: view.id} div.slick_slide img {
 	margin: 0;
 }
-
 <tal:condition tal:condition="view/data/height|None">
-  #fragment-${view/id} img  {
+  #fragment-${python: view.id} img  {
     height: ${view/data/height}px !important;
     object-fit: cover !important;
     object-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
     }
 </tal:condition>
-    .news-container {background: #${view/data/color2}}
+  .news-container {background: #${color2}; }
 </style>
 </section>

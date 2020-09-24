@@ -6,7 +6,7 @@
 	<img class="img-inline padding-0 margin-0" alt="Thumbnail First"
 		src="${view/item_url}/@@images/image/${view/data/image_size}"/>
 
-	<div class="card-block" id="block-${view/id}">
+	<div class="card-block" id="block-${python: view.id}">
 		<h3 class="card-title" tal:condition="view/data/title|None">
 					${view/data/title}
 		</h3>
@@ -16,14 +16,14 @@
 		<p>
          <a class="btn btn-primary" href="${view/item_url}" tal:condition="not: inline|None">
                  ${view/data/linktext|None}
-         </a>  
-        <a href="${view/item_url}" 
+         </a>
+        <a href="${view/item_url}"
                tal:condition="inline|None" class="btn btn-primary pat-contentloader"
                data-pat-contentloader="url:${view/item_url|None}?ajax_load=1;
-               target:#block-${view/id};content:#content">
+               target:#block-${python: view.id};content:#content">
                    <span>${view/data/linktext|None}</span>
          </a>
-      </p>	
+      </p>
 	</div>
 
      <style>

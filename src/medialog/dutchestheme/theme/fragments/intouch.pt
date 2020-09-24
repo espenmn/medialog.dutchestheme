@@ -1,4 +1,4 @@
-<section id="fragent-${view/id}"
+<section id="fragent-${python: view.id}"
           tal:define="description view/data/description|None;
           title view/data/title|None"
           class="container center wow fadeInDown animated"

@@ -1,4 +1,4 @@
-<div id="fragent-${view/id}"
+<div id="fragent-${python: view.id}"
 	  class="social"
 		tal:define="email view/data/email|None;
 					twitter view/data/twitter|None;

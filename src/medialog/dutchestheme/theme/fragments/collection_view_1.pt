@@ -4,7 +4,7 @@
              size view/data/image_size;
              show_csubject python: view.csubject;
              show_ctype  view/ctype"
-             id="fragment-${view/id}">
+             id="fragment-${python: view.id}">
 
 <!--div>
 <p class="data-filter" data-filter="Nyhetsartikkel">Nyhetsartikkel</p>
@@ -45,15 +45,15 @@
 </tal:repeat>
 
  <style>
-#fragment-${view/id} .portal-type {
+#fragment-${python: view.id} .portal-type {
  margin-bottom: 0;
 }
-#fragment-${view/id} .portal-type span {
+#fragment-${python: view.id} .portal-type span {
  padding: 2px 10px;
   text-transform: uppercase;
   font-size: 80%;
 }
-#fragment-${view/id} .collection_item {
+#fragment-${python: view.id} .collection_item {
   color: #333;
  flex: 1;
   min-width: 230px;
@@ -62,7 +62,7 @@
   margin-bottom: 20px;
 }
 
-#fragment-${view/id} img {
+#fragment-${python: view.id} img {
     width: 100%;
     height: auto;
 }

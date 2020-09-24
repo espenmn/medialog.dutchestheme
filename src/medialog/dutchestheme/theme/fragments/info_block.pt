@@ -4,7 +4,7 @@
   title="${title2}"
   data-anchor="anchor-${title2}"
   class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}"
-  id="fragment-${view/id}">
+  id="fragment-${python: view.id}">
    <div class="container margin-10">
        <div class="info_pre">
            <h3 class="pretext ${view/data/color2}" tal:condition="title1|None">

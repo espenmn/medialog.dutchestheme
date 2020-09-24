@@ -1,5 +1,5 @@
 
-<section id="fragment-${view/id}"
+<section id="fragment-${python: view.id}"
          tal:define="folder view/get_items|view/get_item|None;
                 items folder/@@contentlisting|context/@@contentlisting|None;
                 image_size view/data/image_size;
@@ -42,14 +42,14 @@
 
 <style>
 <tal:check tal:condition="view/data/image_height|None">
-    #fragment-${view/id} img.image-inline {
+    #fragment-${python: view.id} img.image-inline {
         object-fit: cover;
         width: 100%;
         max-height: ${view/data/image_height}px;
         object-position: 0 ${view/data/position-y|None}%;
     }
 </tal:check>
- #fragment-${view/id} .half {
+ #fragment-${python: view.id} .half {
     min-width: 30px;
     box-sizing: border-box;
  }
