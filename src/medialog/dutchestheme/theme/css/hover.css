@@ -2,14 +2,13 @@
 
  .hovercolumn {
 	margin-left:  -15px;
-	margin-right:  -15px;
+	margin-right:  -15px;;
 }
  
  .hovercolumn div {
 	position: relative;
 	margin: 15px 15px  50px;;
 	padding: 0;
-	
 }
 
 .hovercolumn div span {

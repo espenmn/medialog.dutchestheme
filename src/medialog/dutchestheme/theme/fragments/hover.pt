@@ -30,13 +30,16 @@ figure {
 .figure img,
 .hover04 figure:hover img {
 	max-width: ${max_width}px;
+  width: ${max_width}px;
 }
 .hover02 figure:hover img {
 	max-width: calc(${max_width}px + 50px);
+  width: calc(${max_width}px + 50px);
 }
 
 .hover04 figure img {
 	max-width: calc(${max_width}px + 100px);
+  width: calc(${max_width}px + 100px);
 }
 
 </style>
