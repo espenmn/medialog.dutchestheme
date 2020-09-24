@@ -17,7 +17,7 @@
         </div>
       </a>
     </tal:repeat>
-</section>
+
 <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
   <link rel="stylesheet" href="++theme++dutchestheme/css/hover.css" tal:condition="load_css">
 </tal:define>
@@ -42,3 +42,4 @@ figure {
 }
 
 </style>
+</section>
