@@ -1,3 +1,22 @@
+.hovercolumn {
+	margin: 15px 15px 0;
+	padding: 0;
+}
+.hovercolumn:last-child {
+	padding-bottom: 60px;
+}
+
+.hovercolumn::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.hovercolumn div {
+	position: relative;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
 
 .hovercolumn div span {
   	position: absolute;
@@ -5,7 +24,6 @@
   	left: 0;
   	z-index: -1;
   	display: block;
-  	width: 300px;
   	margin: 0;
   	padding: 0;
   	color: #444;
