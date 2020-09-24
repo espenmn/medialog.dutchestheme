@@ -27,13 +27,13 @@
   list-style-image: none;
   list-style-type: none;
   justify-content: flex-start;
-  max-width: ${view/get_width}px;
+  max-width: ${python: view.get_width}px;
   margin: auto;
 }
 
 #section-${python: view.id} li { 
     width: ${image_width}px;
-    margin: ${view/get_margin}px;
+    margin: ${python: view.get_margin}px;
     list-style-image: none;
     list-style-type: none;
     overflow: hidden;
@@ -47,7 +47,7 @@
   text-align: center;
   margin-top: 1em;
   overflow: hidden;
-  width: ${image_width}px;
+  width: ${python: image_width}px;
   color: #999;
 }
 
