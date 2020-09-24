@@ -1,7 +1,7 @@
  <section id="fragment-${python: view.id}"
    class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
    tal:define="max_width  view/data/max_width|None;
-               max_height view/data/maxheight|None;">
+               max_height view/data/max_height|None;">
    <tal:repeat tal:repeat="item view/get_items|None">
       <a href="${item/getURL|item/absolute_url}">
         <div tal:define="obj item/getObject;
