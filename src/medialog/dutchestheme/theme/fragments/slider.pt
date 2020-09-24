@@ -6,7 +6,7 @@
 				nav view/data/nav|None;
 				css_file view/data/css_file|None;
 				height view/data/height|None;
-				s_id string:slider-${python: view.id};
+				s_id string:slider-${view/id};
 				min_height view/data/min-height|None;
 				max_height view/data/max-height|None;
 				image_size view/image_size"
