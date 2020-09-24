@@ -38,7 +38,7 @@ figure {
 }
 
 .hover04 figure img {
-	max-width: calc(${max_width + 100px);
+	max-width: calc(${max_width} + 100px);
 }
 
 </style>
