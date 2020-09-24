@@ -15,6 +15,27 @@
           <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
         </value_type>
       </field>
+      <field name="effekt" type="zope.schema.Choice">
+        <description/>
+        <title>Choose effect</title>
+        <values>
+           <element>1</element>
+           <element>2</element>
+           <element>3</element>
+           <element>4</element>
+           <element>5</element>
+           <element>6</element>
+           <element>7</element>
+           <element>8</element>
+           <element>9</element>
+          <element>10</element>
+          <element>11</element>
+          <element>12</element>
+          <element>13</element>
+          <element>14</element>
+          <element>15</element>
+        </values>
+      </field>
       <field name="sort_on" type="zope.schema.Choice">
         <description/>
         <title>Sort on</title>
@@ -28,6 +49,7 @@
           <element>total_comments</element>
         </values>
       </field>
+
       <field name="sort_order" type="zope.schema.Choice">
         <description/>
         <title>Sort order</title>
