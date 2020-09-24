@@ -1,5 +1,5 @@
 def folder_url(self):
-	url = self.data['folder_url']
+	url = self.data['folder_url'].encode('ascii','ignore')
 	return url
 
 def item_width(self):

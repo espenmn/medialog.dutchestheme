@@ -14,7 +14,7 @@
 		<tal:repeat tal:repeat="item items">
 			<div class="card" tal:define="item_url item/getURL|item/absolute_url|None;
            description item/Description;
-           max_chars view/data/max_chars|1000">
+           max_chars view/data/max_chars|python:1000">
         <a href="${item_url}">
 				  <img class="card-img-top" alt="${item/Title}" title="${item/Title}"
 					      src="${item_url}/@@images/image/${image_size}" />
