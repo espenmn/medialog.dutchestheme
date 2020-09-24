@@ -25,20 +25,20 @@
 <style>
 .hovercolumn div,
 figure {
-  max-height: ${max_height}px;
+  max-height: ${python: max_height}px;
 }
 
 .hovercolumn div,
 .figure img,
 .hover04 figure:hover img {
-	max-width: ${max_width}px;
+	max-width: ${python: max_width}px;
 }
 .hover02 figure:hover img {
-	max-width: calc(${max_width}px + 50px);
+	max-width: calc(${python: max_width}px + 50px);
 }
 
 .hover04 figure img {
-	max-width: calc(${max_width}px + 100px);
+	max-width: calc(${python: max_width}px + 100px);
 }
 
 </style>
