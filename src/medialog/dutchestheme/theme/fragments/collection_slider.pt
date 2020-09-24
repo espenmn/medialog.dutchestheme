@@ -5,7 +5,6 @@
               order view/data/order;
               show_text python: order != 'only-image';
               item_c view/data/item_c|None;
-              color2 view/data/color2;
               items collection_items/@@contentlisting|context/@@contentlisting|None">
     <tal:repeat tal:repeat="item python:items[:item_c]">
             <tal:define tal:define="obj item/getObject;
@@ -106,6 +105,6 @@ require([
     object-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
     }
 </tal:condition>
-  .news-container {background: #${python: color2}; }
+  .news-container {background: #${python: view.data['color2']}; }
 </style>
 </section>
