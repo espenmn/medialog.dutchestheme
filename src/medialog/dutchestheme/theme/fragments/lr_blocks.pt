@@ -1,6 +1,6 @@
 
 <section id="fragment-${python: view.id}"
-         tal:define="folder view/get_items|view/get_item|None;
+         tal:define="folder view/get_allitems;
                 items folder/@@contentlisting|context/@@contentlisting|None;
                 image_size view/data/image_size;
                 css_class view/data/css_class;

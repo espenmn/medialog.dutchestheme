@@ -1,9 +1,14 @@
-def get_items(self):
-    linked = self.data['linked_folder'] 
-    folder = self.context.portal_catalog(UID=linked)
-    return folder[0].getObject()
+def get_allitems(self):
+    linked = self.data['linked_folder']
 
-def get_item(self):
-    linked = self.data['select_folder']
-    folder = self.context.portal_catalog(UID=linked)
-    return folder[0].getObject()
+    if linked:
+        folder = self.context.portal_catalog(UID=linked)
+        return folder[0].getObject()
+
+    selected = self.data['select_folder']
+
+    if selected:
+        folder = self.context.portal_catalog(UID=selected)
+        return folder[0].getObject()
+
+    return None

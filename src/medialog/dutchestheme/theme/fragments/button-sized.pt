@@ -1,4 +1,4 @@
-<section class="${view/data/effect|None}" id="fragment-${python: view.id|None}"
+<section class="${view/data/effect|None}" id="fragment-${view/id|None}"
          tal:define="link view/one_link|None; link_url link/getURL|None">
        <div class="roundbutton">
            <div class="button btn btn-primary ${view/data/color1|None}">

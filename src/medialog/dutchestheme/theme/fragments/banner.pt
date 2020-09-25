@@ -6,7 +6,7 @@
     i18n:domain="medialog.dutchestheme">
 <div class="white-background center-text padding-10 no-margin fullwidth">
     <div class="container">
-        <a class="black large-text normal" href="${view/item_url|view/get_url|None}">${view/data/bannertext}</a>
+        <a class="black large-text normal" href="${view/get_theurl}">${view/data/bannertext}</a>
     </div>
 </div>
 </html>

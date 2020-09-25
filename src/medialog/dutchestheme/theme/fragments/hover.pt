@@ -25,7 +25,7 @@
 
 <style>
 .hovercolumn div,
-.figure img,
+.hovercolumn figure img,
 .hover04 figure:hover img {
 	min-width: ${min_width}px;
   width: ${width}%;
@@ -39,9 +39,12 @@
   max-width: calc(100% + 100px);
 }
 
-
 @media only screen and (max-width: ${breakpoint}px) {
   .hovercolumn div{ width: 100%}
 }
 </style>
+<script>
+  $('.hovercolumn figure').height(300)
+</script>
+
 </section>

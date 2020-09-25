@@ -10,17 +10,19 @@
   tal:define="image_size view/data/image_size|None; ">
 <div class="programicon_item ckFilter-obj"  tal:repeat="item view/get_items|None">
 
-    <div tal:define="obj item/getObject">
- 
-    <h1 class="users" tal:define="item_url item/getURL|item/absolute_url">
+    <div tal:define="obj item/getObject;
+            item_url item/getURL|item/absolute_url;
+            whole_day item/whole_day|python: False">
+
+    <h1 class="users">
         <a href="${item_url}">${item/Title}</a>
     </h1>
     <p class="sub_info"><span
           i18n:translate="">${item/location|None}</span> <tal:check tal:condition="item/location|None">|</tal:check>
-          <span tal:condition="python: item.whole_day!=True"
+          <span tal:condition="python: whole_day!=True"
               class="pat-moment"
               data-pat-moment="format:DD.MM.YYYY - HH:mm;">${item/start}</span>
-          <span tal:condition="python: item.whole_day==True"
+          <span tal:condition="python: whole_day==True"
               class="pat-moment"
               data-pat-moment="format:DD.MM.YYYY">${item/start}</span>
     </p>

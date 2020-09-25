@@ -4,4 +4,9 @@
      <indexed_attr value="iconfield"/>
   </index>
   <column value="iconfield"/>
+  <index name="whole_day" meta_type="BooleanIndex">
+     <indexed_attr value="whole_day"/>
+  </index>
+  <column value="whole_day"/>
+
 </object>

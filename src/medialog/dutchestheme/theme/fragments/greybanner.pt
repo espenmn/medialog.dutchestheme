@@ -6,6 +6,6 @@
     i18n:domain="medialog.dutchestheme">
 
 <div class="${view/data/color1|None} bold center-text large-text padding-10 margin-0 line-feed-1">
-    <a href="${view/item_url|view/get_url|None}" class="${view/data/color2|None}"><span tal:replace="structure view/data/bannertext|None"/></a>
+    <a href="${view/get_theurl}" class="${view/data/color2|None}"><span tal:replace="structure view/data/bannertext|None"/></a>
 </div>
 </html>

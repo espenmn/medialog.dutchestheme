@@ -1,7 +1,7 @@
-<section class="contentloader" id="fragment-${python: view.id}" tal:define="item view/load_item|None">
-<div id="content-target-${python: view.id|None}">
+<section class="contentloader" id="fragment-${view/id|None}" tal:define="item view/load_item|None">
+<div id="content-target-${view/id|None}">
 <button type="button" class="btn btn-primary ${view/data/buttonstyle|None} pat-contentloader"
-     data-pat-contentloader="url:${view/item_url|None}?ajax_load=1;target:#content-target-${python: view.id};?ajax_load=1;content:#content">
+     data-pat-contentloader="url:${view/item_url|None}?ajax_load=1;target:#content-target-${view/id};?ajax_load=1;content:#content">
         <span>${view/data/buttontext|None}</span>
 </button>
 <style>

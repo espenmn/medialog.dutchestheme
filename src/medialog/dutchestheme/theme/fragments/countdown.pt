@@ -6,7 +6,7 @@
       lang="en">
 
 <section tal:define="color1 view/data/color1|None; color2 view/data/color2|None; date view/data/countdown_date|None; css_file view/data/css_file|None"
-    class="countdown ${color1}" id="fragment-${python: view.id|None}">
+    class="countdown ${color1}" id="fragment-${view/id|None}">
     <h3 class="${color2}">${view/data/promotion_text|None}</h3>
     <h1 id="clock" class="${color2}"></h1>
     <div class="legend">
