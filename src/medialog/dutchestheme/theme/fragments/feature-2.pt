@@ -10,13 +10,13 @@
     id="fragent-${python: view.id}"
     tal:define="family_css view/family_css;
     title view/data/title|None;
-    item_url view/item_url|view/get_url|None;
+    item_url view/get_theurl|None;
     description view/data/description|None">
 	<div class="feature-icon-2">
 		<i class="${view/data/color1} ${family_css} ${view/data/iconfield}"></i>
 	</div>
 	<div class="feature-text-2">
-    <h2 tal:condition="title" class="${view/data/color1}">${title}</h2>
+    <h2 tal:condition="title" class="${view/data/color1|None}">${title}</h2>
 	  <p class="${view/data/color2}" tal:condition="description">${description}</p>
 	  <a tal:condition="item_url|None" class="btn btn-primary ${view/data/color3}" href="${item_url}">${view/data/buttontext}</a>
 </div>
