@@ -1,50 +1,52 @@
- <section id="fragment-${python: view.id}"
+
+<section id="fragment-${python: view.id}"
    class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
-   tal:define="min_width   view/data/minwidth;
-               width       view/data/width;
-               breakpoint  view/data/breakpoint;
-               image_width  view/data/imagewidth;
-               image_height view/data/imageheight;
-                           ">
-   <tal:repeat tal:repeat="item view/get_items|None">
-        <div tal:define="obj item/getObject;
+   tal:define="min_width   view/data/minwidth|None;
+               width       view/data/width|None;
+               breakpoint  view/data/breakpoint|None;
+               image_width  view/data/imagewidth|None;
+               image_height view/data/imageheight|None;">
+    <tal:repeat tal:repeat="item view/get_items|None">
+     <div tal:define="obj item/getObject;
                 scale_func obj/@@images;
                 scale context/@@images;
                 scaled_image python:scale_func.scale('image', width=image_width, height=image_height, direction='down')">
-          <a href="${item/getURL|item/absolute_url}">
-           <figure  tal:condition="scaled_image" >
+        <a href="${item/getURL|item/absolute_url}">
+            <figure  tal:condition="scaled_image" >
               <img tal:replace="structure python:scaled_image.tag(title=None)"/>
-          </figure>
-          <span>${item/Title}</span>
-          </a>
-        </div>
-    </tal:repeat>
+            </figure>
+            <span>${item/Title|None}</span>
+        </a>
+      </div>
+  </tal:repeat>
 <tal:define tal:define="load_css python:context.portal_registry['medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.load_css'] or '';">
   <link rel="stylesheet" href="++theme++dutchestheme/css/hover.css" tal:condition="load_css">
 </tal:define>
 
 <style>
-.hovercolumn div,
-.hovercolumn figure img,
-.hover04 figure:hover img {
-	min-width: ${min_width}px;
-  width: ${width}%;
+.hovercolumn figure { overflow: hidden}
+
+.hovercolumn div {
+  min-width: ${min_width|None}px;
+  width: ${width|None}%;
 }
-.hover02 figure img:hover {
+section.hover02.hovercolumn figure img:hover {
 	width: calc(100% + 50px);
   max-width: calc(100% + 50px);
 }
-.hover04 figure img {
+
+.hovercolumn figure img,
+section.hover04.hovercolumn  figure:hover img {
+  width: 100%;
+}
+section.hover04.hovercolumn figure img {
 	width: calc(100% + 100px);
   max-width: calc(100% + 100px);
 }
 
-@media only screen and (max-width: ${breakpoint}px) {
+@media only screen and (max-width: ${breakpoint|None}px) {
   .hovercolumn div{ width: 100%}
 }
 </style>
-<script>
-  $('.hovercolumn figure').height(300)
-</script>
-
+<script tal:content="structure view/get_script|None"> </script>
 </section>

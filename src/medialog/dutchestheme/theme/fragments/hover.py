@@ -27,3 +27,29 @@ def width100(self):
 def width50(self):
     bredde = self.data['max_width'] + 50
     return bredde
+
+def ratio(self):
+    bredde = int(self.data['imagewidth'])
+    hoyde =  int(self.data['imageheight'])
+    return hoyde*100/bredde
+
+def get_css(self):
+    return """
+
+    section.hover02.hovercolumn figure img:hover {
+    	width: calc(100% + 50px);
+    }
+    section.hover04.hovercolumn figure img {
+    	width: calc(100% + 100px) !important;
+      max-width: width: calc(100% + 100px) !important;
+    }""" % {  "ratio": self.ratio() }
+
+
+def get_script(self):
+    if self.data['effekt'] == '02 Zoom In 2' or self.data['effekt'] == '04 Zoom Out 2':
+        return """$(window).resize(function(){
+            $('#fragment-%(s_id)s figure').height( ( $('#fragment-%(s_id)s figure').width()  ) * %(ratio)i / 100) ;
+            }).resize();""" % {  "s_id": str(self.id),
+                                 "ratio": self.ratio() or None }
+
+    return ""

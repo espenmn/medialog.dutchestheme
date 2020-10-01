@@ -1,5 +1,7 @@
 /* @override http://xweb14d.plana.dk:8052/Plone/++theme++dutchestheme/css/hover.css */
 
+/* @override http://xweb14d.plana.dk:8052/Plone/++theme++dutchestheme/css/hover.css */
+
  .hovercolumn {
 	margin-left:  -15px;
 	margin-right:  -15px;;
@@ -61,8 +63,8 @@
 
 /* Zoom Out #1 */
 .hover03 figure img {
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
+	-webkit-transform: scale(1.25);
+	transform: scale(1.25);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
@@ -83,8 +85,8 @@
 /* Slide */
 .hover05 figure img {
 	margin-left: 30px;
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
+	-webkit-transform: scale(1.25);
+	transform: scale(1.25);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }

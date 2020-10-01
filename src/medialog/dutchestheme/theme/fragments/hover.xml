@@ -53,6 +53,7 @@
         <description/>
         <title>Choose effect</title>
         <values>
+          <element>00 None</element>
           <element>01 Zoom In 1</element>
           <element>02 Zoom In 2</element>
           <element>03 Zoom Out 1</element>
