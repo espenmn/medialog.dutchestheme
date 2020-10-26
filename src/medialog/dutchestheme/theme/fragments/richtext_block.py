@@ -3,9 +3,11 @@ def get_text(self):
     return text
 
 def background_image(self):
-    bi = self.data['background_image']
-    items = self.context.portal_catalog(UID=bi)
-    return items[0].getURL()
+    if self.data['background_image']:
+        bi = self.data['background_image']
+        items = self.context.portal_catalog(UID=bi)
+        return items[0].getURL()
+    return ''
 
 def get_url(self):
     url = self.data['url']

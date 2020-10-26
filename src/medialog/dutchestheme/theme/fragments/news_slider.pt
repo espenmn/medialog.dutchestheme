@@ -35,27 +35,27 @@ require([
         'use strict';
         $('.slick').slick({
             infinite: true,
-            slidesToShow: ${python:   view.data['slides-1']},
+            slidesToShow: ${python: view.data['slides-1']},
             slidesToScroll: ${python: view.data['slides-1']},
             responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: ${python: view.data['slides-2'],
-              slidesToScroll: ${python: view.data['slides-1']},
+              slidesToShow: ${python: view.data['slides-2']},
+              slidesToScroll: ${python: view.data['slides-2']},
             }
           },
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: ${python: view.data['slides-3']'},
-              slidesToScroll: ${python: view.data['slides-3']'}
+              slidesToShow: ${python: view.data['slides-3']},
+              slidesToScroll: ${python: view.data['slides-3']}
             }
           },
           ],
             vertical: false,
-            dots: ${python: view.data.pager},
-            arrows: ${python: view.data.nav},
+            dots: ${python: view.data['pager']},
+            arrows: ${python: view.data['nav']},
             nextArrow: '<i class="fa fa-angle-right large-text"></i>',
             prevArrow: '<i class="fa fa-angle-left large-text" ></i>',
         });
@@ -96,6 +96,6 @@ div.slick_slide img {
 .slick-track a:hover {text-decoration: none}
 .slick-track a:hover h2 {text-decoration: underline}
 
-.news-container {background: #${python: view.data.color2}}
+.news-container {background: #${python: view.data['color2']}}
 </style>
 </section>

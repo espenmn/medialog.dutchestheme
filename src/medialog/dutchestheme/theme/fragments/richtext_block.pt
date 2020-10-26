@@ -1,7 +1,7 @@
 <section class="richtext_block ${view/data/color1} ${view/data/color3} padding-20 disabled-${view/data/disabled|None}"
             tal:condition="view/editmode|None"
             id="fragment-${python: view.id}"
-            style="background-image: url(${view/background_image|None})"
+            style="background-image: url( ${view/background_image|None } )"
             tal:define="line_url view/get_url|None">
    <div class="container ${view/data/color2}">
     <tal:block define="value nocall:view/data/text|nothing;
