@@ -3,7 +3,8 @@
   link_url view/get_url|None;"
   title="${title2}"
   data-anchor="anchor-${title2}"
-  class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect}"
+  class="infoblock ${view/data/color1} ${view/data/style} ${view/data/effect} disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode|None"
   id="fragment-${python: view.id}">
    <div class="container margin-10">
        <div class="info_pre">

@@ -5,7 +5,8 @@
     lang="en"
     i18n:domain="medialog.dutchestheme">
 
-<div class="${view/data/color1|None} bold center-text large-text padding-10 margin-0 line-feed-1">
+<div class="${view/data/color1|None} bold center-text large-text padding-10 margin-0 line-feed-1 disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
     <a href="${view/get_theurl}" class="${view/data/color2|None}"><span tal:replace="structure view/data/bannertext|None"/></a>
 </div>
 </html>

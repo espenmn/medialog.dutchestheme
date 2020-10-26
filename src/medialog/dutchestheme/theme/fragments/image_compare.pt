@@ -1,6 +1,8 @@
 <section tal:define="image_scale view/data/image_size;
               image1 view/image1|None;
-              image2 view/image2|None;">
+              image2 view/image2|None;"
+              class="disabled-${view/data/disabled|None}"
+              tal:condition="view/editmode|None">
   <figure class="cd-image-container"
      tal:condition="python:image1 and image2">
     <tal:define tal:define="scale_func1 image1/@@images;

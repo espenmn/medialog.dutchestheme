@@ -1,12 +1,13 @@
-<div>
+<div class="disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
 <link rel="stylesheet" href="css/leaflet.css" />
 <script>require([
       '++theme+dutchestheme/javascript/leaflet'
       ], function(Base) {
-      var map = L.map('map', 
-        { crs: L.CRS.Simple, minZoom:-3, maxZoom:4 }); 
-        var bounds = [[0,0], [678,1000], 1]; 
-        var image = L.imageOverlay('/@@images/image', bounds).addTo(map); 
+      var map = L.map('map',
+        { crs: L.CRS.Simple, minZoom:-3, maxZoom:4 });
+        var bounds = [[0,0], [678,1000], 1];
+        var image = L.imageOverlay('/@@images/image', bounds).addTo(map);
         map.fitBounds(bounds);
         var plassering = L.latLng([${context/lat|None}, ${context/lng|None}]);
         L.marker(plassering).addTo(map).bindPopup('<h4>${context/title}</h4><img \n
@@ -31,6 +32,4 @@
 8) set view based on cordinates
 9) Set height
 10 Amkr widget that reads  x & y kordinater
-11) Figure out responsive 
-
-
+11) Figure out responsive

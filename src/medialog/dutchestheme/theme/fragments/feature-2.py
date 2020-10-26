@@ -52,3 +52,11 @@ def family_css(self):
 def iconset(self):
     """Returns current iconset name This is also used for loading the resources below"""
     return self.context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

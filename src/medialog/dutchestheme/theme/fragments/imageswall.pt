@@ -3,7 +3,9 @@
          image_size view/data/image_size|None"
          id="fragment-${python: view.id}"
          data-anchor="anchor-images"
-         title="images">
+         title="images"
+         class="disabled-${view/data/disabled|None}"
+         tal:condition="view/editmode|None">
     <div class="wall-of-images" tal:condition="image_size">
       <tal:image tal:repeat="item items">
         <figure tal:define="obj item/getObject;

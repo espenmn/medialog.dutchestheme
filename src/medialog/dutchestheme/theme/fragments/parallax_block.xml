@@ -7,18 +7,22 @@
   xmlns:users="http://namespaces.plone.org/supermodel/users"
   xmlns="http://namespaces.plone.org/supermodel/schema">
 <schema>
-
+  <field name="disabled" type="zope.schema.Bool">
+      <required>false</required>
+      <title>Hide fragment</title>
+      <description>Click here to hide fragment</description>
+  </field>
     <field name="background_image" type="zope.schema.Choice">
             <description/>
             <required>False</required>
             <title>Choose image</title>
             <source>collective.themefragments.tiles.CatalogSource</source>
     </field>
-    <!--field name="bkground_image" type="zope.schema.Text" 
+    <!--field name="bkground_image" type="zope.schema.Text"
         form:widget="medialog.dutchestheme.widgets.widgets.PickerFieldWidget">
         <description/>
         <required>False</required>
-        <title>NOT WORKING YET: Alternative Choose image here </title> 
+        <title>NOT WORKING YET: Alternative Choose image here </title>
     </field-->
     <field name="opacity" type="zope.schema.Float">
         <description/>

@@ -3,7 +3,8 @@
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     lang="en"
-    i18n:domain="medialog.dutchestheme">
+    i18n:domain="medialog.dutchestheme"
+    tal:condition="view/editmode|None">
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>

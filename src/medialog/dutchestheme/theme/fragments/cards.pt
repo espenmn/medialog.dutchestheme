@@ -2,7 +2,9 @@
         items view/get_items;
         buttontext view/data/buttontext|None;
         f_id python: view.id"
-        id="cards-${f_id}">
+        id="cards-${f_id}"
+        class="disabled-${view/data/disabled|None}"
+        tal:condition="view/editmode|None">
 	<tal:check tal:condition="items"
 	    tal:define="image_size view/data/image_size|None;
 	        css_class view/css_class|None;

@@ -1,5 +1,6 @@
 <section id="fragment-${python: view.id}"
-				 class="sosial-block ${view/data/style|None}"
+				 class="sosial-block ${view/data/style|None} disabled-${view/data/disabled|None}"
+				 tal:condition="view/editmode|None"
 				 tal:define="email view/data/email|None;
 					  twitter view/data/twitter|None;
 					  facebook view/data/facebook|None;

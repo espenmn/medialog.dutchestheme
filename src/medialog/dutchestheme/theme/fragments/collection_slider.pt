@@ -1,4 +1,5 @@
-<section>
+<section class="disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode">
 <div id="fragment-${python: view.id}" class="news-container ${view/data/color1|None}">
   <div class="slick" tal:define="image_size view/data/image_size|None;
               collection_items view/get_items|None;

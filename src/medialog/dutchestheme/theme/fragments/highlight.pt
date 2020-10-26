@@ -3,7 +3,9 @@
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     lang="en"
-    i18n:domain="medialog.dutchestheme">
+    i18n:domain="medialog.dutchestheme"
+    class="disabled-${view/data/disabled|None}"
+    tal:condition="view/editmode|None">
 
     <link rel="stylesheet"
            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">

@@ -1,5 +1,6 @@
 
-<div class="card"
+<div class="card disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None"
 	tal:define="card_linktext view/data/linktext|None;
 	            inline view/data/inline-readmore|None;
 				card_link view/load_item;">

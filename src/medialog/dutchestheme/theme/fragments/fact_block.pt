@@ -1,5 +1,7 @@
-<aside class="padding-10-0" role="complementary"
-    id="frag${python: view.id}">
+<aside class="padding-10-0 disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None"
+role="complementary"
+id="frag${python: view.id}">
     <div class="accordian sans-serif">
         <h3 class=""><!--i class="fa fa-info-circle plone-link large large-text"/--> ${view/data/title}</h3>
         <div class="accordian-body"

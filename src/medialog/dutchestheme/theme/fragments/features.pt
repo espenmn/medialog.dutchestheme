@@ -4,7 +4,8 @@
 		 title view/data/title|None;
 		 family_css view/family_css|None;
 		 language context/Language"
-		 class="${css_file}">
+		 class="${css_file} disabled-${view/data/disabled|None}"
+		 tal:condition="view/editmode|None">
     <div  tal:condition="keyword">
     	<div class="center wow fadeInDown">
       	<h1 tal:condition="title">${title}</h1>

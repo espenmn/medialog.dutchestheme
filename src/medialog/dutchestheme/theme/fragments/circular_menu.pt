@@ -1,5 +1,6 @@
 <section id="fragment-circular_menu-${python: view.id}"
-				 class="${view/data/color3}"
+				 class="${view/data/color3} disabled-${view/data/disabled|None}"
+				 tal:condition="view/editmode|None"
 				 tal:define="items view/get_items|None;
 				 showimage view/data/show-image|None;
 				 height view/get_height|None;

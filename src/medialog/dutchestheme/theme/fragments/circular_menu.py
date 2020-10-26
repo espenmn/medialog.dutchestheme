@@ -9,7 +9,7 @@ def get_items(self):
     linked = self.data['linked_folder'] or self.data['select_folder']
     radius = self.data['radius']
     standard_icon = self.data['iconfield']
-    
+
     if linked:
         folder = self.context.portal_catalog(UID=linked)
         items = folder[0].getObject().items()
@@ -20,7 +20,7 @@ def get_items(self):
     rotation = (2 *math.pi)/item_count
 
     rotate_list = []
-            
+
     for index, item in enumerate(items):
         real_index = index + 1
         turner = real_index * rotation
@@ -76,4 +76,11 @@ def family_css(self):
 def iconset(self):
     """Returns current iconset name This is also used for loading the resources below"""
     return self.context.portal_registry['medialog.iconpicker.interfaces.IIconPickerSettings.iconset']
-    
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

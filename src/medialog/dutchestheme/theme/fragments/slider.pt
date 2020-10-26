@@ -1,3 +1,4 @@
+<tal:check tal:condition="view/editmode|None">
 <section tal:define="folder_url request/form/folder_url|None;
 				maxwidth view/data/maxwidth|None;
 				speed view/data/speed|None;
@@ -11,7 +12,7 @@
 				max_height view/data/max-height|None;
 				image_size view/image_size"
 				tal:condition="folder_url"
-				class="no-margin ${view/data/css_class|None} ${s_id}"
+				class="no-margin ${view/data/css_class|None} ${s_id} disabled-${view/data/disabled|None}"
 				id="fragment-main-slider">
 		<div id="slider" class="${s_id}" tal:condition="folder_url">
 			   <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">
@@ -80,3 +81,4 @@
     }).resize();
 	</script>
 </section>
+</tal:check>

@@ -1,4 +1,4 @@
-<script>
+<script tal:condition="view/editmode|None">
 require([
       'jquery',
       '++theme++dutchestheme/javascript/jquery.sticky'

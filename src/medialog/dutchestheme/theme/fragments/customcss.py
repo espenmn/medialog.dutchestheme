@@ -63,3 +63,11 @@ def lineawesome(self):
     <script type="text/javascript" src="++resource++medialog.iconpicker/bootstrap-iconpicker/js/iconset/iconset-line-awesome.js"></script>
     <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/line-awesome/css/line-awesome.css"/>
     """
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

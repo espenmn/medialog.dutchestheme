@@ -1,4 +1,8 @@
-<section class="contentloader" id="fragment-${view/id|None}" tal:define="item view/load_item|None">
+<section
+  id="fragment-${view/id|None}"
+  tal:define="item view/load_item|None"
+  class="contentloader disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode|None">
 <div id="content-target-${view/id|None}">
 <button type="button" class="btn btn-primary ${view/data/buttonstyle|None} pat-contentloader"
      data-pat-contentloader="url:${view/item_url|None}?ajax_load=1;target:#content-target-${view/id};?ajax_load=1;content:#content">

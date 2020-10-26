@@ -1,10 +1,11 @@
-<section class="newsitems flex flex-wrap margin-0--15"
-              tal:define="collection_items view/get_items|None;
+<section class="newsitems flex flex-wrap margin-0--15 disabled-${view/data/disabled|None}"
+    tal:condition="view/editmode"
+    tal:define="collection_items view/get_items|None;
              items collection_items/@@contentlisting|context/@@contentlisting|None;
              size view/data/image_size;
              show_csubject python: view.csubject;
              show_ctype  view/ctype"
-             id="fragment-${python: view.id}">
+    id="fragment-${python: view.id}">
 
 <!--div>
 <p class="data-filter" data-filter="Nyhetsartikkel">Nyhetsartikkel</p>

@@ -5,3 +5,11 @@ def one_link(self):
     items =self.context.portal_catalog(UID=item)
     return items[0]
     #return self.context.portal_catalog(uuid=(self.data['background_image']))
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

@@ -16,6 +16,7 @@
     </tal:check>
 
 <style>
+.disabled-True { opacity: 0.3}
 div.mosaic-grid-row-fluid {position: relative; width: 100vw; margin-left: calc((50vw - 50%)/-1) !important; }
 option[value=custom-color1], .custom-color1 {color: #${python: color1} !important}
 option[value=custom-color2], .custom-color2 {color: #${python: color2} !important}

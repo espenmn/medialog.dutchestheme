@@ -1,5 +1,6 @@
 
-<section>
+<section class="disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
 
 
 

@@ -4,7 +4,7 @@ def image_size(self):
 
 def t_out(self):
     speed = self.data['speed']
-    if "t_out" in self.data.keys(): 
+    if "t_out" in self.data.keys():
         if self.data["t_out"] > 0:
             return self.data["t_out"] + speed
     return speed + 2000
@@ -14,7 +14,7 @@ def get_id(self):
 
 def script(self):
     data = self.data
-    s_id = self.get_id 
+    s_id = self.get_id
     return """require([
       "jquery",
         "++theme++dutchestheme/javascript/responsiveslides.min",
@@ -41,7 +41,7 @@ def script(self):
             $("#slider").height(new_height);
             }
     }).resize();
-    """ % {  "s_id": str(self.id), "nav": data["nav"], 
+    """ % {  "s_id": str(self.id), "nav": data["nav"],
                      "height": data["height"],
                      "max_height": data["max-height"],
                      "min_height": data["min-height"],
@@ -49,8 +49,8 @@ def script(self):
                      "speed": data["speed"],
                      "t_out": data["t_out"],
                      "pager": data["pager"], }
-                     
-                     
+
+
 
 def xscript(self):
     data = self.data
@@ -58,3 +58,11 @@ def xscript(self):
 $("#slider.slider-033090786cd84a61bb88d4ca79cb3a68").responsiveSlides();
 });""" % { "s_id": id }
 
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

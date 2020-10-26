@@ -1,5 +1,5 @@
-<section>
-
+<section class="disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
 <div class="news-container ${view/data/color1|None}">
   <div class="slick" tal:define="image_size view/data/image_size|None" >
     <tal:repeat tal:repeat="item view/get_items|None">

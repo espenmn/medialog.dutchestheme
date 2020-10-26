@@ -1,4 +1,6 @@
-<section id="section-${python: view.id}" class=""
+<section id="section-${python: view.id}"
+  class="disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode|None"
   tal:define="image_width  view/data/image_width|None;
               image_height view/data/image_height|None;
               folder view/get_items|None;

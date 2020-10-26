@@ -40,3 +40,11 @@ def get_items(self):
         sorton = data['sort_on']
     language = self.context.Language
     return self.context.portal_catalog(Subject=keyword, sort_on=sorton, sort_order=sort_order, Language=language)
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

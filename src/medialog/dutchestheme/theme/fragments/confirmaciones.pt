@@ -6,7 +6,8 @@
     i18n:domain="medialog.dutchestheme">
 
 
-<div class="conteido grey-background fullwidth padding-10-0">
+<div class="conteido grey-background fullwidth padding-10-0 disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
     <div class="container center-text">
         <h2>${view/data/title|None}</h2>
         <p>${view/data/description|None}</p>

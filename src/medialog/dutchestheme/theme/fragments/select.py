@@ -18,3 +18,11 @@ def get_path(self):
     folder = self.context.portal_catalog(UID=linked)
     mappe =  folder[0].getObject()
     return  '/'.join(mappe.getPhysicalPath())
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

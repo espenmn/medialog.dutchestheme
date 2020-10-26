@@ -5227,7 +5227,7 @@ option[value=grey-background],
   height: 100em;
 }
 .plone-toolbar-left #edit-zone.pat-toolbar {
-  z-index: 10;
+  z-index: 20;
 }
 #viewlet-below-content {
   margin-right: auto;

@@ -1,4 +1,6 @@
-<section id="fragment-gallery">
+<section id="fragment-gallery"
+	class="disabled-${view/data/disabled|None}"
+	tal:condition="view/editmode|None">
 		<div id="slider">
       <tal:repeat tal:repeat="picture context/images|None">
         <div tal:define="item python:picture.to_object">

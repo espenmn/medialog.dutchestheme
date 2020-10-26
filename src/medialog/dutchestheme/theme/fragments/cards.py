@@ -7,3 +7,11 @@ def get_items(self):
  keyword = self.data['keyword'].encode('ascii','ignore')
  language = self.context.Language()
  return self.context.portal_catalog(sort_on='modified', Language=language, sort_order='ascending', Subject=keyword)[:card_items]
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

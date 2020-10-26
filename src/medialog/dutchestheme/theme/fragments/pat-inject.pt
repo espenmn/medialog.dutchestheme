@@ -1,5 +1,6 @@
 <section tal:define="my_id python: view.id; item view/load_item; title item/Title;"
-  class="pat-inject"
+  class="pat-inject disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode|None"
   id="fragment-${my_id}"
   data-anchor="anchor-${title}"
   title="${title}">

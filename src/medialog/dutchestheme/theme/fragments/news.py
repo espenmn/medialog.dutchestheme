@@ -9,3 +9,11 @@ def get_items(self):
 def item_width(self):
     items = self.data['item_c']
     return 100/items
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

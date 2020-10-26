@@ -1,7 +1,8 @@
 <section id="fragent-${python: view.id}"
           tal:define="description view/data/description|None;
           title view/data/title|None"
-          class="container center wow fadeInDown animated"
+          class="container center wow fadeInDown animated disabled-${view/data/disabled|None}"
+          tal:condition="view/editmode|None"
           data-wow-delay="600ms" data-wow-duration="1000ms"
           style="visibility: visible; animation-duration: 1000ms;
                 animation-delay: 600ms; animation-name: fadeInDown;">

@@ -6,7 +6,8 @@
          image_size view/data/image_size;
          color1 view/data/color1"
          id="fragment-${python: view.id}"
-         class="${view/data/color2} padding-20">
+         class="${view/data/color2} padding-20 disabled-${view/data/disabled|None}"
+         tal:condition="view/editmode|None">
 
     <img src="${image_url}/@@images/image/${view/data/image_size}"
           alt="${title}"

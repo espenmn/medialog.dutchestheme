@@ -1,6 +1,7 @@
 
 <section id="fragment-${python: view.id}"
-   class="hover${view/get_effect|None} hovercolumn flex flex-wrap"
+   class="hover${view/get_effect|None} hovercolumn flex flex-wrap disabled-${view/data/disabled|None}"
+   tal:condition="view/editmode|None"
    tal:define="min_width   view/data/minwidth|None;
                width       view/data/width|None;
                breakpoint  view/data/breakpoint|None;

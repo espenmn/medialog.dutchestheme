@@ -5,7 +5,8 @@
     lang="en"
     i18n:domain="medialog.dutchestheme">
 
-<div class="conteido light-grey-background fullwidth">
+<div class="conteido light-grey-background fullwidth disabled-${view/data/disabled|None}"
+tal:condition="view/editmode|None">
     <div class="items container flex flex-between padding-15">
         <div class="news-item white-background margin-10-0 width-23 padding-0"
         tal:repeat="item python:context.portal_catalog(portal_type='News Item', sort_on='published')[-4:]">

@@ -7,7 +7,6 @@ def background_image(self):
     items = self.context.portal_catalog(UID=bi)
     return items[0].getURL()
 
-
 def get_url(self):
     url = self.data['url']
     if url.startswith('${portal_url}'):
@@ -20,3 +19,11 @@ def get_url(self):
             context_state.canonical_object_url(), url
         ])
     return url
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

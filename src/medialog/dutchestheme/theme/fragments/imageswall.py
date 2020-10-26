@@ -14,3 +14,11 @@ def medium(self):
 def large(self):
     large = self.data['large']
     return 100/large
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

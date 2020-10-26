@@ -1,9 +1,10 @@
 <tal:define  tal:define="item_url view/item_url|None; load_item view/load_item|None;
           obj load_item/getObject;
           scale_func obj/@@images;
-          scaled_image python:scale_func.scale('image', scale='large')">
+          scaled_image python:scale_func.scale('image', scale='large')"
+          tal:condition="view/editmode|None">
 
-  <div  id="fragment-${view/id|None}" class="inner-service post type-post format-standard has-post-thumbnail hentry category-blog">
+  <div  id="fragment-${view/id|None}" class="inner-service post type-post format-standard has-post-thumbnail hentry category-blog disabled-${view/data/disabled|None}">
          <div class="shadow-box white-background padding-10">
            <div class="box-image col-xs-6 margin-0 padding-0" tal:condition="scaled_image">
                 <img tal:replace="structure python:scaled_image.tag()" tal:on-error=""/>

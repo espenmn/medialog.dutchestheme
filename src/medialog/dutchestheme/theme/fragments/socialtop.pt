@@ -1,5 +1,6 @@
 <div id="fragent-${python: view.id}"
-	  class="social"
+	  class="social disabled-${view/data/disabled|None}"
+		tal:condition="view/editmode|None">
 		tal:define="email view/data/email|None;
 					twitter view/data/twitter|None;
 					facebook view/data/facebook|None;

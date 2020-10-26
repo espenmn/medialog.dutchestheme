@@ -6,7 +6,9 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     lang="en"
     i18n:domain="medialog.dutchestheme">
-<div class="feature-item" id="fragent-${python: view.id}"
+<div class="feature-item disabled-${view/data/disabled|None}"
+    tal:condition="view/editmode|None"
+    id="fragent-${python: view.id}"
     tal:define="family_css view/family_css;
         iconfield view/data/iconfield|None;
         description view/data/description|None;

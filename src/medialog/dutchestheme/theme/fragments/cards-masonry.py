@@ -22,3 +22,19 @@ def get_items(self):
         sort_order = str(self.data['sort_order'])
 
     return self.context.portal_catalog(sort_on=sorton, Language=language, sort_order=sort_order, Subject=keyword)
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False
+
+def editmode(self):
+    form = self.request.form
+    if  '_layouteditor' in form:
+        return True
+    if  'disabled' in self.data:
+        return self.data['disabled']  == False
+    return False

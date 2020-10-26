@@ -1,4 +1,6 @@
- <section id="fragment-${python: view.id}">
+ <section id="fragment-${python: view.id}"
+ class="disabled-${view/data/disabled|None}"
+ tal:condition="view/editmode|None">
     <div class="flex flex-between flex-wrap margin-0--10 padding-0">
         <tal:repeat tal:repeat="item view/get_items|None">
               <tal:define tal:define="obj item/getObject;

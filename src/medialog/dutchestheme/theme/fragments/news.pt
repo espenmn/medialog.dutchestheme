@@ -4,7 +4,8 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     lang="en"
     i18n:domain="medialog.dutchestheme">
-<div class="newsitems">
+<div class="newsitems disabled-${view/data/disabled|None}"
+  tal:condition="view/editmode|None">
 <div class="programicon_item ckFilter-obj"
  tal:repeat="item python: view.get_items">
 
