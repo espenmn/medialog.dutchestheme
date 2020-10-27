@@ -22,3 +22,9 @@ def editmode(self):
     if  'disabled' in self.data:
         return self.data['disabled']  == False
     return False
+
+def cropped(self):
+    if  (self.data['image_width'] and self.data['image_height']):
+        return "Cropped"
+
+    return False

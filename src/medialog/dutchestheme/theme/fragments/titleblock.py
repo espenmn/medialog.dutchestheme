@@ -4,7 +4,7 @@ def titlestructure(self):
     title = data['titletext']
     return "<%s>%s</%s>""" % (header, title, header)
 
-  def editmode(self):
+def editmode(self):
     form = self.request.form
     if  '_layouteditor' in form:
         return True

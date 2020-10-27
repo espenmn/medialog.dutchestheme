@@ -3,7 +3,7 @@
             id="fragment-${python: view.id}"
             style="background-image: url( ${view/background_image|None } )"
             tal:define="line_url view/get_url|None">
-   <div class="container ${view/data/color2}">
+   <div class="${view/data/color2}">
     <tal:block define="value nocall:view/data/text|nothing;
                    output_relative_to nocall:value/@@output_relative_to|nothing"
                tal:condition="output_relative_to"
