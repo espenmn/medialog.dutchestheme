@@ -66,19 +66,6 @@
 		     	nextText: ">",
      		});
 		});
-		$(window).resize(function(){
-      // Setting the heigth of the slides
-      var new_height = ($('.${s_id}').width()*${height}/100);
- 		 var min_height = ${min_height};
- 		 var max_height = ${max_height};
- 		 if (new_height > max_height) {
- 		  $('.${s_id}').height(max_height);
- 		 } else if (new_height < min_height) {
- 			$('.${s_id}').height(min_height);
- 		 } else {
- 		 	$('.${s_id}').height(new_height);
- 			}
-    }).resize();
 	</script>
 </section>
 </tal:check>

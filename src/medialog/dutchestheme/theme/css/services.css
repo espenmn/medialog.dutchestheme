@@ -26,6 +26,11 @@ div.service-items {
   margin-bottom: 1em;
 }
 
+.service-item img {
+ margin-bottom: 1em;
+}
+
+
 h1.media-heading {
   font-size: 200%;
 }

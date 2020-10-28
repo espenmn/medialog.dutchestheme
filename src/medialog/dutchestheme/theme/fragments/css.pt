@@ -1,5 +1,5 @@
 <div class="css-dummy disabled-${view/data/disabled|None}"
-    tal:condition="view/editmode|None"
+    tal:condition="view/editmode|None">
   Placeholder for CSS code</div>
 <style>.css-dummy {display: none} .template-edit .css-dummy {display: block}
-${python: view.data['css']</style>
+${view/data/css}</style>

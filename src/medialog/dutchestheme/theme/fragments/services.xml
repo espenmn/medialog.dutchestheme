@@ -121,7 +121,6 @@
               <title>Button text</title>
               <description/>
               <required>True</required>
-              <title>Button</title>
             </field>
 </schema>
 </model>
