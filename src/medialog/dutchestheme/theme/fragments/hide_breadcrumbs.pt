@@ -1,4 +1,1 @@
-<style class="disabled-${view/data/disabled|None}"
-tal:condition="view/editmode|None">
- #portal-breadcrumbs {display: none !important}
-</style>
+<style class="disabled-${view/data/disabled|None}" tal:condition="view/editmode">#portal-breadcrumbs {display: none !important}</style>

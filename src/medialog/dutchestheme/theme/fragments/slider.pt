@@ -16,7 +16,7 @@
 				id="fragment-main-slider">
 		<div id="slider" class="${s_id}" tal:condition="folder_url">
 			   <tal:repeat tal:repeat="item  context/?folder_url/@@contentlisting">
-			   		<div  class="fillme" tal:define="item_url item/getURL|item/absolute_url;
+			   		<div  class="fillme full-${view/data/fill|None}" tal:define="item_url item/getURL|item/absolute_url;
 							        image_url python:item_url + '/@@images/image/' + image_size">
 			 			  <img class="slider-img img-responsive"  alt="${item/title|None}" src="${image_url}"/>
 				      <div class="slidetext-container" tal:condition="view/data/showtext">
@@ -36,17 +36,20 @@
 	</tal:define>
 	<style>
 		<tal:condition tal:condition="view/data/fill|None">
-			.${s_id} .slider-img.img-responsive {
-				width: 100vw
-			}
+
+			div.fillme.full-True img.slider-img.img-responsive {
+			 width: 100vw !important;
+			 height: ${height}vw;
+		 }
 		  .${s_id} img.slider-img.img-responsive  {
 		    min-height: ${min_height}px !important;
-		    height: ${max_height}px !important;
 		    object-fit: cover !important;
 		    object-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
 		    }
 		</tal:condition>
-		#slider.${s_id} {
+
+		#slider.${s_id},
+		#slider.${s_id} img {
 			max-height: ${max_height}px !important;
 			min-height: ${min_height}px !important;
 		}
@@ -66,19 +69,20 @@
 		     	nextText: ">",
      		});
 		});
-		function resise(param){
-				// Setting the heigth of the slides
-				var new_height = ($('.${s_id}').width()*${height}/100);
-			  var min_height = ${min_height};
-			  var max_height = ${max_height};
-			  if (new_height > max_height) {
-				 $('.${s_id}').height(max_height);
-			  } else if (new_height < min_height) {
-				  $('.${s_id}').height(min_height);
-			  } else {
-				  $('.${s_id}').height(new_height);
-				}
-			}).resize();
+		$(window).resize(function(){
+      // Setting the heigth of the slides
+      var new_height = ($('.${s_id}').width()*${height}/100);
+ 		 var min_height = ${min_height};
+ 		 var max_height = ${max_height};
+ 		 if (new_height > max_height) {
+ 		  $('.${s_id}').height(max_height);
+ 		 } else if (new_height < min_height) {
+ 			$('.${s_id}').height(min_height);
+ 		 } else {
+ 		 	$('.${s_id}').height(new_height);
+			$('.${s_id} img.slider-img.img-responsive').height(new_height);
+ 			}
+    }).resize();
 	</script>
 </section>
 </tal:check>

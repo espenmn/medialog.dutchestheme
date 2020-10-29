@@ -28,16 +28,27 @@ tal:condition="view/editmode|None">
               data-pat-moment="format:DD.MM.YYYY">${item/start}</span>
     </p>
     <figure tal:define="scale_func obj/@@images;
-                scale context/@@images;
-                scaled_image python:scale_func.scale('image', scale=image_size)"
+                scale context/@@images;"
                 tal:on-error="">
-            <img tal:replace="structure python:scaled_image.tag(title='')"
-                 tal:condition="scaled_image" />
+
+                <tal:check tal:condition="not: view/cropped|None"
+                    tal:define="scaled_image python:scale_func.scale('image', scale=image_size)">
+                  <img tal:replace="structure python:scaled_image.tag(title='')"
+                     tal:on-error="" />
+                </tal:check>
+                <tal:check tal:condition="view/cropped|None"
+                    tal:define="image_width view/data/image_width;
+                      image_height view/data/image_height;
+                      image_direction view/data/direction;
+                    scaled_image python:scale_func.scale('image', width=image_width, height=image_height, direction=image_direction)">
+                  <img tal:replace="structure python:scaled_image.tag(title='')"
+                    tal:on-error="" />
+              </tal:check>
     </figure>
 
     </div>
 <style>
-    div.eventitems {
+div.eventitems {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -68,15 +79,17 @@ h1.users a {
 	color: #5c5c5c;
 }
 
-  p.sub_info span {
+p.sub_info span {
 	font-weight: normal;
 	font-style: normal;
 }
 
-div.programicon_item.ckFilter-obj {
-	width: 32%;
-	min-width: 300px;
+@media (min-width: 600px) {
+  div.programicon_item.ckFilter-obj {
+  	width: 32%;
+  	min-width: 300px;
 
+  }
 }
 
 </style>

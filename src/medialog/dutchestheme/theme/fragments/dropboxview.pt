@@ -22,37 +22,36 @@
         </li>
       </tal:image>
     </ol>
-<style>
+    <style>
 
-#section-${python: view.id} ol.flex.flex-wrap  {
-  padding: 0;
-  list-style-image: none;
-  list-style-type: none;
-  justify-content: flex-start;
-  max-width: ${python: view.get_width}px;
-  margin: auto;
-}
+    #section-${python: view.id} ol.flex.flex-wrap  {
+      padding: 0;
+      list-style-image: none;
+      list-style-type: none;
+      justify-content: flex-start;
+      max-width: ${view/get_width|None}px;
+      margin: auto;
+    }
 
-#section-${python: view.id} li { 
-    width: ${image_width}px;
-    margin: ${python: view.get_margin}px;
-    list-style-image: none;
-    list-style-type: none;
-    overflow: hidden;
-}
+    #section-${python: view.id} li { 
+        width: ${image_width}px;
+        margin: ${view/get_margin|None}px;
+        list-style-image: none;
+        list-style-type: none;
+        overflow: hidden;
+    }
 
-#section-${python: view.id} img {
-  width: 100%;
-}
+    #section-${python: view.id} img {
+      width: 100%;
+    }
 
-#section-${python: view.id} p.center {
-  text-align: center;
-  margin-top: 1em;
-  overflow: hidden;
-  width: ${python: image_width}px;
-  color: #999;
-}
+    #section-${python: view.id} p.center {
+      text-align: center;
+      margin-top: 1em;
+      overflow: hidden;
+      width: ${image_width|None}px;
+      color: #999;
+    }
 
-</style>
-
+    </style>
 </section>

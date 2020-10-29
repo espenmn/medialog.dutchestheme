@@ -27,5 +27,29 @@
          <default>preview</default>
        <vocabulary>plone.app.vocabularies.ImagesScales</vocabulary>
     </field>
+    <field name="image_width" type="zope.schema.Int">
+      <description>Set size if you want to scale image more precisely</description>
+      <required>False</required>
+      <title>Max Width</title>
+      <min>10</min>
+    </field>
+
+    <field name="image_height" type="zope.schema.Int">
+      <description>Set size if you want to scale image more precisely</description>
+      <required>False</required>
+      <title>Max Height</title>
+      <min>10</min>
+    </field>
+
+    <field name="direction" type="zope.schema.Choice">
+      <description/>
+      <required>True</required>
+      <title>Scale mode if you set width and height</title>
+      <values>
+        <element>up</element>
+        <element>down</element>
+      </values>
+    </field>
+
 </schema>
 </model>

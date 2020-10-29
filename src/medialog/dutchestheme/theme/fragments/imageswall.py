@@ -1,8 +1,10 @@
 def get_wallitems(self):
     linked = self.data['linked_folder'] or self.data['select_folder']
-    folder = self.context.portal_catalog(UID=linked)
-    return folder[0].getObject()
-
+    if linked:
+        folder = self.context.portal_catalog(UID=linked)
+        return folder[0].getObject()
+    return self.context
+    
 def small(self):
     small = self.data['small']
     return 100/small

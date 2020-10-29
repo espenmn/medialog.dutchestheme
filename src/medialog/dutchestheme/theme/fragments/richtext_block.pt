@@ -9,7 +9,7 @@
                tal:condition="output_relative_to"
                tal:content="structure python:output_relative_to(context)" />
     <div tal:condition="view/data/button">
-       <a class="btn btn-primary plone-link-color"
+       <a class="btn btn-primary ${view/data/buttontype|None}"
          href="${line_url|None}">
          ${view/data/button}
        </a>

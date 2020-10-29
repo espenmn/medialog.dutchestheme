@@ -1,8 +1,9 @@
 def get_items(self):
     linked = self.data['linked_folder'] or self.data['select_folder']
-    folder = self.context.portal_catalog(UID=linked)
-    return folder[0].getObject()
-    #.getURL()
+    if linked:
+        folder = self.context.portal_catalog(UID=linked)
+        return folder[0].getObject()
+    return self.context
 
 def ctype(self):
     if 'ctype' in self.data.keys():
