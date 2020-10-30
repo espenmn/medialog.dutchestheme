@@ -1,6 +1,6 @@
  <section id="fragment-${python: view.id}"
    class="selectfragment disabled-${view/data/disabled|None}"
-   tal:condition="python: view.editmode">
+   tal:condition="view/editmode|None">
 
     <label for="folder_select-${python: view.id}">${view/data/labeltext|None}</label>
     <select name="folder_select-${python: view.id}" id="folder_select-${python: view.id}" onchange="location = this.value;">

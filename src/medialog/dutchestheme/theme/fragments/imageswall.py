@@ -4,7 +4,7 @@ def get_wallitems(self):
         folder = self.context.portal_catalog(UID=linked)
         return folder[0].getObject()
     return self.context
-    
+
 def small(self):
     small = self.data['small']
     return 100/small
@@ -23,7 +23,7 @@ def editmode(self):
         return True
     if  'disabled' in self.data:
         return self.data['disabled']  == False
-    return False
+    return True
 
 def cropped(self):
     if  (self.data['image_width'] and self.data['image_height']):

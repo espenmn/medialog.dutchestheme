@@ -21,4 +21,4 @@ def editmode(self):
         return True
     if  'disabled' in self.data:
         return self.data['disabled']  == False
-    return False
+    return True
