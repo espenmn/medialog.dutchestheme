@@ -7,7 +7,7 @@
 <div class="newsitems disabled-${view/data/disabled|None}"
   tal:condition="view/editmode|None">
 <div class="programicon_item ckFilter-obj"
- tal:repeat="item python: view.get_items">
+ tal:repeat="item view/get_items|None">
 
     <div tal:define="obj item/getObject">
     <p class="pre_title">

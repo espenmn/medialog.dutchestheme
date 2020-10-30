@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="++theme++dutchestheme/css/hover.css" tal:condition="load_css">
 </tal:define>
 
-<style>
+<style tal:define="effectvalue view/data/effectvalue|None">
 .hovercolumn figure { overflow: hidden}
 
 .hovercolumn div {
@@ -32,7 +32,7 @@
   width: ${width|None}%;
 }
 section.hover02.hovercolumn figure img:hover {
-	width: calc(100% + 50px);
+	width: calc(100% + ${effectvalue}px);
   max-width: calc(100% + 50px);
 }
 
@@ -41,7 +41,7 @@ section.hover04.hovercolumn  figure:hover img {
   width: 100%;
 }
 section.hover04.hovercolumn figure img {
-	width: calc(100% + 100px);
+	width: calc(100% + ${effectvalue}px + ${effectvalue}px);
   max-width: calc(100% + 100px);
 }
 
