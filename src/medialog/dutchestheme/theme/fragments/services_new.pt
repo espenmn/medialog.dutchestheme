@@ -83,7 +83,6 @@
 				  justify-content: space-between;
 				  margin-top: 3em;
 				  margin-bottom: 1.4em;
-					width: 100%;
 				}
 				.service-item {
 				  background: white;
