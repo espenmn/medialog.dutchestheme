@@ -64,7 +64,7 @@
 				div.servicetext {
 				  margin: auto;
 				  text-align: center;
-					width: 100%;
+
 				}
 				#fragment-services  {
 				  padding: 30px 15px 15px;
@@ -83,6 +83,7 @@
 				  justify-content: space-between;
 				  margin-top: 3em;
 				  margin-bottom: 1.4em;
+					width: 100%;
 				}
 				.service-item {
 				  background: white;
