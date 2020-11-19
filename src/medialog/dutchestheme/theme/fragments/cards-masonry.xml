@@ -35,6 +35,10 @@
         <element>ascending</element>
       </values>
 </field>
+<field name="show_date" type="zope.schema.Bool">
+    <required>false</required>
+    <title>Show date</title>
+</field>
 <field name="max_chars" type="zope.schema.Int">
       <description>Max characters of description</description>
       <required>False</required>

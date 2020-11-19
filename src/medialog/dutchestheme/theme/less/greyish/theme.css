@@ -5230,7 +5230,7 @@ option[value=grey-background],
   height: 100em;
 }
 .plone-toolbar-left #edit-zone.pat-toolbar {
-  z-index: 10;
+  z-index: 20;
 }
 #viewlet-below-content {
   margin-right: auto;
@@ -5258,6 +5258,9 @@ option[value=grey-background],
   #viewlet-below-content {
     width: 1570px;
   }
+}
+.template-edit .label {
+  color: #000;
 }
 table.grid tbody tr td {
   padding: 4px 10px;

@@ -5256,6 +5256,9 @@ option[value=grey-background],
     width: 1570px;
   }
 }
+.template-edit .label {
+  color: #000;
+}
 table.grid tbody tr td {
   padding: 4px 10px;
 }
