@@ -26,7 +26,7 @@
 <style>
 #fragment-${f_id} {
   width: 100%;
-  height: ${view/data/height}px;
+  height: ${view/data/height|None}px;
   position: relative;
   overflow: hidden;
 }
@@ -41,14 +41,14 @@
 }
 #fragment-${f_id} .img-parallax {
   min-width: 100%;
-  xmin-height: ${view/data/height}px;
-  height: calc(${view/data/height}px + ${view/data/height}px *${view/data/speed});
+  xmin-height: ${view/data/height|None}px;
+  height: calc(${view/data/height|None}px + ${view/data/height|None}px *${view/data/speed|None});
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%,0);
   pointer-events: none;
-  opacity: ${view/data/opacity};
+  opacity: ${view/data/opacity|None};
 }
 </style>
 <script>
