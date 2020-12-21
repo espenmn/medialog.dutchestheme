@@ -19,6 +19,6 @@
       <link rel="stylesheet" href="++theme++dutchestheme/css/richtext_block.css" tal:condition="load_css">
   </tal:define>
   <style>
-    .richtext_block {border: 1px solid; background-size: cover}
+    .richtext_block {border: 1px solid; background-size: cover; background-position: top center}
   </style>
 </section>

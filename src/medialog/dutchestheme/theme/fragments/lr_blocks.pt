@@ -38,10 +38,10 @@
         </div>
      </div>
  </tal:repeat>
-
  <link rel="stylesheet" href="++theme++dutchestheme/css/lr_block.css" tal:condition="load_css">
 
 <style>
+#fragment-${python: view.id} { overflow: hidden;}
 <tal:check tal:condition="view/data/image_height|None">
     #fragment-${python: view.id} img.image-inline {
         object-fit: cover;
