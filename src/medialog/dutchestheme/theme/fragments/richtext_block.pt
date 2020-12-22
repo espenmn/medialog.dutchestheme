@@ -20,5 +20,7 @@
   </tal:define>
   <style>
     .richtext_block {border: 1px solid; background-size: cover; background-position: top center}
+    .btn.outline.white {color: white !important;}
+.btn.outline.white:hover {  box-shadow: 4px 4px 10px rgba(0,0,0, 0.3); }
   </style>
 </section>

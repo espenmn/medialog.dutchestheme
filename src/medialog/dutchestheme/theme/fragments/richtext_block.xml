@@ -17,7 +17,7 @@
           form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
       <title>Text</title>
   </field>
-  <field name="color1" type="zope.schema.Choice">
+  <field name="color1" type="zope.schema.Choice" >
     <description/>
     <required>False</required>
     <title>Border color</title>
@@ -94,6 +94,7 @@
         <element>custom-background1</element>
         <element>custom-background2</element>
         <element>custom-background3</element>
+        <element>outline plone-background-opposite white</element>
       </values>
   </field>
 
