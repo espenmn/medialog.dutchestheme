@@ -23,7 +23,7 @@
   <style>
     #fragment-${python: view.id} {
       background-size: cover;
-      background-position: top center;
+      background-position: ${view/data/position-y|None}%  ${view/data/position-y|None}%;
       height: ${view/data/height|None}px;
       padding-top: calc(${view/data/height|None}px - 240px);
       width: 100%;}
