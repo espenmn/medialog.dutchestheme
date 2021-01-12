@@ -18,3 +18,4 @@ develop-eggs
 src/medialog/dutchestheme/theme/fragments/folder_listing.pt
 src/medialog/dutchestheme/theme/fragments/folder_listing.py
 src/medialog/dutchestheme/theme/fragments/folder_listing.xml
+src/medialog/dutchestheme/theme/fragments/image_banneri.py
