@@ -20,7 +20,7 @@
   </field>
   <field name="link" type="zope.schema.Choice">
       <description/>
-      <required>True</required>
+      <required>False</required>
       <title>Choose Link to</title>
       <source>collective.themefragments.tiles.CatalogSource</source>
   </field>

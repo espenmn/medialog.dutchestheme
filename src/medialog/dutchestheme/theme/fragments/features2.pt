@@ -22,7 +22,7 @@
 							class="feature">
 							<div class="feature-wrap ${family_css}" tal:define="item_url item/getURL|item/absolute_url">
 								<a href="${item_url}">
-									<img tal:condition="python: css_file=='arrows'" src='${item_url}/@@images/image/thumb'/>
+									<img tal:condition="python: css_file=='arrows'" src='${item_url}/@@images/image/mini'/>
 									<tal:check tal:condition="python: css_file!='arrows'" >
 									<i  tal:condition="exists:item/image" class="${family_css}"
 										style="background-image: url('${item_url}/@@images/image');" />
@@ -30,7 +30,6 @@
 									 </tal:check>
 									<h2>${item/Title}<i tal:condition="python: css_file=='arrows'" class="fa fa-chevron-right round-box"> </i>
 									</h2>
-
 								</a>
 								<h4 tal:condition="python: css_file  != 'arrows'">${item/Description}</h4>
 							</div>
