@@ -1,7 +1,7 @@
 <section id="fragment-${python: view.id}"
          tal:define="scale view/data/image_size;
                 name view/data/name|None;
-                title view/data/tittel|None;
+                title view/data/title|None;
                 image view/one_image|view|None;
                 image_url image/getURL;
                 color1 view/data/color1;
@@ -21,9 +21,8 @@
       <img alt="${title}" class="image-inline "
           src="${image_url}/@@images/image/${scale}" />
       <h2  class="${color2}" tal:condition="name">${name}</h2>
-      <h4  class="${color2}" tal:condition="title|None">${title}</h4>
-      <p class="${color2}">${view/data/phone|None}</p>
-      <p><a class="${color2}" href="mailto: ${email|None}">${email|None}</a></p>
+      <h3  class="${color2}" tal:condition="title|None">${title}</h3>
+      <p class="${color2}">${view/data/phone|None}<br/><a class="${color2}" href="mailto: ${email|None}">${email|None}</a></p>
     </div>
  </div>
  <link rel="stylesheet" href="++theme++dutchestheme/css/lr_block.css" tal:condition="load_css">
@@ -32,6 +31,11 @@
         object-fit: cover;
         border-radius: 50%
   }
+
+  #fragment-${python: view.id} h2 { margin-bottom: 0;}
+
+  #fragment-${python: view.id} h3 { margin-top: 0;}
+
   #fragment-${python: view.id} { overflow: hidden; margin-left: -15px; margin-right: -15px;}
 
  #fragment-${python: view.id} div * {
@@ -41,8 +45,6 @@
 #fragment-${python: view.id} .center {
 	text-align:center;
 }
-
-
 
  </style>
 </section>

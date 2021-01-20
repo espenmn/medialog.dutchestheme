@@ -49,7 +49,7 @@
     <required>False</required>
     <title>Email</title>
 </field>
-
+ 
 <field name="text" type="plone.app.textfield.RichText" marshal:primary="true"
           form:widget="plone.app.z3cform.widget.RichTextFieldWidget">
           <form:widget>plone.app.z3cform.widget.RichTextFieldWidget</form:widget>
