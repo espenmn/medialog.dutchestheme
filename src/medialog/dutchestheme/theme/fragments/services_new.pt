@@ -8,6 +8,7 @@
 				 color4 python: view.data['color4'];
 				 min_width python: view.data['min_width'];
 				 disabled python: view.data['disabled'];
+				 hide_images python: view.data['hide_images'];
 				 item_width python: view.item_width;
 				 b_point python: view.b_point;
 				 editmode python: view.editmode;
@@ -29,13 +30,20 @@
 		                 	tal:content="context/?folder_url/Description|None"/>
 		       </div>
 		       <div class="service-items container flex flex-wrap">
-		 				<div tal:repeat="item context/?folder_url/@@contentlisting|None"
-		               class="wow fadeInDown animated service-item ${color3}"
+						 <tal:check tal:repeat="item context/?folder_url/@@contentlisting|None">
+							 <tal:define tal:define="item_url item/getURL|item/absolute_url;
+																item_title item/Title;
+																itemType item/portal_type;
+																noShow python: hide_images and itemType=='Image'">
+		 				   <div class="wow fadeInDown animated service-item ${color3}"
 		               data-wow-delay="600ms" data-wow-duration="1000ms"
 		               style="visibility: visible; animation-duration: 1000ms;
-		                         animation-delay: 600ms; animation-name: fadeInDown;">
-		 				    <tal:define tal:define="item_url item/getURL|item/absolute_url;
-		 							               item_title item/Title">
+		                         animation-delay: 600ms; animation-name: fadeInDown;"
+														 tal:condition="python: noShow==False">
+
+
+
+
 		 							<a href="#" tal:attributes="href item_url">
 		 	 							<img src="${item_url}/@@images/image/${image_size}" alt="${item_title}"
 		 							    	 tal:condition="item/image|None"
@@ -56,8 +64,9 @@
 		 		                       tal:condition="output_relative_to"
 		 		                       tal:content="structure python:output_relative_to(context)" />
 		 							</tal:cond>
-		           	</tal:define>
-		 				  </div>
+		           	 </div>
+							</tal:define>
+						</tal:check>
 		     	</div>
 
 			<style>

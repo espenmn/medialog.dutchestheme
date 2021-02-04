@@ -4,6 +4,7 @@
              items collection_items/@@contentlisting|context/@@contentlisting|None;
              i_size view/data/image_size;
              show_csubject python: view.csubject;
+              hide_images python: view.data['hide_images'];
              show_ctype  view/ctype"
     id="fragment-${python: view.id}">
 
@@ -13,7 +14,10 @@
 </div-->
 <tal:repeat tal:repeat="item items">
     <div tal:define="subject item/Subject|None;
-          tags python: ' '.join(subject)"
+          tags python: ' '.join(subject);
+          itemType item/portal_type;
+          noShow python: hide_images and itemType=='Image'"
+           tal:condition="python: noShow==False"
           class="collection_item margin-10 ${item/Type} ${tags}">
         <div tal:define="item_url item/getURL|item/absolute_url">
         <p class="${item/portal_type} portal-type white black-background">
