@@ -3,10 +3,11 @@ def get_text(self):
     return text
 
 def background_image(self):
-    if self.data['background_image']:
-        bi = self.data['background_image']
-        items = self.context.portal_catalog(UID=bi)
-        return items[0].getURL()
+    item =   self.data['background_image'] or self.data['background_image2']
+    items = self.context.portal_catalog(UID=item)
+    return items[0].getURL()
+
+def bildet(self):
     return ''
 
 def get_url(self):
