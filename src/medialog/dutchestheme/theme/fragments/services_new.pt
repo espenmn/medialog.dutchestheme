@@ -21,7 +21,7 @@
 				 tal:condition="editmode"
 				 data-anchor="anchor-${title}">
 
-				 <div tal:condition="folder_url">
+				 <tal:check tal:condition="folder_url">
 		   		<div class="center wow fadeInDown animated container servicetext"
 		            style="visibility: visible; animation-name: fadeInDown;">
 		           <h2 class="${color2}" tal:content="context/?folder_url/Title|None"/>
@@ -67,95 +67,92 @@
 		           	 </div>
 							</tal:define>
 						</tal:check>
-		     	</div>
+		     	</tal:check>
 
-			<style>
-				div.servicetext {
-				  margin: auto;
-				  text-align: center;
+					<style>
+						div.servicetext {
+						  margin: auto;
+						  text-align: center;
 
-				}
-				#fragment-services  {
-				  padding: 30px 15px 15px;
-				  text-align: center;
-				}
+						}
+						#fragment-services  {
+						  padding: 30px 15px 15px;
+						  text-align: center;
+						}
 
-				#fragment-services.service-services2 .service-item  {
-					padding: 0 0 15px 0;
-				}
+						#fragment-services.service-services2 .service-item  {
+							padding: 0 0 15px 0;
+						}
 
-				.mosaic-grid-row-fluid  #fragment-services {
-				margin-left: -15px;
-				margin-right: -15px;}
+						.mosaic-grid-row-fluid  #fragment-services {
+						margin-left: -15px;
+						margin-right: -15px;}
 
-				div.service-items.container {
-				  justify-content: space-between;
-				  margin-top: 3em;
-				  margin-bottom: 1.4em;
-					width: 100%;
-				}
-				.service-item {
-				  background: white;
-				  padding: 0.9em;
-				  margin-bottom: 1em;
-				}
-				.service-item img {
-				 margin-bottom: 1em;
-				}
-				h1.media-heading {
-				  font-size: 200%;
-				}
-				@media (max-width: 768px) {
-				  div.service-items {
-				    flex-direction: column;
-				    justify-content: center;
-				  }
-				  .service-item {
-				    margin-left: auto;
-				    margin-right: auto;
-				  }
-				}
-				.service-round .service-item {
-				  margin-bottom: 2em;
-				  padding:  0;
+						div.service-items.container {
+						  justify-content: space-between;
+						  margin-top: 3em;
+						  margin-bottom: 1.4em;
+							width: 100%;
+						}
+						.service-item {
+						  background: white;
+						  padding: 0.9em;
+						  margin-bottom: 1em;
+						}
+						.service-item img {
+						 margin-bottom: 1em;
+						}
+						h1.media-heading {
+						  font-size: 200%;
+						}
+						@media (max-width: 768px) {
+						  div.service-items {
+						    flex-direction: column;
+						    justify-content: center;
+						  }
+						  .service-item {
+						    margin-left: auto;
+						    margin-right: auto;
+						  }
+						}
+						.service-round .service-item {
+						  margin-bottom: 2em;
+						  padding:  0;
 
-				}
-				#fragment-services.service-round .service-item {
-					background: transparent !important;
-					color: white;
+						}
+						#fragment-services.service-round .service-item {
+							background: transparent !important;
+							color: white;
 
-				}
-				#fragment-services.service-services2 .media-body  {
-					padding-left: 1em;
-					padding-right: 1em;
+						}
+						#fragment-services.service-services2 .media-body  {
+							padding-left: 1em;
+							padding-right: 1em;
 
-				}
-				.service-round .media-body {
-					 padding:  1em;
-				}
-				.service-round .service-item img {
-				  border-radius: 50%;
-				  border: 1.5px solid white;
-				}
+						}
+						.service-round .media-body {
+							 padding:  1em;
+						}
+						.service-round .service-item img {
+						  border-radius: 50%;
+						  border: 1.5px solid white;
+						}
 
-				@media (min-width: ${min_width}px ){
-				.service-item {
-  				width: ${item_width}%;
-					min-width: ${min_width}px;
-				 }
-				}
+						@media (min-width: ${min_width}px ){
+						.service-item {
+		  				width: ${item_width}%;
+							min-width: ${min_width}px;
+						 }
+						}
 
-				@media (max-width: ${b_point}px ){
-				#fragment-services  {
-					padding-left: 0;
-					padding-right: 0;
-				}
-				.service-item {
-  				width: 100%%;
-					min-width: 100%;
-				 }
-				}
+						@media (max-width: ${b_point}px ){
+						#fragment-services  {
+							padding-left: 0;
+							padding-right: 0;
+						}
+
+					}
 
 
-			</style>
+					</style>
 </section>

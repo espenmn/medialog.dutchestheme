@@ -8,7 +8,7 @@ def item_width(self):
 
 def b_point(self):
 	min_width = self.data['min_width']
-	return (min_width*1.6)
+	return (min_width*1.95)
 
 def editmode(self):
     form = self.request.form
