@@ -2,9 +2,10 @@
    color1 view/data/color1;
    color2 view/data/color2;
    color3 view/data/color3;
-   color4 view/data/color4; ">
+   color4 view/data/color4;
+   link_url view/get_url|None">
 
-<a class="nounderline" href="${view/get_url|None}">
+<a class="nounderline"  tal:omit-tag="python: link_url == ''" href="link_url">
 <section class="image_banner disabled-${view/data/disabled|None}"
             tal:condition="view/editmode|None"
             id="fragment-${python: view.id}">
@@ -15,7 +16,7 @@
     </h1>
      <div><p>
       <span class="${color3} ${color4} padding-20" tal:condition="view/data/text|None">
-        ${view/data/text|None} <i class="fa fa-chevron-right ${color1} ${color2} round-box"> </i>
+        ${view/data/text|None} <i class="fa fa-chevron-right ${color1} ${color2} round-box" tal:condition="python: link_url != ''"> </i>
        </span>
      </p>
     </div>
@@ -27,7 +28,7 @@
   #fragment-${python: view.id} {
     background-image: url( ${view/background_image|None } );
     background-size: cover;
-    background-position: ${view/data/position-y|None}%  ${view/data/position-y|None}%;
+    background-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
     height: ${view/data/height|None}px;
     padding-top: calc(${view/data/height|None}px - 240px);
     width: 100%;}

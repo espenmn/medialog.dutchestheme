@@ -15,6 +15,7 @@
   </field>
   <field name="heading" type="zope.schema.TextLine">
       <title>Heading</title>
+      <required>False</required>
   </field>
   <field name="color1" type="zope.schema.Choice">
     <description/>
@@ -51,6 +52,7 @@
   </field>
   <field name="text" type="zope.schema.TextLine">
       <title>Text</title>
+      <required>False</required>
   </field>
 
   <field name="color3" type="zope.schema.Choice">
