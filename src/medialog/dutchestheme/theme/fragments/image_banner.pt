@@ -3,6 +3,7 @@
    color2 view/data/color2;
    color3 view/data/color3;
    color4 view/data/color4;
+   i_height view/data/height|None;
    link_url view/get_url|None">
 
 <a class="nounderline"  tal:omit-tag="python: link_url == ''" href="link_url">
@@ -16,7 +17,7 @@
     </h1>
      <div><p>
       <span class="${color3} ${color4} padding-20" tal:condition="view/data/text|None">
-        ${view/data/text|None} <i class="fa fa-chevron-right ${color1} ${color2} round-box" tal:condition="python: link_url != ''"> </i>
+         ${view/data/text|None} <i class="fa fa-chevron-right ${color1} ${color2} round-box" tal:condition="python: link_url != ''"> </i>
        </span>
      </p>
     </div>
@@ -29,8 +30,8 @@
     background-image: url( ${view/background_image|None } );
     background-size: cover;
     background-position: ${view/data/position-x|None}% ${view/data/position-y|None}%;
-    height: ${view/data/height|None}px;
-    padding-top: calc(${view/data/height|None}px - 240px);
+    height: ${i_height}px;
+    padding-top: ${view/padding|None}px;
     width: 100%;}
   #fragment-${python: view.id} p { font-size: 130%}
   a.nounderline,  a.nounderline:hover  { text-decoration: none}
