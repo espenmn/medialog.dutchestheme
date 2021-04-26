@@ -1,17 +1,19 @@
 
 <section id="fragment-${python: view.id}"
   class="selectfragment disabled-${view/data/disabled|None}"
-  tal:condition="view/editmode|None">
+  tal:condition="view/editmode|None"
+  tal:define="folder view/list_items|None">
 
-  <tal:repeat tal:repeat="item view/get_items|None">
+   <tal:repeat tal:repeat="item folder/@@contentlisting|view/get_items|None">
     <div class="listing_card zoom">
       <a href="${item/getURL|item/absolute_url}">
         <h2 class="${view/data/color2|None}"><span>${item/Title}</span>  <i class="float-right fa fa-arrow-right ${view/data/color1}" /></h2>
         <p class="card_label xblack">${item/Description}</p>
       </a>
-  </div>
+    </div>
+   </tal:repeat>
 
- </tal:repeat>
+
 
 </section>
 
