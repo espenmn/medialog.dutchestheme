@@ -14,14 +14,14 @@
           <source>collective.themefragments.tiles.CatalogSource</source>
       </field>
       <field name="content_type" type="zope.schema.List">
-        <description>Note: This setting is only for folders</description>
+        <description>Note: This setting is only for folders, not collection</description>
         <title>Content Types</title>
         <value_type type="zope.schema.Choice">
           <vocabulary>plone.app.vocabularies.UserFriendlyTypes</vocabulary>
         </value_type>
       </field>
       <field name="sort_on" type="zope.schema.Choice">
-      <description>Note: This setting is only for folders</description>
+      <description>Note: This setting is only for folders, not collection</description>
         <title>Sort on</title>
         <values>
           <element>modified</element>
@@ -34,7 +34,7 @@
         </values>
       </field>
       <field name="sort_order" type="zope.schema.Choice">
-        <description>Note: This setting is only for folders</description>
+        <description>Note: This setting is only for folders, not collection</description>
         <title>Sort order</title>
         <values>
           <element>descending</element>
