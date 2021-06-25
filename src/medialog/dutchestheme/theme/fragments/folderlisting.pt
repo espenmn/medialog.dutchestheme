@@ -1,5 +1,5 @@
 
-<section id="fragment-${python: view.id}"
+<section id="${view/get_id}"
   class="selectfragment disabled-${view/data/disabled|None}"
   tal:condition="view/editmode|None"
   tal:define="folder view/list_items|None">

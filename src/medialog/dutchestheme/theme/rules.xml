@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="++resource++medialog.iconpicker/icon-fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
   </after>
 
+  <!-- <after css:theme-children="head" css:content="head script" /> -->
   <after css:theme="body" css:content="#customcss"  href="/@@theme-fragment/customcss"  />
 
   <!-- Footer -->

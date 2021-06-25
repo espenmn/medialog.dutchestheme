@@ -1,18 +1,22 @@
-<section class="newsitems flex flex-wrap margin-0--15 disabled-${view/data/disabled|None}"
-    tal:condition="view/editmode"
-    tal:define="collection_items view/get_items|None;
-             items collection_items/@@contentlisting|context/@@contentlisting|None;
-             i_size view/data/image_size;
-             show_csubject python: view.csubject;
-              hide_images python: view.data['hide_images'];
-             show_ctype  view/ctype"
-    id="${view/get_id}">
 
-<!--div>
-<p class="data-filter" data-filter="Nyhetsartikkel">Nyhetsartikkel</p>
-<p class="data-filter" data-filter="Bilde">Bilde</p>
-</div-->
-<tal:repeat tal:repeat="item items">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="medialog.dutchestheme">
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block use-macro="context/@@listing_view/macros/content-core">
+
+  <metal:entries fill-slot="entries">
+
+    <metal:block use-macro="context/@@listing_view/macros/entries"
+        tal:define="portal context/@@plone_portal_state/portal">
+      <metal:entry fill-slot="entry">
+
     <div tal:define="subject item/Subject|None;
           tags python: ' '.join(subject);
           itemType item/portal_type;
@@ -84,4 +88,11 @@
       });
    });
  </script>
- </section>
+
+</metal:entries>
+
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>

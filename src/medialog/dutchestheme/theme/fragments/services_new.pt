@@ -70,11 +70,27 @@
 		     	</div>
 
 			<style>
-				div.servicetext {
+				/* @override https://www.fender.no/news/None */
+
+div.servicetext {
 				  margin: auto;
 				  text-align: center;
 
 				}
+
+
+div.service-item  {
+	position: relative;
+}
+
+div.media-body div {
+	position: absolute;
+	border: 0;
+	bottom: 30px;
+}
+
+
+
 				#fragment-services  {
 				  padding: 30px 15px 15px;
 				  text-align: center;
@@ -130,10 +146,7 @@
 				}
 
 
-				.service-services3 div.media-body div a {
-				 position: absolute;
-				 bottom:  100px;
-				}
+
 
 				.service-services3 .service-item {
 				 padding-bottom: 50px;

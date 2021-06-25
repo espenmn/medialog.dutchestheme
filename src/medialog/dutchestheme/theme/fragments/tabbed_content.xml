@@ -20,8 +20,6 @@
       <title>Text 1</title>
     <required>False</required>
   </field>
-
-
 <field name="title2" type="zope.schema.TextLine">
     <title>Tab title 2</title>
 <required>False</required>
@@ -29,7 +27,6 @@
 <field name="text2" type="zope.schema.Text">
 <form:widget>
   <klass>pat-tinymce</klass>
-  <data-pat-tinymce>{"inline": true}</data-pat-tinymce>
 </form:widget>
       <title>Text 2</title>
 <required>False</required>
@@ -67,11 +64,11 @@
       <title>Text 5</title>
 <required>False</required>
 </field>
-<field name="title6" type="zope.schema.TextLine">
-    <title>Tab title 6</title>
+<field name="title6a" type="zope.schema.TextLine">
+    <title>Tab title 5</title>
 <required>False</required>
 </field>
-<field name="text6" type="zope.schema.Text">
+<field name="text6a" type="zope.schema.Text">
 <form:widget>
   <klass>pat-tinymce</klass>
 </form:widget>

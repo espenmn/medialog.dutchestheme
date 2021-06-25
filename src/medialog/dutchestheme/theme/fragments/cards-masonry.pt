@@ -46,7 +46,7 @@
         .cards-${f_id} img.card-img-top {
             object-fit: cover;
             height: ${python: view.data['image_height']}px !important;
-            object-position: ${python: view.data.['position-x']}% ${python: view.data['position-y']}%;
+            object-position: ${python: view.data['position-x']}% ${python: view.data['position-y']}%;
         }
     </tal:check>
     	.card {

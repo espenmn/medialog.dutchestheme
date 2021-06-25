@@ -33,3 +33,10 @@ def list_items(self):
         folder = self.context.portal_catalog(UID=linked)
         if folder[0].portal_type=='Collection':
             return folder[0].getObject()
+
+
+def get_id(self):
+    if self.data['collectionfilter']:
+        return 'content-core'
+    else:
+        return 'fragment-{0}'.format(self.id)

@@ -7,6 +7,11 @@
           <title>Hide fragment</title>
           <description>Click here to hide fragment</description>
       </field>
+      <field name="collectionfilter" type="zope.schema.Bool">
+          <required>false</required>
+          <title>Use for collectionfilter</title>
+          <description>Click here to give correct id for collectiontiler. Only one on each page</description>
+      </field>
       <field name="linked_folder" type="zope.schema.Choice">
           <description>Choose Folder.</description>
           <required>False</required>
