@@ -17,7 +17,7 @@ def get_items(self):
 
 def get_keyword(self):
     keyord = self.data['keyword']
-    return [s.encode('ascii', 'ignore') for s in keyord]
+    return [s for s in keyord]
 
 def editmode(self):
     form = self.request.form
