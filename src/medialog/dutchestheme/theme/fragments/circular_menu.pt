@@ -92,8 +92,8 @@
 	 }
 
 #circular_menu-${python: view.id} {
-	margin-top: ${python: view.data['radius']px;
-	margin-bottom: ${python: view.data['radius']px;
+	margin-top: ${view/get_radius}px;
+	margin-bottom: ${view/get_radius}px;
 }
 
 #circular_menu-${python: view.id} ::selection {

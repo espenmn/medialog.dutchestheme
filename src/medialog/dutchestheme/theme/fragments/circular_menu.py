@@ -47,6 +47,9 @@ def get_height(self):
     radius = self.data['radius']
     return radius * 2 + 144
 
+def get_radius(self):
+    return self.data['radius']
+
 def family_css(self):
     #return css_family_class, like fa, wi
     iconset = self.iconset()
