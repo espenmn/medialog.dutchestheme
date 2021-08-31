@@ -5099,6 +5099,7 @@ img,
 div.outer-wrapper {
   overflow-x: hidden;
 }
+.photoAlbumEntry a,
 .portletNavigationTree ul li.navTreeItem a {
   background: white;
 }

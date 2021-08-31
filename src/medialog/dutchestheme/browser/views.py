@@ -46,7 +46,7 @@ class IChangelayoutView(BrowserView):
             long = eval(old_cordinates)[0]
             lat =  eval(old_cordinates)[1]
             #obj.coordinates     = "POINT({0} {1})".format.(long, lat)
-            ICoordinates.coordinates = "POINT({0} {1})".format.(long, lat)
+            ICoordinates.coordinates = "POINT({0} {1})".format(long, lat)
             #obj.new_coordinates = "POINT({0} {1})".format.(long, lat)
             #Might as well reindex everything, it is migrated after all…
             obj.reindexObject()
