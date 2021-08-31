@@ -1,8 +1,8 @@
-<div class="count-item" id="fragment-${python: view.id}"
-  class="disabled-${view/data/disabled|None}"
+<div id="fragment-${python: view.id}"
+  class="disabled-${view/data/disabled|None} count-item"
   tal:condition="view/editmode|None">
     <span tal:condition="view/data/icon|None" class="fa ${view/data/icon|None} black"></span>
-    <h1><span class="countme count-{${python: view.id}">${view/data/number|None}</span> ${view/data/title|None}</h1>
+    <h1><span class="countme count-${view/id}">${view/data/number|None}</span> ${view/data/title|None}</h1>
     <p tal:condition="view/data/description|None">${view/data/description|None}</p>
 </div>
 <script>require([

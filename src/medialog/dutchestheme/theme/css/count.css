@@ -1,9 +1,14 @@
-/* @override http://xweb14d.plana.dk:8081/Plone/++theme++dutchestheme/css/count.css */
+/* @override 
+	http://xweb14d.plana.dk:8081/Plone/++theme++dutchestheme/css/count.css
+	http://localhost:8080/mosaic_test/++theme++dutchestheme/css/count.css
+*/
 
 div.count-item {
 	text-align:center;
 }
 
+ 
+ 
 div.count-item span.fa {
 	font-size: 300%;
 	background: #EEE;
