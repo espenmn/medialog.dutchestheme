@@ -85,16 +85,19 @@ div.slidetext-container {
 	width: 1.5em;
 	height: 1.5em;
 	display: inline-block;
+	color:  #cd4e2f;
+	font-weight: bold;;
 }
 
 #fragment-main-slider  ul li.rslides_here a {
-    background-color: #212020;
-	color:  white;;
+    background-color:#cd4e2f;;
+	color:  white;
+	font-weight: normal;
 }
 
 
 #fragment-main-slider .prev, #fragment-main-slider .next {
-    background-color: #191818;
+    background-color: #cd4e2f;
     border-radius: 4px;
     color: #fff;
     display: inline-block;
