@@ -19,13 +19,23 @@
 			   		<div  class="fillme full-${view/data/fill|None}" tal:define="item_url item/getURL|item/absolute_url;
 							        image_url python:item_url + '/@@images/image/' + image_size">
 			 			  <img class="slider-img img-responsive"  alt="${item/title|None}" src="${image_url}"/>
-				      <div class="slidetext-container" tal:condition="view/data/showtext">
+				      <div class="slidetext-container" tal:condition="view/show_text">
 				        <div class="slidetext  wow bounceInUp animated">
-								    		<h1 tal:content="item/title|None" />
+								    		<h1 tal:content="item/title|None" tal:condition="view/data/showtext"/>
 												<tal:condition
-														tal:condition="exists: item/description">
-
+														tal:condition="view/data/showtext">
+																<h3 tal:condition="exists: item/description">${item/description}</h3>
 													</tal:condition>
+
+													<tal:condition
+															tal:condition="view/data/showbody|None">
+
+															<div tal:define="value item/text|nothing;
+											             output_relative_to nocall:value/@@output_relative_to|nothing"
+											             tal:condition="output_relative_to"
+											             tal:content="structure python:output_relative_to(context)" />
+													</tal:condition>
+
 											 </div>
 			              </div>
 			      </div>

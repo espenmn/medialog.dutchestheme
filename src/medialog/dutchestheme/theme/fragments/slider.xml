@@ -95,7 +95,11 @@
   </field>
   <field name="showtext" type="zope.schema.Bool">
         <description/>
-        <title>Show Text</title>
+        <title>Show Heading and description text</title>
+  </field>
+  <field name="showbody" type="zope.schema.Bool">
+        <description/>
+        <title>Show Body text</title>
   </field>
   <field name="pager" type="zope.schema.Choice">
         <description/>
@@ -122,6 +126,7 @@
       <values>
         <element>responsiveslides</element>
         <element>responsiveslides2</element>
+        <element>responsiveslides3</element>
       </values>
     </field>
 </schema>

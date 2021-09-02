@@ -12,6 +12,12 @@ def t_out(self):
 def get_id(self):
     return "." + self.id
 
+def show_text(self):
+    if self.data['showtext'] or self.data['showbody']:
+        return True
+    return False
+
+
 def script(self):
     data = self.data
     s_id = self.get_id
