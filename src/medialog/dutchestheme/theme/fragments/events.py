@@ -16,8 +16,10 @@ def get_items(self):
     return self.context.portal_catalog(portal_type='Event', end=date_range, Language=language, sort_on='start')[:item_count]
 
 def get_keyword(self):
-    keyord = self.data['keyword']
-    return [s for s in keyord]
+    keyword = self.data['keyword']
+    if isinstance(u"", str):
+        keyword.encode('ascii','ignore')
+    return [s for s in keyword]
 
 def editmode(self):
     form = self.request.form

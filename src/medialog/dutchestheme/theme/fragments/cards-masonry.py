@@ -12,6 +12,8 @@ def large(self):
 
 def get_items(self):
     keyword = self.data['keyword']
+    if isinstance(u"", str):
+        keyword = self.data['keyword'].encode('ascii','ignore')
     language = self.context.Language()
     sorton = 'modified'
     if 'sort_on' in self.data.keys():

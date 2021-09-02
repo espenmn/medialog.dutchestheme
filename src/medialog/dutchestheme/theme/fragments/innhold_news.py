@@ -17,8 +17,11 @@ def item_width(self):
     return 100/items
 
 def get_keyword(self):
-    keyord = self.data['keyword']
-    return [s.encode('ascii', 'ignore') for s in keyord]
+    keyword = self.data['keyword']
+
+    if isinstance(u"", str):
+        return [s.encode('ascii', 'ignore') for s in keyword]
+    return [s for s in keyword]
 
 def editmode(self):
     form = self.request.form
