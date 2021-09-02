@@ -9,10 +9,7 @@
   margin: 0;
   }
   
-  .fillme {
-	width: 100%;
-}
-
+ 
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
