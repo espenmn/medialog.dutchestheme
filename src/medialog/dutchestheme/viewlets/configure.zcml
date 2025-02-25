@@ -66,5 +66,20 @@
                 class=".viewlets.AboveFooterViewlet"
                 permission="zope.Public"
     /-->
+    <browser:viewlet
+      name="medialog.dutchestheme.jshead_viewlet"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"    
+      class=".viewlets.JSHeadViewlet"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"                
+      permission="zope2.View"
+    />
+
+    <browser:viewlet
+      name="medialog.dutchestheme.jsfooter_viewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.JSFooterViewlet"
+      layer="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"                
+      permission="zope2.View"
+    />
 
 </configure>

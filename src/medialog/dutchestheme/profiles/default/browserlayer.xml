@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layers>
   <layer
-      name="medialog.dutchestheme"
-      interface="medialog.dutchestheme.interfaces.IMedialogDutchesthemeLayer"
+      name="medialog.dutchmantheme"
+      interface="medialog.dutchmantheme.interfaces.IMedialogdutchmanthemeLayer"
       />
 </layers>

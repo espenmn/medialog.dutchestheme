@@ -4,6 +4,8 @@
   <records interface="medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings" purge="false">
 		<value purge="false" key="style"></value>
 		<value purge="false" key="rules"></value>
+    <value purge="false" key="jshead"></value>
+    <value purge="false" key="jsfooter"></value>
   </records>
 
 </registry>

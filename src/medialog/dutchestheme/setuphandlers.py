@@ -22,6 +22,10 @@ def uninstall(context):
     # Do something at the end of the uninstallation of this package.
     noLongerProvides(IMedialogDutchesThemeSettings, IMedialogControlpanelSettingsProvider)
 
+def upgrade(context):
+    """Upgradel script"""
+    # Do something at the end of the uninstallation of this package.
+    pass
 
 def _create_content(portal):
     """Lets create the icons and the user can customize them"""

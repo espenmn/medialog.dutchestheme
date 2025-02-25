@@ -9,6 +9,30 @@ from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
 from zope.component import getUtility
+from plone import api
+from medialog.dutchestheme.interfaces import IMedialogDutchesThemeSettings
+
+class JSHeadViewlet(ViewletBase):
+    """ A viewlet which renders the js."""
+    
+    def render(self):
+        js_head =  api.portal.get_registry_record('medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.jshead')
+        if js_head:
+            return js_head
+        return "<script></script>"
+    
+class JSFooterViewlet(ViewletBase):
+    """ A viewlet which renders the js."""
+    
+    # def __init__(self, context):
+    #     js_footer =  api.portal.get_registry_record('medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.jsfooter')
+        
+    
+    def render(self):
+        js_footer =  api.portal.get_registry_record('medialog.dutchestheme.interfaces.IMedialogDutchesThemeSettings.jsfooter')
+        if js_footer:
+            return js_footer
+        return "<script></script>"
 
 
 class MenuViewlet(GlobalSectionsViewlet):

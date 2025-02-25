@@ -67,7 +67,9 @@ class IMedialogDutchesThemeSettings(model.Schema):
             'color1',
             'color2',
             'color3',
-            'extra_css']
+            'extra_css',
+            'jshead',
+            'jsfooter']
     )
 
     model.fieldset(
@@ -92,6 +94,15 @@ class IMedialogDutchesThemeSettings(model.Schema):
     style = schema.Choice(
         title=_(u'Style'),
         values=['dutchesblue', 'blue', 'ploneconf', 'red', 'rood', 'scheme1', 'greyish', 'orange', 'paragraf', 'childtheme'],
+        required=False,
+    )
+    
+    jshead = schema.Text(
+        title=_('jsfooter', default=u'Javascript in Head'),
+        required=False,
+    )
+    jsfooter = schema.Text(
+        title=_('jsfooter', default=u'Javascript in Footer'),
         required=False,
     )
 
